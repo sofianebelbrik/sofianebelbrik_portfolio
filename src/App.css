@@ -1,0 +1,1324 @@
+/* General Reset and Base Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  width: 100%;
+  flex: none; /* Prevents the div from stretching */
+}
+/* HERO SECTION */
+.hero {
+  background-color: #FFFFF0;
+  min-height: 100vh; /* Full height of viewport */
+  display: flex;
+  justify-content: flex-start; /* Align content to the top */
+  align-items: center; /* Center the content horizontally */
+  padding-top: 20px; /* Space between top of screen and words */
+  flex-direction: column; /* Stack content vertically */
+}
+
+/* Words Container */
+.words-container {
+  display: flex;
+  flex-direction: column; /* Stack words vertically */
+  align-items: center;    /* Center horizontally */
+  justify-content: flex-start; /* Align items to the top vertically */
+  gap: 10px; /* Space between words */
+  width: 100%; /* Full width */
+  position: relative;
+  margin-bottom:0px; /* Optional: Adjust top space */
+}
+
+/* Word Styling (Base for Mobile) */
+.innovation, .creativity, .simplicity {
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px; /* Default size for mobile */
+  font-weight: 600;
+  color: #FFD60A; /* Yellow text */
+  margin: 0;
+}
+
+
+/* Animation for Innovation (Typing Effect) */
+.innovation {
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid black;
+  width: 0;
+  animation: typing 4s steps(10, end) forwards, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 11ch;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #FF3B30;
+  }
+}
+
+/* Animation for Creativity (Shine Effect) */
+.creativity {
+  text-shadow: none;
+  animation: shine 3s ease-in-out forwards;
+}
+
+@keyframes shine {
+  0% {
+    color: #333;
+    text-shadow: none;
+  }
+  50% {
+    color: #FFA500;
+    text-shadow: 0 0 10px #FFA500;
+  }
+  100% {
+    color: #FFD60A;
+    text-shadow: 0 0 20px #FFD700, 0 0 30px #FFD700;
+  }
+}
+
+/* Animation for Simplicity (Slide-Up Effect) */
+.simplicity {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideUp 6s ease-out forwards;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-photo {
+  width: 200px; /* Adjust the size as needed */
+  max-width: 100%;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideInFromLeft 2s forwards;
+  margin-top: 20px; /* Space between the words and the image */
+  box-shadow: 8px 8px 4px 0px #FF3B30; /* Add the box shadow */
+}
+
+/* Animation for Profile Photo (Slide-In from Left) */
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* Introductory Text Styling */
+.intro-text,
+.second-intro-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5; /* Adjust as needed */
+  text-align: center;
+  color: #6B7280; /* Set the background color */
+  padding: 20px; /* Optional padding for better spacing */
+  margin-top: 20px; /* Space between elements */
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideUpText 1s forwards;
+}
+
+/* Add a delay for the second paragraph */
+.second-intro-text {
+  animation-delay: 0.5s; /* Adjust delay as needed */
+}
+
+/* Animation Keyframes */
+@keyframes slideUpText {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Styling for 'A.I.M.E' text */
+.aime {
+  font-weight: bold;
+  color: #FFD60A; /* Yellow color */
+}
+/* Base styles for content-container and text-container */
+.content-container {
+  display: flex;
+  flex-direction: column; /* Stack items vertically on mobile */
+  align-items: center;    /* Center items horizontally */
+  width: 100%;
+  margin-top: 20px;       /* Space between words-container and content-container */
+}
+
+.text-container {
+  width: 100%;
+  text-align: center;     /* Center text on mobile */
+}
+
+
+
+/* About Me Section */
+.section1 {
+  background-color: #FFFFF0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content to the top */
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh; /* Full height for the section */
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* About Me Heading */
+.section1 h1 {
+  background: #B32324; /* Red background for the box */
+  color: white; /* Text color */
+  width:170px; /* Fixed width */
+  height: auto; /* Fixed height */
+  line-height: 50px; /* Vertically center the text */
+  text-align: center; /* Center text horizontally */
+  position: relative;
+  margin-top: 40px;
+  font-size: 20px;
+  margin-bottom: 50px; /* Add margin to space between the heading and text */
+  box-shadow: 8px 8px 4px 0px #000000; /* Shadow effect */
+}
+
+/* About Me Paragraphs */
+.about-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5; /* Adjust for better readability */
+  text-align: center;
+  color: #6B7280; /* Text color */
+  max-width: 800px; /* Limit width for better readability */
+  margin-bottom: 20px; /* Space between paragraphs */
+}
+
+
+.about-image {
+  display: none; /* Hide image by default */
+}
+
+
+
+.section2 {
+  background-color: #f9dfb2; /* Set the background color */
+  min-height: 100vh;
+  padding: 20px; /* Add padding for spacing */
+  text-align: center; /* Center any content horizontally */
+  height: auto; /* Let the height adjust based on content */
+  box-sizing: border-box; /* Include padding in the height/width calculations */
+  position: relative; /* Make the section a positioning context for absolute elements */
+  overflow: hidden; /* Hide any content that overflows beyond the section */
+}
+
+.cloud {
+  position: absolute;
+  width: 290px; /* Set the size of the cloud */
+  height: auto; /* Maintain aspect ratio */
+  animation: moveClouds 30s linear infinite; /* Move all clouds in 20 seconds */
+
+}
+
+/* Position each cloud individually */
+.cloud1 {
+  top: 10%; /* Position the cloud relative to the section */
+  left: 20%;
+  width: 100%; /* Adjust size */
+}
+
+.cloud2 {
+  top: 30%;
+  left: 0%;
+  width: 100%;
+}
+
+.cloud3 {
+  top: 0%;
+  right:30%;
+  width: 100%;
+}
+.cloud4 {
+  top: 20%;
+  left: 0%;
+  width: 100%;
+}
+
+.cloud5 {
+  top: 50%;
+  left: 30%;
+  width: 100%;
+}
+.cloud6 {
+  top: 70%;
+  right: 30%;
+  width: 100%;
+}
+.cloud7 {
+  top: 40%;
+  left: 50%;
+  width: 70%;
+}
+.cloud8 {
+  top: 0%;
+  left: 50%;
+  width: 60%;
+}
+.cloud9 {
+  bottom: 20%;
+  right: 40%;
+  width: 75%;
+}
+@keyframes moveClouds {
+  0% {
+    transform: translateY(100vh); /* Start from the bottom */
+  }
+  100% {
+    transform: translateY(-100vh); /* Move upward out of view */
+  }
+}
+/* Popup window */
+.popup-window {
+  width: 85%; /* Width suitable for mobile */
+  max-width: 400px; /* Max width for larger screens */
+  height: 60%;
+  background-color: white; /* White background */
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+  position: fixed; /* Use fixed positioning to center it on the screen */
+  top: 50%; /* Move to the middle of the screen */
+  left: 50%; /* Move to the middle of the screen */
+  transform: translate(-50%, -50%); /* Adjust position to be exactly center */
+  overflow: hidden; /* Ensure no content overflows the window */
+  z-index: 10; /* Ensure it stays on top of other elements */
+  position: absolute;
+  border: 3px solid #333; /* Change width and color as needed */
+
+}
+
+/* Top bar styling */
+.top-bar {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  background-color: #f3b9b9; /* Similar color to the top bar */
+  padding: 5px 10px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+/* Circles in the top bar */
+.circle {
+  width: 17px;
+  height: 17px;
+  background-color: #ffffff; /* Or any preferred color */
+  border-radius: 50%;
+  margin-right: 8px; /* Space between circles */
+}
+/* Title styling */
+.bar-title {
+  flex-grow: 1; /* Allow it to grow to occupy space */
+  display: flex; /* Enable flexbox for vertical centering */
+  align-items: center; /* Center text vertically */
+  justify-content: center; /* Center text horizontally */
+  text-align: center; /* Center text within this element */
+  font-size: 11px;
+  font-weight: 500;
+  font-family: 'Press Start 2P', sans-serif; /* Use the pixelated font */
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  height: 30px;
+}
+
+/* Navigation buttons */
+.nav-buttons {
+  margin-left: auto; /* Push buttons to the right */
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  font-size: 25px;
+  margin-left: 5px;
+  color: #8473f1;
+  cursor: pointer;
+  outline: none;
+}
+
+.window-body {
+  padding: 20px; /* Padding for inner content */
+  background-color: white; /* Ensure background stays white */
+  border-bottom-left-radius: 20px; /* Rounded corners for bottom */
+  border-bottom-right-radius: 20px;
+  min-height: 200px; /* Set a minimum height for content space */
+  position: relative; /* Allow .folder to be positioned relative to this container */
+}
+
+
+/* Folder SVG icon */
+.folder-icon {
+  width: 35px; /* Adjust size as necessary */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 10px; /* Space between icon and label */
+}
+
+/* Folder label */
+.folder-label {
+  font-family: 'Press Start 2P', sans-serif; /* Use the pixelated font */
+  font-size: 9px; /* Adjust size as necessary */
+  text-align: center;
+  color: #333; /* Choose a color that stands out */
+}
+
+/* Common folder styles */
+.folder {
+  position: absolute;
+  cursor: pointer; /* Make it look clickable */
+}
+
+/* Individual folder positions */
+
+/* Code Arsenal Folder */
+.code-arsenal {
+  top: 30px; /* Adjust vertical position */
+  left: 10px; /* Adjust horizontal position */
+}
+
+/* Framework Forge Folder */
+.framework-forge {
+  top: 40px; /* Same vertical line as Code Arsenal */
+  left: 160px; /* Shift to the right */
+}
+
+/* UI/UX Workshop Folder */
+.uiux-workshop {
+  top: 120px; /* Move down vertically */
+  left: 20px; /* Same horizontal position as Code Arsenal */
+}
+
+/* Data Science Lab Folder */
+.data-science-lab {
+  top: 140px; /* Same vertical line as UI/UX Workshop */
+  left: 170px; /* Align horizontally with Framework Forge */
+}
+
+/* Creative Vault Folder */
+.creative-vault {
+  top: 210px; /* Position below other folders */
+  left: 85px; /* Center it horizontally */
+}
+
+.icons-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 3 columns */
+  grid-auto-rows: auto; /* Rows auto-size */
+  gap: 14px; /* Space between icons */
+  justify-items: center; /* Center icons in each grid cell */
+  padding: 20px;
+}
+.icons-grid1 {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr); /* 3 columns */
+  grid-auto-rows: auto; /* Rows auto-size */
+  gap: 14px; /* Space between icons */
+  justify-items: center; /* Center icons in each grid cell */
+  padding: 20px;
+}
+
+.folder-icon-item {
+  width: 40px; /* Set the size for the icons */
+  height: auto; /* Maintain aspect ratio */
+  
+}
+
+
+
+
+.icons-grid1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 20px; /* Space between squares */
+  justify-items: center; /* Center squares within the grid */
+  align-items: center;
+  padding: 20px;
+}
+
+.icon-square {
+  display: flex;
+  flex-direction: column; /* Stack square and label vertically */
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center text */
+}
+
+.icon-initial {
+  width: 50px; /* Square size */
+  height: 50px; /* Square size */
+  display: flex;
+  align-items: center; /* Center text vertically */
+  justify-content: center; /* Center text horizontally */
+  font-size: 36px; /* Font size for the initial */
+  font-weight: bold;
+  color: #fff; /* White color for the text */
+  border-radius: 8px; /* Rounded corners for a nice effect */
+}
+
+.icon-label {
+  margin-top: 8px; /* Space between square and label */
+  font-size: 14px; /* Font size for the label */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Basic Section Styling (For Later Sections) */
+.section3 {
+  height: 100vh; /* Full height for sections */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-bottom: 2px solid #ddd; /* Add visual separation */
+}
+.section4 {
+  height: 100vh; /* Full height for sections */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-bottom: 2px solid #ddd; /* Add visual separation */
+}
+
+
+
+
+/* Media Query for Tablet Devices */
+@media (min-width: 600px) and (max-width: 900px) {
+  /* Adjust .hero section */
+  /* Adjust .hero section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;       /* Keep full viewport height if needed */
+  padding: 20px;
+  align-items: center;     /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+}
+
+  /* Words Container */
+  .words-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    margin-bottom: 20px;
+    margin-top: -70px; /* Adjust the value as needed */
+
+  }
+
+  /* Adjust word elements */
+  .innovation,
+  .creativity,
+  .simplicity {
+    font-size: 35px;
+  }
+
+  .content-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 20px;
+    /* Remove any bottom margin if present */
+    margin-bottom: 0;
+  }
+
+  .profile-photo {
+    width: 230px;
+    flex: none;           /* Prevent the image from stretching */
+    margin-right: 20px;   /* Space between image and text */
+    /* Remove align-self property if present */
+  }
+
+  .text-container {
+    flex: 1;              /* Take up the remaining space */
+    text-align: left;     /* Align text to the left on tablets */
+  }
+
+  /* Introductory Text Styling */
+  .intro-text,
+  .second-intro-text {
+    /* Reset previous animations */
+    animation: none;
+
+    /* Apply new animation */
+    opacity: 0;
+    transform: translateX(100%); /* Start off-screen to the right */
+    animation: slideInFromRight 1s forwards;
+    /* Other existing styles */
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #6B7280;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  /* Add animation delay to the second text */
+  .second-intro-text {
+    animation-delay: 0.5s;
+  }
+
+  /* Keyframes for sliding in from right */
+  @keyframes slideInFromRight {
+    from {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+.section1 {
+  padding: 20px 20px; /* Add padding to ensure content is spaced correctly */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content at the top */
+  align-items: center;
+  height: auto; /* Let the height adjust based on content */
+  position: relative;
+  box-sizing: border-box; /* Ensure padding is included in height calculations */
+  overflow: auto /* Allow content to overflow naturally */
+  
+}
+
+.section1 h1 {
+  width: 27%; /* Adjust width for mobile */
+  height: auto;
+  text-align: center; /* Center the heading text */
+  font-weight: 600;
+  margin-top: 10px; 
+  margin-bottom: 60px; /* Space between heading and text */
+}
+
+.about-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px; /* Adjust font size for mobile */
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  color: #6B7280;
+  max-width: 90%; /* Ensure text fits within mobile view */
+  padding: 0 10px; /* Reduce padding for mobile */
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align text at the top */
+  align-items: center;
+  width: 100%; /* Full width for container */
+  flex-grow: 1; /* Allow container to grow based on content */
+  box-sizing: border-box;
+}
+
+
+
+
+
+/* Popup window */
+.popup-window {
+  width: 85%; /* Width suitable for mobile */
+  max-width: 700px; /* Max width for larger screens */
+
+ 
+}
+
+/* Top bar styling */
+.top-bar {
+height: 53px;
+
+
+}
+
+
+/* Title styling */
+.bar-title {
+font-size: 14px;
+height: 35px;
+}
+
+.nav-button {
+  font-size: 35px;
+
+}
+
+/* Folder SVG icon */
+.folder-icon {
+  width: 70px; /* Adjust size as necessary */
+
+}
+
+/* Folder label */
+.folder-label {
+  font-size: 14px; /* Adjust size as necessary */
+
+}
+
+
+/* Code Arsenal Folder */
+.code-arsenal {
+  top: 30px; /* Adjust vertical position */
+  left: 10px; /* Adjust horizontal position */
+}
+
+/* Framework Forge Folder */
+.framework-forge {
+  top: 60px; /* Same vertical line as Code Arsenal */
+  left: 370px; /* Shift to the right */
+}
+
+/* UI/UX Workshop Folder */
+.uiux-workshop {
+  top: 180px; /* Move down vertically */
+  left: 80px; /* Same horizontal position as Code Arsenal */
+}
+
+/* Data Science Lab Folder */
+.data-science-lab {
+  top: 240px; /* Same vertical line as UI/UX Workshop */
+  left: 400px; /* Align horizontally with Framework Forge */
+}
+
+/* Creative Vault Folder */
+.creative-vault {
+  top: 350px; /* Position below other folders */
+  left: 85px; /* Center it horizontally */
+}
+
+.icons-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 3 columns */
+  grid-auto-rows: auto; /* Rows auto-size */
+  gap: 14px; /* Space between icons */
+  justify-items: center; /* Center icons in each grid cell */
+  padding: 20px;
+}
+.icons-grid1 {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr); /* 3 columns */
+  grid-auto-rows: auto; /* Rows auto-size */
+  gap: 14px; /* Space between icons */
+  justify-items: center; /* Center icons in each grid cell */
+  padding: 20px;
+}
+
+.folder-icon-item {
+  width: 65px; /* Set the size for the icons */
+  height: auto; /* Maintain aspect ratio */
+
+  
+}
+
+
+
+
+
+.icon-initial {
+  width: 60px; /* Square size */
+  height: 60px; /* Square size */
+  display: flex;
+ 
+}
+
+.icon-label {
+  margin-top: 8px; /* Space between square and label */
+  font-size: 19px; /* Font size for the label */
+}
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 901px)  {
+  /* Words container adjustment */
+  .words-container {
+    position: relative;
+    width: 1186px;
+    flex-direction: row; /* Align words horizontally */
+    height: auto;
+    display: flex;
+    justify-content: center; /* Center the words horizontally */
+    gap: 20px;
+    top: 100px; /* Space from the top */
+    opacity: 1; /* Ensure full visibility */
+    padding-bottom: 60px;
+  }
+
+  /* Adjust font size for the text elements */
+  .innovation,
+  .creativity,
+  .simplicity {
+    font-size: 40px; /* Increase font size for larger screens */
+  }
+
+  /* Layout to align image on the left and text on the right */
+  .content-container {
+    display: flex;
+    flex-direction: row; /* Align image and text side by side */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center content horizontally */
+    width: 90%;
+    max-width: 1186px;
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  /* Profile photo adjustment - aligned to the left */
+  .profile-photo {
+    width: 200px;
+    margin-right: 60px; /* Space between image and text */
+    box-shadow: 8px 8px 4px 0px #FF3B30;
+  }
+
+  /* Text container aligned to the right */
+  .text-container {
+    width: 100%;
+    text-align: left; /* Align text to the left */
+  }
+
+  /* Introductory text animation */
+  .intro-text,
+  .second-intro-text {
+    opacity: 0;
+    transform: translateX(100%); /* Start off-screen to the right */
+    animation: slideInFromRight 1s forwards;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #6B7280;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  /* Add delay for the second text */
+  .second-intro-text {
+    animation-delay: 0.5s;
+  }
+
+  /* Keyframes for slide-in from the right */
+  @keyframes slideInFromRight {
+    from {
+      opacity: 0;
+      transform: translateX(100%); /* Start off-screen */
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0); /* Move into place */
+    }
+  }
+  .section1 {
+    padding: 20px 20px; /* Add padding to ensure content is spaced correctly */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content at the top */
+    align-items: center;
+    height: auto; /* Let the height adjust based on content */
+    position: relative;
+    box-sizing: border-box; /* Ensure padding is included in height calculations */
+    overflow: auto; /* Allow content to overflow naturally */
+  }
+  
+  .section1 h1 {
+    width: 25%; /* Adjust width for mobile */
+    text-align: center; /* Center the heading text */
+    margin-top: 50px; 
+    margin-bottom: 50px; /* Space between heading and text */
+  }
+  
+  .about-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px; /* Adjust font size for mobile */
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: left;
+    color: #6B7280;
+    max-width: 50%; /* Ensure text fits within mobile view */
+    padding: 0 10px; /* Reduce padding for mobile */
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align text at the top */
+    align-items: flex-start; /* Align content to the left */
+    width: 100%; /* Full width for container */
+    flex-grow: 1; /* Allow container to grow based on content */
+    bottom: 0; /* Stick to the bottom of the cotainer */
+    box-sizing: border-box;
+    position: relative; /* Make the container the reference point for absolute positioning */
+  }
+  
+  .about-image {
+    display: block; /* Show image on desktop */
+    position: absolute; /* Use absolute positioning */
+    bottom: 0; /* Stick to the bottom of the container */
+    right:75px; /* Adjust as needed */
+    width: 290px; /* Adjust the size */
+  }
+
+
+  .popup-window {
+    width: 85%; /* Width suitable for mobile */
+    max-width: 700px; /* Max width for larger screens */
+    height: 70%;
+  
+   
+  }
+  
+  /* Top bar styling */
+  .top-bar {
+  height: 53px;
+  
+  
+  }
+  
+  
+  /* Title styling */
+  .bar-title {
+  font-size: 14px;
+  height: 35px;
+  }
+  
+  .nav-button {
+    font-size: 35px;
+  
+  }
+  
+  /* Folder SVG icon */
+  .folder-icon {
+    width: 70px; /* Adjust size as necessary */
+  
+  }
+  
+  /* Folder label */
+  .folder-label {
+    font-size: 14px; /* Adjust size as necessary */
+  
+  }
+  
+  
+  /* Code Arsenal Folder */
+  .code-arsenal {
+    top: 30px; /* Adjust vertical position */
+    left: 10px; /* Adjust horizontal position */
+  }
+  
+  /* Framework Forge Folder */
+  .framework-forge {
+    top: 60px; /* Same vertical line as Code Arsenal */
+    left: 370px; /* Shift to the right */
+  }
+  
+  /* UI/UX Workshop Folder */
+  .uiux-workshop {
+    top: 180px; /* Move down vertically */
+    left: 80px; /* Same horizontal position as Code Arsenal */
+  }
+  
+  /* Data Science Lab Folder */
+  .data-science-lab {
+    top: 240px; /* Same vertical line as UI/UX Workshop */
+    left: 400px; /* Align horizontally with Framework Forge */
+  }
+  
+  /* Creative Vault Folder */
+  .creative-vault {
+    top: 350px; /* Position below other folders */
+    left: 85px; /* Center it horizontally */
+  }
+  
+  .icons-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 3 columns */
+    grid-auto-rows: auto; /* Rows auto-size */
+    gap: 14px; /* Space between icons */
+    justify-items: center; /* Center icons in each grid cell */
+    padding: 20px;
+  }
+  .icons-grid1 {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr); /* 3 columns */
+    grid-auto-rows: auto; /* Rows auto-size */
+    gap: 14px; /* Space between icons */
+    justify-items: center; /* Center icons in each grid cell */
+    padding: 20px;
+  }
+  
+  .folder-icon-item {
+    width: 65px; /* Set the size for the icons */
+    height: auto; /* Maintain aspect ratio */
+  
+    
+  }
+  
+  
+  
+  
+  
+  .icon-initial {
+    width: 60px; /* Square size */
+    height: 60px; /* Square size */
+    display: flex;
+   
+  }
+  
+  .icon-label {
+    margin-top: 8px; /* Space between square and label */
+    font-size: 19px; /* Font size for the label */
+  }
+  
+  
+  
+}
+
+  @media (min-width: 1199px) {
+
+/* Words container adjustment */
+.words-container {
+  position: relative;
+  width: 1186px;
+  flex-direction: row; /* Align words horizontally */
+  height: auto;
+  display: flex;
+  justify-content: center; /* Center the words horizontally */
+  gap: 20px;
+  top: 100px; /* Space from the top */
+  opacity: 1; /* Ensure full visibility */
+  padding-bottom: 60px;
+}
+
+/* Adjust font size for the text elements */
+.innovation,
+.creativity,
+.simplicity {
+  font-size: 40px; /* Increase font size for larger screens */
+}
+
+/* Layout to align image on the left and text on the right */
+.content-container {
+  display: flex;
+  flex-direction: row; /* Align image and text side by side */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center content horizontally */
+  width: 90%;
+  max-width: 1186px;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+
+
+
+  
+ /* Profile photo adjustment - aligned to the left */
+ .profile-photo {
+  width: 200px;
+  margin-right: 60px; /* Space between image and text */
+  box-shadow: 8px 8px 4px 0px #FF3B30;
+}
+
+/* Text container aligned to the right */
+.text-container {
+  width: 100%;
+  text-align: left; /* Align text to the left */
+}
+
+/* Introductory text animation */
+.intro-text,
+.second-intro-text {
+  opacity: 0;
+  transform: translateX(100%); /* Start off-screen to the right */
+  animation: slideInFromRight 1s forwards;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #6B7280;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Add delay for the second text */
+.second-intro-text {
+  animation-delay: 0.5s;
+}
+
+/* Keyframes for slide-in from the right */
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%); /* Start off-screen */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* Move into place */
+  }
+  
+}
+.section1 {
+  padding: 20px 20px; /* Add padding to ensure content is spaced correctly */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content at the top */
+  align-items: center;
+  height: auto; /* Let the height adjust based on content */
+  position: relative;
+  box-sizing: border-box; /* Ensure padding is included in height calculations */
+  overflow: auto; /* Allow content to overflow naturally */
+}
+
+.section1 h1 {
+  width: 15%; /* Adjust width for mobile */
+  text-align: center; /* Center the heading text */
+  margin-top: 50px; 
+  margin-bottom: 50px; /* Space between heading and text */
+}
+
+.about-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px; /* Adjust font size for mobile */
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: left;
+  color: #6B7280;
+  max-width: 50%; /* Ensure text fits within mobile view */
+  padding: 0 10px; /* Reduce padding for mobile */
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align text at the top */
+  align-items: flex-start; /* Align content to the left */
+  width: 100%; /* Full width for container */
+  flex-grow: 1; /* Allow container to grow based on content */
+  bottom: 0; /* Stick to the bottom of the container */
+  box-sizing: border-box;
+  position: relative; /* Make the container the reference point for absolute positioning */
+}
+
+.about-image {
+  display: block; /* Show image on desktop */
+  position: absolute; /* Use absolute positioning */
+  bottom: 0; /* Stick to the bottom of the container */
+  right:140px; /* Adjust as needed */
+  width: 330px; /* Adjust the size */
+}
+
+
+
+/* Popup window */
+.popup-window {
+  width: 90%; /* Width suitable for mobile */
+  max-width: 700px; /* Max width for larger screens */
+  height: 70%;
+  background-color: white; /* White background */
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+  position: fixed; /* Use fixed positioning to center it on the screen */
+  top: 50%; /* Move to the middle of the screen */
+  left: 50%; /* Move to the middle of the screen */
+  transform: translate(-50%, -50%); /* Adjust position to be exactly center */
+  overflow: hidden; /* Ensure no content overflows the window */
+  z-index: 10; /* Ensure it stays on top of other elements */
+  position: absolute;
+  border: 3px solid #333; /* Change width and color as needed */
+
+}
+
+
+/* Folder SVG icon */
+.folder-icon {
+  width: 55px; /* Adjust size as necessary */
+
+}
+
+/* Folder label */
+.folder-label {
+  font-family: 'Press Start 2P', sans-serif; /* Use the pixelated font */
+  font-size: 12px; /* Adjust size as necessary */
+
+}
+
+/* Individual folder positions */
+
+/* Code Arsenal Folder */
+.code-arsenal {
+  top: 30px; /* Adjust vertical position */
+  left: 10px; /* Adjust horizontal position */
+}
+
+/* Framework Forge Folder */
+.framework-forge {
+  top: 40px; /* Same vertical line as Code Arsenal */
+  left: 400px; /* Shift to the right */
+}
+
+/* UI/UX Workshop Folder */
+.uiux-workshop {
+  top: 170px; /* Move down vertically */
+  left: 20px; /* Same horizontal position as Code Arsenal */
+}
+
+/* Data Science Lab Folder */
+.data-science-lab {
+  top: 210px; /* Same vertical line as UI/UX Workshop */
+  left: 290px; /* Align horizontally with Framework Forge */
+}
+
+/* Creative Vault Folder */
+.creative-vault {
+  top: 330px; /* Position below other folders */
+  left: 85px; /* Center it horizontally */
+}
+
+.folder-icon-item {
+  width: 50px; /* Set the size for the icons */
+  height: auto; /* Maintain aspect ratio */
+  
+}
+
+
+
+}
+
+
+
+
