@@ -106,7 +106,11 @@ const handleForwardClick = () => {
         {/* New content container */}
         <div className="content-container">
         <img
+<<<<<<< HEAD
   src={`${process.env.PUBLIC_URL}/IMG_1212.jpg`}
+=======
+  src="IMG_1212.jpg" // Remove the leading slash
+>>>>>>> 937cebd938bdde59e836a577c57ee762109ec281
   alt="Sofiane Belbrik"
   className="profile-photo"
 />
