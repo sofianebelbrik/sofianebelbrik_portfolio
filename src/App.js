@@ -106,7 +106,7 @@ const handleForwardClick = () => {
         {/* New content container */}
         <div className="content-container">
         <img
-  src="https://blbsoo.github.io/portfoliowebsite/IMG_1212.jpg"
+        src="/IMG_1212.jpg"
   alt="Sofiane Belbrik"
   className="profile-photo"
 />
