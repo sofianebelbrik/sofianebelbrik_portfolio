@@ -105,11 +105,11 @@ const handleForwardClick = () => {
 
         {/* New content container */}
         <div className="content-container">
-          <img
-            src="SofianeBelbrik.heic" // Use a web-compatible image format
-            alt="Sofiane Belbrik"
-            className="profile-photo"
-          />
+        <img
+  src="https://blbsoo.github.io/portfoliowebsite/IMG_1212.jpg"
+  alt="Sofiane Belbrik"
+  className="profile-photo"
+/>
 
           {/* Text container */}
           <div className="text-container">
@@ -156,7 +156,7 @@ const handleForwardClick = () => {
     I see development not just as coding, but as an art form, crafting intuitive, impactful solutions that make life easier.
   </p>
   </div>
-  <img src="/aboutmepic.PNG" alt="About Me" className="about-image" />
+  <img src="aboutmepic.PNG" alt="About Me" className="about-image" />
 
 </section>
 
