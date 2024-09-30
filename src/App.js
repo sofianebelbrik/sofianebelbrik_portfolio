@@ -106,7 +106,7 @@ const handleForwardClick = () => {
         {/* New content container */}
         <div className="content-container">
         <img
-        src="/IMG_1212.jpg"
+  src="IMG_1212.jpg" // Remove the leading slash
   alt="Sofiane Belbrik"
   className="profile-photo"
 />
