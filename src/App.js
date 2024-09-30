@@ -6,16 +6,16 @@ function App() {
 const [windowTitle, setWindowTitle] = useState('SKILLS'); // Manage popup title
 const [isFolderOpen, setIsFolderOpen] = useState(false);  // Track if folder is open
 const codeArsenalIcons = [
-  { path: '/CodeAicons/c++.svg', title: 'C++' },
-  { path: '/CodeAicons/Css.svg', title: 'CSS' },
-  { path: '/CodeAicons/html.svg', title: 'HTML' },
-  { path: '/CodeAicons/Js.svg', title: 'JavaScript' },
-  { path: '/CodeAicons/php.svg', title: 'PHP' },
-  { path: '/CodeAicons/Pyhton.svg', title: 'Python' },
-  { path: '/CodeAicons/Swift.svg', title: 'Swift' },
-  { path: '/CodeAicons/firebase.svg', title: 'Firebase' },
-  { path: '/CodeAicons/mysql.svg', title: 'MySQL' },
-  { path: '/CodeAicons/postg.svg', title: 'PostgreSQL' }
+  { path: 'CodeAicons/c++.svg', title: 'C++' },
+  { path: 'CodeAicons/Css.svg', title: 'CSS' },
+  { path: 'CodeAicons/html.svg', title: 'HTML' },
+  { path: 'CodeAicons/Js.svg', title: 'JavaScript' },
+  { path: 'CodeAicons/php.svg', title: 'PHP' },
+  { path: 'CodeAicons/Pyhton.svg', title: 'Python' },
+  { path: 'CodeAicons/Swift.svg', title: 'Swift' },
+  { path: 'CodeAicons/firebase.svg', title: 'Firebase' },
+  { path: 'CodeAicons/mysql.svg', title: 'MySQL' },
+  { path: 'CodeAicons/postg.svg', title: 'PostgreSQL' }
 ];
 
 const UIDesignIcons = [
@@ -106,7 +106,7 @@ const handleForwardClick = () => {
         {/* New content container */}
         <div className="content-container">
         <img
-        src="/IMG_1212.jpg"
+  src={`${process.env.PUBLIC_URL}/IMG_1212.jpg`}
   alt="Sofiane Belbrik"
   className="profile-photo"
 />
@@ -162,14 +162,14 @@ const handleForwardClick = () => {
 
 <section id="skills" className="section2">
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"></link>
-  <img src="/cloudss.svg" alt="Cloud" className="cloud cloud1" />
-  <img src="/cloudss.svg" alt="Cloud" className="cloud cloud2" />
-  <img src="/cloudss.svg" alt="Cloud" className="cloud cloud3" />
-  <img src="/cloudss.svg" alt="Cloud" className="cloud cloud5" />
-  <img src="/cloudss.svg" alt="Cloud" className="cloud cloud6" />
-  <img src="/cloudss.svg" alt="Cloud" className="cloud cloud7" />
-  <img src="/cloudss.svg" alt="Cloud" className="cloud cloud8" />
-  <img src="/cloudss.svg" alt="Cloud" className="cloud cloud9" />
+  <img src="cloudss.svg" alt="Cloud" className="cloud cloud1" />
+<img src="cloudss.svg" alt="Cloud" className="cloud cloud2" />
+<img src="cloudss.svg" alt="Cloud" className="cloud cloud3" />
+<img src="cloudss.svg" alt="Cloud" className="cloud cloud5" />
+<img src="cloudss.svg" alt="Cloud" className="cloud cloud6" />
+<img src="cloudss.svg" alt="Cloud" className="cloud cloud7" />
+<img src="cloudss.svg" alt="Cloud" className="cloud cloud8" />
+<img src="cloudss.svg" alt="Cloud" className="cloud cloud9" />
 
 
   <div class="popup-window">
@@ -187,49 +187,45 @@ const handleForwardClick = () => {
     <div className="window-body">
   {!isFolderOpen ? (
     <>
-     <div 
-  className="folder code-arsenal"
-  onClick={() => handleFolderClick('Code Arsenal')}
->
-  <img src="/CodeArsenal.svg" alt="Code Arsenal" className="folder-icon" />
-  <p className="folder-label">Code Arsenal</p>
-</div>
+    <div 
+        className="folder code-arsenal"
+        onClick={() => handleFolderClick('Code Arsenal')}
+      >
+        <img src="CodeArsenal.svg" alt="Code Arsenal" className="folder-icon" />
+        <p className="folder-label">Code Arsenal</p>
+      </div>
 
+      <div 
+        className="folder framework-forge"
+        onClick={() => handleFolderClick('Framework Forge')}
+      >
+        <img src="FrameworkForge.svg" alt="Framework Forge" className="folder-icon" />
+        <p className="folder-label">Framework Forge</p>
+      </div>
 
-<div 
-  className="folder framework-forge"
-  onClick={() => handleFolderClick('Framework Forge')}
->
-  <img src="/FrameworkForge.svg" alt="Framework Forge" className="folder-icon" />
-  <p className="folder-label">Framework Forge</p>
-</div>
+      <div 
+        className="folder uiux-workshop"
+        onClick={() => handleFolderClick('UI/UX Workshop')}
+      >
+        <img src="uiux.svg" alt="UI/UX Workshop" className="folder-icon" />
+        <p className="folder-label">UI/UX Workshop</p>
+      </div>
 
+      <div 
+        className="folder data-science-lab"
+        onClick={() => handleFolderClick('Data Science Lab')}
+      >
+        <img src="DataScienceLab.svg" alt="Data Science Lab" className="folder-icon" />
+        <p className="folder-label">Data Science Lab</p>
+      </div>
 
-<div 
-  className="folder uiux-workshop"
-  onClick={() => handleFolderClick('UI/UX Workshop')}
->
-  <img src="/uiux.svg" alt="UI/UX Workshop" className="folder-icon" />
-  <p className="folder-label">UI/UX Workshop</p>
-</div>
-
-
-<div 
-  className="folder data-science-lab"
-  onClick={() => handleFolderClick('Data Science Lab')}
->
-  <img src="/DataScienceLab.svg" alt="Data Science Lab" className="folder-icon" />
-  <p className="folder-label">Data Science Lab</p>
-</div>
-
-
-<div 
-  className="folder creative-vault"
-  onClick={() => handleFolderClick('Creative Vault')}
->
-  <img src="/CreativeVault.svg" alt="Creative Vault" className="folder-icon" />
-  <p className="folder-label">Creative Vault</p>
-</div>
+      <div 
+        className="folder creative-vault"
+        onClick={() => handleFolderClick('Creative Vault')}
+      >
+        <img src="CreativeVault.svg" alt="Creative Vault" className="folder-icon" />
+        <p className="folder-label">Creative Vault</p>
+      </div>
 
 
 
