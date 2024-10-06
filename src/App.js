@@ -1,36 +1,122 @@
 import React, { useState } from 'react';
 import './App.css';
+import { projects } from './projectData';
+
 
 
 function App() {
+  const SectionCards = ({ title, cards }) => (
+    <div className="section-cards">
+      <h3>{title}</h3>
+  
+      {/* Container for the cards */}
+      <div className="shared-cards-container">
+        {cards.map((card, index) => (
+          <div key={index} className="shared-card" onClick={() => openLightbox(projects[currentProjectIndex].id, card.category)}>
+            <h4>{card.type}</h4>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+  
+  const [isRotated, setIsRotated] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [currentProjectIndex, setCurrentProjectIndex] = useState(0); // Index for project cards
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  const [lightboxImages, setLightboxImages] = useState([]);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
+// Function to open the lightbox
+const openLightbox = (projectId, category) => {
+  // Find the selected project by ID
+  const selectedProject = projects.find(project => project.id === projectId);
+  if (!selectedProject) return;
+
+  // Find the category in the details
+  const categories = ["uiux", "frontend", "backend"];
+  let images = [];
+
+  // Search through categories and find images by matching type
+  for (let cat of categories) {
+    const content = selectedProject.details[cat].content.find(item => item.type === category);
+    if (content) {
+      images = content.images; // Get images from the matched category type
+      break;
+    }
+  }
+
+  // If images are found, set them in the lightbox
+  if (images.length > 0) {
+    setLightboxImages(images);
+    setCurrentImageIndex(0); // Start with the first image
+    setIsLightboxOpen(true); // Open the lightbox
+  }
+};
+
+// Function to close the lightbox
+const closeLightbox = () => {
+  setIsLightboxOpen(false);
+};
+
+// Navigation functions for the lightbox
+const prevImage = () => {
+  setCurrentImageIndex((prevIndex) => (prevIndex === 0 ? lightboxImages.length - 1 : prevIndex - 1));
+};
+
+const nextImage = () => {
+  setCurrentImageIndex((prevIndex) => (prevIndex === lightboxImages.length - 1 ? 0 : prevIndex + 1));
+};
+  // Function to handle key click
+  const handleKeyClick = () => {
+    setIsRotated(true);
+    
+    // After rotation is complete, make the door disappear
+    setTimeout(() => {
+      setIsOpen(true);
+    }, 1000); // Delay matches the rotation duration
+  };
+ // Navigation handlers for project cards
+ const handlePreviousProject = () => {
+  setCurrentProjectIndex((prevIndex) =>
+    prevIndex > 0 ? prevIndex - 1 : projects.length - 1
+  );
+};
+
+const handleNextProject = () => {
+  setCurrentProjectIndex((prevIndex) =>
+    prevIndex < projects.length - 1 ? prevIndex + 1 : 0
+  );
+};
+
 const [windowTitle, setWindowTitle] = useState('SKILLS'); // Manage popup title
 const [isFolderOpen, setIsFolderOpen] = useState(false);  // Track if folder is open
 const codeArsenalIcons = [
-  { path: 'CodeAicons/c++.svg', title: 'C++' },
-  { path: 'CodeAicons/Css.svg', title: 'CSS' },
-  { path: 'CodeAicons/html.svg', title: 'HTML' },
-  { path: 'CodeAicons/Js.svg', title: 'JavaScript' },
-  { path: 'CodeAicons/php.svg', title: 'PHP' },
-  { path: 'CodeAicons/Pyhton.svg', title: 'Python' },
-  { path: 'CodeAicons/Swift.svg', title: 'Swift' },
-  { path: 'CodeAicons/firebase.svg', title: 'Firebase' },
-  { path: 'CodeAicons/mysql.svg', title: 'MySQL' },
-  { path: 'CodeAicons/postg.svg', title: 'PostgreSQL' }
+  { path: `${process.env.PUBLIC_URL}/CodeAicons/c++.svg`, title: 'C++' },
+  { path: `${process.env.PUBLIC_URL}/CodeAicons/Css.svg`, title: 'CSS' },
+  { path: `${process.env.PUBLIC_URL}/CodeAicons/html.svg`, title: 'HTML' },
+  { path: `${process.env.PUBLIC_URL}/CodeAicons/Js.svg`, title: 'JavaScript' },
+  { path: `${process.env.PUBLIC_URL}/CodeAicons/php.svg`, title: 'PHP' },
+  { path: `${process.env.PUBLIC_URL}/CodeAicons/Pyhton.svg`, title: 'Python' },
+  { path: `${process.env.PUBLIC_URL}/CodeAicons/Swift.svg`, title: 'Swift' },
+  { path: `${process.env.PUBLIC_URL}/CodeAicons/firebase.svg`, title: 'Firebase' },
+  { path: `${process.env.PUBLIC_URL}/CodeAicons/mysql.svg`, title: 'MySQL' },
+  { path: `${process.env.PUBLIC_URL}/CodeAicons/postg.svg`, title: 'PostgreSQL' }
 ];
 
 const UIDesignIcons = [
-  { path: '/uidesign/figma.svg', title: 'Figma' },
-  { path: '/uidesign/canva.svg', title: 'Canva' },
-  { path: '/uidesign/proto.svg', title: 'Proto.io' },
-  { path: '/uidesign/creatie.svg', title: 'Creatie AI' }
+  { path: `${process.env.PUBLIC_URL}/uidesign/figma.svg`, title: 'Figma' },
+  { path: `${process.env.PUBLIC_URL}/uidesign/canva.svg`, title: 'Canva' },
+  { path: `${process.env.PUBLIC_URL}/uidesign/proto.svg`, title: 'Proto.io' },
+  { path: `${process.env.PUBLIC_URL}/uidesign/creatie.svg`, title: 'Creatie AI' }
 ];
 const MlLAB = [
-  { path: '/ML/datap.svg', title: 'Data Pre-processing' },
-  { path: '/ML/modelT.svg', title: 'Model Training' },
-  { path: '/ML/dataA.svg', title: 'Data Analysis' }
+  { path: `${process.env.PUBLIC_URL}/ML/datap.svg`, title: 'Data Pre-processing' },
+  { path: `${process.env.PUBLIC_URL}/ML/modelT.svg`, title: 'Model Training' },
+  { path: `${process.env.PUBLIC_URL}/ML/dataA.svg`, title: 'Data Analysis' }
 ];
 
-const dataScienceIcons = [
+const Frameworkicons = [
   { name: 'Numpy', color: '#013243', initial: 'N' },
   { name: 'Pandas', color: '#150458', initial: 'P' },
   { name: 'Matplotlib', color: '#11557c', initial: 'M' },
@@ -41,11 +127,51 @@ const dataScienceIcons = [
   { name: 'Express.js', color: '#000000', initial: 'E' }
 ];
 const creativeIcons = [
-  { name: 'Filming & Video Editing', path: '/creativev/Filming&Video Editing.svg' },
-  { name: 'Marketing Strategy', path: '/creativev/MarketingStrategy.svg' },
-  { name: 'Photo Editing', path: '/creativev/photoediting.svg' },
-  { name: 'Project & Campaign Management', path: '/creativev/k.svg' }
+  { name: 'Filming & Video Editing', path: `${process.env.PUBLIC_URL}/creativev/Filming&Video Editing.svg` },
+  { name: 'Marketing Strategy', path: `${process.env.PUBLIC_URL}/creativev/MarketingStrategy.svg` },
+  { name: 'Photo Editing', path: `${process.env.PUBLIC_URL}/creativev/photoediting.svg` },
+  { name: 'Project & Campaign Management', path: `${process.env.PUBLIC_URL}/creativev/k.svg` }
 ];
+
+// Consolidate all icons into one array
+const allIcons = [
+  ...codeArsenalIcons,
+  ...UIDesignIcons,
+  ...MlLAB,
+  ...creativeIcons,
+];
+
+const allFrameworkicons = [...Frameworkicons];
+// Function to find matching icon
+const findIconPath = (tool) => {
+  // First check for SVG icons
+  const icon = allIcons.find(icon => icon.title === tool);
+  if (icon) return <img src={icon.path} alt={icon.title} className="tool-icon-item" />;
+
+  // Then check for Data Science icons which use color & initial
+  const dataIcon = Frameworkicons.find(icon => icon.name === tool);
+  if (dataIcon) {
+    return (
+      <div
+        style={{
+          backgroundColor: dataIcon.color,
+          width: '20px',
+          height: '20px',
+          borderRadius: '50%',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          color: 'white',
+          fontSize: '12px'
+        }}
+      >
+        {dataIcon.initial}
+      </div>
+    );
+  }
+  return null;
+};
+
 // Track the navigation history of folders
 const [navigationHistory, setNavigationHistory] = useState([]); // Array of visited folder names
 const [currentIndex, setCurrentIndex] = useState(-1); // Track the current position in the history
@@ -89,6 +215,12 @@ const handleForwardClick = () => {
     setIsFolderOpen(true);
   }
 };
+const [isExpanded, setIsExpanded] = useState(false);
+
+const handleExpandToggle = () => {
+  setIsExpanded(!isExpanded);
+};
+
 
 
   return (
@@ -106,11 +238,7 @@ const handleForwardClick = () => {
         {/* New content container */}
         <div className="content-container">
         <img
-<<<<<<< HEAD
   src={`${process.env.PUBLIC_URL}/IMG_1212.jpg`}
-=======
-  src="IMG_1212.jpg" // Remove the leading slash
->>>>>>> 937cebd938bdde59e836a577c57ee762109ec281
   alt="Sofiane Belbrik"
   className="profile-photo"
 />
@@ -156,24 +284,24 @@ const handleForwardClick = () => {
     software development, while my AI work has pushed me to new levels, constantly finding ways to merge these two fields to create groundbreaking solutions.
   </p>
   <p className="about-text">
-    What excites me most is the fusion of creativity and technology—taking a simple idea and transforming it into something elegant and user-friendly.
+    What excites me most is combining creativity and technology—taking a simple idea and transforming it into something elegant and user-friendly.
     I see development not just as coding, but as an art form, crafting intuitive, impactful solutions that make life easier.
   </p>
   </div>
-  <img src="aboutmepic.PNG" alt="About Me" className="about-image" />
+  <img src={`${process.env.PUBLIC_URL}/aboutmepic.PNG`} alt="About Me" className="about-image" />
 
 </section>
 
 <section id="skills" className="section2">
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"></link>
-  <img src="cloudss.svg" alt="Cloud" className="cloud cloud1" />
-<img src="cloudss.svg" alt="Cloud" className="cloud cloud2" />
-<img src="cloudss.svg" alt="Cloud" className="cloud cloud3" />
-<img src="cloudss.svg" alt="Cloud" className="cloud cloud5" />
-<img src="cloudss.svg" alt="Cloud" className="cloud cloud6" />
-<img src="cloudss.svg" alt="Cloud" className="cloud cloud7" />
-<img src="cloudss.svg" alt="Cloud" className="cloud cloud8" />
-<img src="cloudss.svg" alt="Cloud" className="cloud cloud9" />
+  <img src={`${process.env.PUBLIC_URL}/cloudss.svg`} alt="Cloud" className="cloud cloud1" />
+<img src={`${process.env.PUBLIC_URL}/cloudss.svg`} alt="Cloud" className="cloud cloud2" />
+<img src={`${process.env.PUBLIC_URL}/cloudss.svg`} alt="Cloud" className="cloud cloud3" />
+<img src={`${process.env.PUBLIC_URL}/cloudss.svg`} alt="Cloud" className="cloud cloud5" />
+<img src={`${process.env.PUBLIC_URL}/cloudss.svg`} alt="Cloud" className="cloud cloud6" />
+<img src={`${process.env.PUBLIC_URL}/cloudss.svg`} alt="Cloud" className="cloud cloud7" />
+<img src={`${process.env.PUBLIC_URL}/cloudss.svg`} alt="Cloud" className="cloud cloud8" />
+<img src={`${process.env.PUBLIC_URL}/cloudss.svg`} alt="Cloud" className="cloud cloud9" />
 
 
   <div class="popup-window">
@@ -195,7 +323,11 @@ const handleForwardClick = () => {
         className="folder code-arsenal"
         onClick={() => handleFolderClick('Code Arsenal')}
       >
-        <img src="CodeArsenal.svg" alt="Code Arsenal" className="folder-icon" />
+       <img 
+          src={`${process.env.PUBLIC_URL}/CodeArsenal.svg`} 
+          alt="Code Arsenal" 
+          className="folder-icon" 
+        />
         <p className="folder-label">Code Arsenal</p>
       </div>
 
@@ -203,7 +335,11 @@ const handleForwardClick = () => {
         className="folder framework-forge"
         onClick={() => handleFolderClick('Framework Forge')}
       >
-        <img src="FrameworkForge.svg" alt="Framework Forge" className="folder-icon" />
+        <img 
+          src={`${process.env.PUBLIC_URL}/FrameworkForge.svg`} 
+          alt="Framework Forge" 
+          className="folder-icon" 
+        />
         <p className="folder-label">Framework Forge</p>
       </div>
 
@@ -211,7 +347,11 @@ const handleForwardClick = () => {
         className="folder uiux-workshop"
         onClick={() => handleFolderClick('UI/UX Workshop')}
       >
-        <img src="uiux.svg" alt="UI/UX Workshop" className="folder-icon" />
+        <img 
+          src={`${process.env.PUBLIC_URL}/uiux.svg`} 
+          alt="UI/UX Workshop" 
+          className="folder-icon" 
+        />
         <p className="folder-label">UI/UX Workshop</p>
       </div>
 
@@ -219,7 +359,11 @@ const handleForwardClick = () => {
         className="folder data-science-lab"
         onClick={() => handleFolderClick('Data Science Lab')}
       >
-        <img src="DataScienceLab.svg" alt="Data Science Lab" className="folder-icon" />
+        <img 
+          src={`${process.env.PUBLIC_URL}/DataScienceLab.svg`} 
+          alt="Data Science Lab" 
+          className="folder-icon" 
+        />
         <p className="folder-label">Data Science Lab</p>
       </div>
 
@@ -227,7 +371,11 @@ const handleForwardClick = () => {
         className="folder creative-vault"
         onClick={() => handleFolderClick('Creative Vault')}
       >
-        <img src="CreativeVault.svg" alt="Creative Vault" className="folder-icon" />
+       <img 
+          src={`${process.env.PUBLIC_URL}/CreativeVault.svg`} 
+          alt="Creative Vault" 
+          className="folder-icon" 
+        />
         <p className="folder-label">Creative Vault</p>
       </div>
 
@@ -261,7 +409,7 @@ const handleForwardClick = () => {
   {/* Framework Lab Icons */}
   {windowTitle === 'Framework Forge' && (
     <div className="icons-grid1">
-      {dataScienceIcons.map((icon, index) => (
+      {Frameworkicons.map((icon, index) => (
         <div key={index} className="icon-square">
           <div 
             className="icon-initial" 
@@ -331,9 +479,177 @@ const handleForwardClick = () => {
   </div>
 </section>
 
-      <section id="projects" className="section3">
-        <h1>Projects Section</h1>
-      </section>
+<section id="project-vault" className="section3">
+  <h1 className="projects-title">Project Vault</h1>
+
+  {/* Vault Container */}
+  <div className={`vault-container ${isExpanded ? 'expanded' : ''}`}>
+    {/* Vault Door */}
+    {!isOpen && (
+      <div className="vault-door">
+        <img
+          src={`${process.env.PUBLIC_URL}/vaultkey.svg`}
+          alt="Vault Key"
+          className={`vault-key ${isRotated ? 'rotate' : ''}`}
+          onClick={handleKeyClick}
+        />
+      </div>
+    )}
+
+    {/* Project Cards */}
+    {isOpen && (
+      <div className="project-card-container">
+        {/* Previous Arrow */}
+        <button className="nav-button prev-button" onClick={handlePreviousProject}>
+          ⬅
+        </button>
+
+        {/* Project Card */}
+        <div key={projects[currentProjectIndex].id} className={`project-card ${isExpanded ? 'expanded' : ''}`}>
+          {/* Expand Button */}
+          <button className="expand-button" onClick={handleExpandToggle}>
+            {isExpanded ? '✕' : '⛶'}
+          </button>
+
+          {/* Card Title */}
+          <h2 className="card-title">{projects[currentProjectIndex].title}</h2>
+          
+          {/* Description Section */}
+          <div className="card-description-container">
+            <h3 className="description-title">Description</h3>
+            <div className="description-content">{projects[currentProjectIndex].description}</div>
+          </div>
+
+          {/* Tools Section */}
+          <div className="tools-container">
+            <h3 className="tools-icons">Tools used</h3>
+            <div className="toolsIcons-content">
+              {projects[currentProjectIndex].tools.map((tool, index) => (
+                <div key={index} className="tool-icon-item">
+                  {findIconPath(tool)}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Creation Path Section */}
+          <div className="creation-path-container">
+            <h3 className="creation-path-title">Creation Path</h3>
+            <div className="progress-line-vertical">
+              <div className="continuous-line"></div>
+
+              <div className="progress-step">
+                <span className="progress-label">UI/UX</span>
+                <div className={`progress-bubble ${projects[currentProjectIndex].phases.uiux ? 'completed' : ''}`}></div>
+              </div>
+
+              <div className="progress-step">
+                <span className="progress-label">Front-end</span>
+                <div className={`progress-bubble ${projects[currentProjectIndex].phases.frontend ? 'completed' : ''}`}></div>
+              </div>
+
+              <div className="progress-step">
+                <span className="progress-label">Back-end</span>
+                <div className={`progress-bubble ${projects[currentProjectIndex].phases.backend ? 'completed' : ''}`}></div>
+              </div>
+
+              
+            </div>
+          </div>
+
+          {/* Additional Sections - Rendered Only When Expanded */}
+       
+          {isExpanded && (
+  <div className="expanded-content">
+    {/* UI/UX Section */}
+    {projects[currentProjectIndex].phases.uiux && (
+      <div className="detailedcards-container">
+        <div className="section-cards">
+          <h3>UI/UX</h3>
+          {/* Container for the cards */}
+          <div className="shared-cards-container">
+            {/* Sketches Card */}
+            <div 
+              className="shared-card"
+              onClick={() => openLightbox(projects[currentProjectIndex].id, 'Sketches')}
+            >
+              <img
+                src={`${process.env.PUBLIC_URL}/sketchestext.svg`}
+                alt="Sketches"
+                className="sketches-svg"
+              />
+            </div>
+            {/* Mockups Card */}
+            <div 
+              className="shared-card mockups-card"
+              onClick={() => openLightbox(projects[currentProjectIndex].id, 'Mockups')}
+            >
+              <h4>Mockups</h4>
+            </div>
+            {/* Final Prototype Card */}
+            <div 
+              className="shared-card"
+              onClick={() => openLightbox(projects[currentProjectIndex].id, 'Final Prototype')}
+            >
+              <h4 className="final-text">Final </h4> 
+              <h5 className="prototype-text">Prototype</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    )}
+
+    {/* Front-end Section */}
+    {projects[currentProjectIndex].phases.frontend && (
+      <div className="detailedcards-container">
+        <SectionCards
+          title="Front-end Development"
+          cards={[
+            { type: "Components", category: "Components" },
+            { type: "Responsive Design", category: "Responsive Design" },
+            { type: "Animations & Interactions", category: "Animations & Interactions" }
+          ]}
+        />
+      </div>
+    )}
+
+    {/* Back-end Section */}
+    {projects[currentProjectIndex].phases.backend && (
+      <div className="detailedcards-container">
+        <SectionCards
+          title="Back-end Development"
+          cards={[
+            { type: "Server & Routing", category: "Server Setup" },
+            { type: "Database Integration", category: "Database Integration" },
+            { type: "Environment & Configurations", category: "Environment & Configurations" }
+          ]}
+        />
+      </div>
+    )}
+    
+    {/* Lightbox for viewing images */}
+    {isLightboxOpen && (
+      <div className="lightbox">
+        <button className="close-button" onClick={closeLightbox}>✕</button>
+        <button className="nav-button2 left" onClick={prevImage}>⬅</button>
+        <div className="lightbox-content">
+          <img src={lightboxImages[currentImageIndex]} alt="Lightbox" />
+        </div>
+        <button className="nav-button2 right" onClick={nextImage}>➡</button>
+      </div>
+    )}
+  </div>
+)}
+        </div>
+
+        {/* Next Arrow */}
+        <button className="nav-button next-button" onClick={handleNextProject}>
+          ➡
+        </button>
+      </div>
+    )}
+  </div>
+</section>
 
       <section id="contact" className="section4">
         <h1>Contact Me Section</h1>

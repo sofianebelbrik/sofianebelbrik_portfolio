@@ -197,7 +197,7 @@
   justify-content: flex-start; /* Align content to the top */
   align-items: center;
   padding: 20px;
-  min-height: 100vh; /* Full height for the section */
+  min-height: 100vh;
   position: relative;
   box-sizing: border-box;
 }
@@ -220,7 +220,7 @@
 /* About Me Paragraphs */
 .about-text {
   font-family: 'Poppins', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.5; /* Adjust for better readability */
   text-align: center;
@@ -232,6 +232,7 @@
 
 .about-image {
   display: none; /* Hide image by default */
+  bottom: 0;
 }
 
 
@@ -357,7 +358,7 @@
   align-items: center; /* Center text vertically */
   justify-content: center; /* Center text horizontally */
   text-align: center; /* Center text within this element */
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 500;
   font-family: 'Press Start 2P', sans-serif; /* Use the pixelated font */
   background-color: #FFFFFF;
@@ -368,6 +369,8 @@
 /* Navigation buttons */
 .nav-buttons {
   margin-left: auto; /* Push buttons to the right */
+
+  
 }
 
 .nav-button {
@@ -375,7 +378,7 @@
   border: none;
   font-size: 25px;
   margin-left: 5px;
-  color: #8473f1;
+  color: #2d2274;
   cursor: pointer;
   outline: none;
 }
@@ -400,7 +403,7 @@
 /* Folder label */
 .folder-label {
   font-family: 'Press Start 2P', sans-serif; /* Use the pixelated font */
-  font-size: 9px; /* Adjust size as necessary */
+  font-size: 12px; /* Adjust size as necessary */
   text-align: center;
   color: #333; /* Choose a color that stands out */
 }
@@ -421,39 +424,31 @@
 
 /* Framework Forge Folder */
 .framework-forge {
-  top: 40px; /* Same vertical line as Code Arsenal */
+  top: 80px; /* Same vertical line as Code Arsenal */
   left: 160px; /* Shift to the right */
 }
 
 /* UI/UX Workshop Folder */
 .uiux-workshop {
-  top: 120px; /* Move down vertically */
+  top: 150px; /* Move down vertically */
   left: 20px; /* Same horizontal position as Code Arsenal */
 }
 
 /* Data Science Lab Folder */
 .data-science-lab {
-  top: 140px; /* Same vertical line as UI/UX Workshop */
+  top: 220px; /* Same vertical line as UI/UX Workshop */
   left: 170px; /* Align horizontally with Framework Forge */
 }
 
 /* Creative Vault Folder */
 .creative-vault {
-  top: 210px; /* Position below other folders */
+  top: 320px; /* Position below other folders */
   left: 85px; /* Center it horizontally */
 }
 
 .icons-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 3 columns */
-  grid-auto-rows: auto; /* Rows auto-size */
-  gap: 14px; /* Space between icons */
-  justify-items: center; /* Center icons in each grid cell */
-  padding: 20px;
-}
-.icons-grid1 {
-  display: grid;
-  grid-template-columns: repeat(2, 2fr); /* 3 columns */
   grid-auto-rows: auto; /* Rows auto-size */
   gap: 14px; /* Space between icons */
   justify-items: center; /* Center icons in each grid cell */
@@ -486,7 +481,7 @@
 }
 
 .icon-initial {
-  width: 50px; /* Square size */
+  width: 80px; /* Square size */
   height: 50px; /* Square size */
   display: flex;
   align-items: center; /* Center text vertically */
@@ -502,54 +497,538 @@
   font-size: 14px; /* Font size for the label */
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Basic Section Styling (For Later Sections) */
+/* Section containing Project Vault */
 .section3 {
-  height: 100vh; /* Full height for sections */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border-bottom: 2px solid #ddd; /* Add visual separation */
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically if needed */
+  height: 100vh; /* Adjust based on your needs */
+  position: relative;
 }
+
+.projects-title {
+  position: absolute; /* Position title absolutely */
+  top: 5%; /* Place it at the top of the section */
+  left: 50%; /* Move to the center horizontally */
+  transform: translateX(-50%); /* Center it properly */
+  font-size: 20px;
+  width: 200px;
+  font-weight: 600;
+  box-shadow: 8px 8px 4px 0px #000000;
+  color: #6B7280;
+  padding: 10px;
+  background-color: #E9BA52;
+  text-align: center; /* Center text inside */
+}
+
+/* Vault Container */
+/* Project Vault Container */
+.vault-container {
+  position: relative;
+  width: 80%; /* Adjust width as needed */
+  height: 70%; /* Adjust height as needed */
+  background-color: #ffffff; /* Main gray color for vault */
+  border: 8px solid #808080; /* Darker gray for vault border */
+  border-radius: 15px; /* Slightly rounded edges */
+  box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Prevent overflow */
+  padding: 10px;
+}
+
+/* Vault Door */
+.vault-door {
+  width: 100%; /* Slightly smaller than the container */
+  height: 100%;
+  background-color: #0a3f64; /* Light gray for door */
+  border-radius: 1px; /* Slightly rounded edges */
+  box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.1); /* Inner shadow for depth */
+}
+
+/* Vault Feet */
+.vault-foot {
+  position: absolute;
+  bottom: -10px; /* Position just below the vault container */
+  width: 40px;
+  height: 20px;
+  background-color: #808080; /* Same color as vault border */
+  border-radius: 5px 5px 0 0; /* Rounded top edges */
+}
+
+/* Position left and right feet */
+.vault-foot-left {
+  left: 20px; /* Position to the left */
+}
+
+.vault-foot-right {
+  right: 20px; /* Position to the right */
+}
+
+/* Vault Key Styling */
+.vault-key {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px; /* Adjust size as needed */
+  height: 80px; /* Adjust size as needed */
+  cursor: pointer;
+  transition: transform 1s ease; /* Smooth rotation over 1 second */
+  transform-origin: center; /* Set the rotation center */
+}
+
+/* Rotate the key on click */
+.vault-key.rotate {
+  transform: translate(-50%, -50%) rotate(360deg); /* Apply both translate and rotation */
+}
+
+
+/* Project Card */
+.project-card {
+  width: 95%; /* Adjust width as needed */
+  max-height: 90%; /* Limit height to enable scrolling */
+  border: 3px solid #000000; /* Darker gray for vault border */
+  border-radius: 5px;
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 20px; /* Padding for better content spacing */
+  background-color: #f9f9f9; /* Background color for card */
+  margin: 10px auto; /* Center card inside vault */
+}
+/* Center Project Cards within Vault Container */
+.project-card-container {
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  overflow-y: auto; /* Enable scrolling if cards overflow */
+}
+/* Navigation Buttons */
+.nav-button {
+  background-color: transparent;
+  border: none;
+  color: #a0462b;
+  ;
+  font-size: 23px;
+  cursor: pointer;
+}
+
+.card-title {
+  background-color: #B32324; /* Red background */
+  padding: 18px;
+  margin-top: 20px;
+  color: white; /* White text */
+  width: 65%; /* Adjust width as needed */
+  margin: 10px auto; /* Center the title horizontally */
+  font-weight: bold;
+  font-size: 18px;
+  box-shadow: 8px 8px 4px 0px #000000; /* Shadow for depth */
+  text-align: center; /* Center text inside */
+  
+}
+/* Description Container */
+.card-description-container {
+  width: 100%; /* Full width of the card */
+  margin-top: 18px; /* Space above the description section */
+ 
+}
+
+/* Description Title */
+.description-title {
+  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+  font-weight: 600;
+  font-size: 16px;
+  text-align: left; /* Align to the left */
+  margin-top: 30px;
+  margin-bottom: 7px; /* Space below the title */
+  margin-left: 3px;
+}
+
+/* Scrollable Description Content */
+.description-content {
+  width: 100%; /* Slightly reduce width for spacing */
+
+  margin: 0 auto; /* Center within parent horizontally */
+  background-color: #e9e9e9; /* Light gray background */
+  padding: 10px;
+  max-height: 100px; /* Limit height */
+  overflow-y: auto; /* Scroll vertically if content overflows */
+  border-radius: 5px; /* Rounded corners */
+  border: 1px solid;
+  word-wrap: break-word; /* Break long words */
+  word-break: break-word; /* Break long words in smaller pieces */
+  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+  font-size: 16px;
+  line-height: 1.5;
+
+  
+}
+/* Tools Container */
+.tools-container {
+  width: 100%; /* Full width of the card */
+  margin-top: 18px; /* Space above the tools section */
+}
+
+/* Tools Title */
+.tools-icons {
+  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+  font-weight: 600;
+  font-size: 16px;
+  text-align: left; /* Align title to the left */
+  margin-bottom: 5px; /* Space below the title */
+  margin-left: 3px; /* Align with other titles */
+}
+
+/* Scrollable Content for Tools */
+.toolsIcons-content {
+  display: flex;
+  flex-wrap: wrap; /* Allow icons to wrap to next line */
+  gap: 10px; /* Space between icons */
+  width: 100%; /* Slightly reduce width for spacing */
+  margin: 0 auto; /* Center within parent horizontally */
+  max-height: 120px; /* Limit height for scrolling */
+  overflow-y: auto; /* Scroll vertically if content overflows */
+  padding: 10px;
+  background-color: #e9e9e9; /* Light gray background */
+  border-radius: 5px; /* Rounded corners */
+  border: 1px solid; /* Border for consistency */
+}
+
+/* Tool Icons Styling */
+.tool-icon-item {
+  width: 40px; /* Adjust size as needed */
+  height: 40px; /* Adjust size as needed */
+}
+/* Container for the Creation Path Section */
+.creation-path-container {
+  width: 100%; /* Width relative to card */
+  margin: 0 auto; /* Center within card */
+}
+
+/* Creation Path Title */
+.creation-path-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: left; /* Align to the left */
+  margin-bottom: 10px; /* Space below the title */
+  margin-left: 3px; /* Align with other section titles */
+  margin-top: 18px; /* Space above title */
+}
+
+/* Vertical Line Container */
+.progress-line-vertical {
+  display: flex;
+  flex-direction: column; /* Arrange steps vertically */
+  align-items: center; /* Center-align the bubbles */
+  background-color: #e9e9e9; /* Light gray background */
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid; /* Add border for consistent styling */
+  width: 100%; /* Full width of the container */
+  margin: 0 auto; /* Center the vertical path within the card */
+}
+
+/* Container for each step */
+.progress-step {
+  display: flex;
+  align-items: center; /* Align bubble and text vertically */
+  justify-content: flex-start; /* Align items to the start (left) */
+  margin-bottom: 20px; /* Space between steps */
+  width: 100%; /* Full width */
+  position: relative; /* To align the text and bubble */
+}
+
+/* Phase Text */
+.progress-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px; /* Adjust as needed */
+  margin-right: 20px; /* Space between text and bubble */
+  width: 80px; /* Fixed width to align properly */
+  text-align: left; /* Align text to the left */
+  position: absolute;
+  left: 0;
+}
+
+/* Bubbles representing each phase */
+.progress-bubble {
+  width: 20px; /* Adjust size */
+  height: 20px; /* Adjust size */
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid #000;
+  cursor: pointer;
+  margin-left: auto; /* Align the bubble to the right side */
+}
+
+/* Completed Phase Styling */
+.progress-bubble.completed {
+  background-color: #f5552e; /* Change to filled color when completed */
+}
+
+.tool-icon-item {
+  width: 30px; /* Adjust size as needed */
+  height: 30px;
+  margin: 5px;
+}
+
+.toolsIcons-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-height: 120px;
+  overflow-y: auto;
+  padding: 10px;
+  background-color: #e9e9e9;
+  border-radius: 5px;
+}
+.expand-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent; /* Make button background transparent */
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #000; /* Adjust color */
+}
+
+
+
+/* Vault Container - Expanded State */
+.vault-container.expanded {
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  position: fixed; /* Overlay entire screen */
+  top: 0;
+  left: 0;
+  background-color: #ffffff; /* Adjust background color */
+  z-index: 10; /* Bring to front */
+  padding: 20px; /* Extra padding for spacing */
+  box-shadow: none; /* Remove box-shadow for expanded view */
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+/* Project Card - Expanded State */
+/* Project Card - Expanded State */
+.project-card.expanded {
+  width: 95%; /* Almost the full width of the vault */
+  height: 95%; /* Almost the full height of the vault */
+  position: absolute; /* Allow it to cover more space within the vault */
+  top: 2.5%; /* Center the card vertically */
+  left: 2.5%; /* Center the card horizontally */
+  margin: 0 auto; /* Center card within the vault */
+  overflow-y: auto; /* Enable scrolling for overflowing content */
+  padding: 20px; /* Add padding for better content spacing */
+  transition: all 0.5s ease-in-out; /* Smooth transition for expansion */
+  z-index: 1; /* Ensure it's above other elements */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.expand-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent; /* Transparent background */
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #000; /* Adjust button color */
+  z-index: 20; /* Make sure it appears above content */
+}
+/* Adjust card content for expanded view */
+.project-card.expanded .card-description-container,
+.project-card.expanded .tools-container,
+.project-card.expanded .creation-path-container {
+  width: 98%; /* Make content wider */
+  margin: 20px auto; /* Center content within expanded card */
+}
+
+/* Expanded Content Styling */
+.expanded-content {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between sections */
+}
+
+
+/* Shared container for cards */
+.shared-cards-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* Shared styling for each card */
+.shared-card {
+  width: 130px; 
+  height: 150px; 
+  background-color: #ffffff; 
+  border-radius: 8px; 
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); 
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  cursor: pointer; 
+  transition: transform 0.2s ease;
+
+}
+
+/* Hover effect for shared cards */
+.shared-card:hover {
+  transform: scale(1.05);
+}
+
+/* Title for each shared card */
+.shared-card h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+}
+/* Lightbox Styles */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Make sure it's on top */
+}
+
+/* Lightbox Content */
+.lightbox-content img {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Navigation Buttons */
+.nav-button2 {
+  background: transparent;
+  border: none;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nav-button2.left {
+  left: 20px;
+}
+
+.nav-button2.right {
+  right: 20px;
+}
+
+/* Close Button */
+.close-button {
+  position: absolute;
+  top: 20px;
+  left: 150px;
+  background: transparent;
+  color: #891c1c;
+  border: none;
+  width: 100%;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.detailedcards-container {
+  background-color: #d3d3d3; /* Light gray background */
+  padding: 10px; /* Padding for some spacing */
+  border-radius: 10px; /* Rounded corners */
+  margin: 14px 0; /* Margin to separate from other sections */
+}
+
+.sketches-svg {
+  width: 80%; /* Adjust the width of the SVG */
+  height: auto; /* Maintain aspect ratio */
+}
+.mockups-card h4 {
+  font-family: 'Poppins', sans-serif; /* Use your desired font */
+  font-size: 15px; /* Adjust font size */
+  font-weight: 500;
+  color: #ffffff; /* Change text color */
+  
+  background-color: #333;
+}
+/* Ensure the prototype card uses a column layout */
+.prototype {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align text if needed */
+}
+
+/* Style for Final */
+.final-text {
+  font-size: 14px; /* Adjust font size */
+  font-weight: bold; /* Bold or adjust as needed */
+  color: #333; /* Adjust text color */
+  margin: 0; /* Remove margin if needed */
+  text-align: center; /* Center text */
+  background-color: #FE3E01;
+  
+}
+
+/* Style for Prototype */
+.prototype-text {
+  font-size: 14px; /* Adjust font size */
+  font-weight: normal; /* Adjust weight */
+  color: #666; /* Adjust text color */
+  margin: 0; /* Remove margin if needed */
+  text-align: center; /* Center text */
+  background-color: #FFE052
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .section4 {
   height: 100vh; /* Full height for sections */
   display: flex;
+  background-color: #B32324;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -561,8 +1040,7 @@
 
 /* Media Query for Tablet Devices */
 @media (min-width: 600px) and (max-width: 900px) {
-  /* Adjust .hero section */
-  /* Adjust .hero section */
+
 .hero {
   display: flex;
   flex-direction: column;
@@ -667,42 +1145,48 @@
 .section1 h1 {
   width: 27%; /* Adjust width for mobile */
   height: auto;
+  font-size: 26px;
   text-align: center; /* Center the heading text */
   font-weight: 600;
   margin-top: 10px; 
-  margin-bottom: 60px; /* Space between heading and text */
+  margin-bottom: 80px; /* Space between heading and text */
 }
 
 .about-text {
   font-family: 'Poppins', sans-serif;
-  font-size: 14px; /* Adjust font size for mobile */
+  font-size: 16px; /* Adjust font size for mobile */
   font-weight: 500;
   line-height: 1.5;
-  text-align: center;
+  text-align: left;
+width: 50%;
   color: #6B7280;
-  max-width: 90%; /* Ensure text fits within mobile view */
-  padding: 0 10px; /* Reduce padding for mobile */
-  margin: 0 auto;
-  margin-bottom: 20px;
+left: 0;
+  
+  margin-bottom: 60px;
 }
 
 .about-container {
   display: flex;
   flex-direction: column;
   justify-content: flex-start; /* Align text at the top */
-  align-items: center;
+ 
   width: 100%; /* Full width for container */
   flex-grow: 1; /* Allow container to grow based on content */
   box-sizing: border-box;
 }
-
-
+.about-image {
+  display: block; /* Show image on desktop */
+  position: absolute; /* Use absolute positioning */
+  bottom: 0; /* Stick to the bottom of the container */
+  right:35px; /* Adjust as needed */
+  width: 400px; /* Adjust the size */
+}
 
 
 
 /* Popup window */
 .popup-window {
-  width: 85%; /* Width suitable for mobile */
+  width: 75%; /* Width suitable for mobile */
   max-width: 700px; /* Max width for larger screens */
 
  
@@ -710,7 +1194,8 @@
 
 /* Top bar styling */
 .top-bar {
-height: 53px;
+height: 65px;
+font-size: 20px;
 
 
 }
@@ -718,12 +1203,13 @@ height: 53px;
 
 /* Title styling */
 .bar-title {
-font-size: 14px;
-height: 35px;
+font-size: 22px;
+height: 45px;
+
 }
 
 .nav-button {
-  font-size: 35px;
+  font-size: 45px;
 
 }
 
@@ -733,12 +1219,12 @@ height: 35px;
 
 }
 
-/* Folder label */
 .folder-label {
-  font-size: 14px; /* Adjust size as necessary */
-
+  font-family: 'Press Start 2P', sans-serif; /* Use the pixelated font */
+  font-size: 16px; /* Adjust size as necessary */
+  text-align: center;
+  color: #333; /* Choose a color that stands out */
 }
-
 
 /* Code Arsenal Folder */
 .code-arsenal {
@@ -766,7 +1252,7 @@ height: 35px;
 
 /* Creative Vault Folder */
 .creative-vault {
-  top: 350px; /* Position below other folders */
+  top: 390px; /* Position below other folders */
   left: 85px; /* Center it horizontally */
 }
 
@@ -788,7 +1274,7 @@ height: 35px;
 }
 
 .folder-icon-item {
-  width: 65px; /* Set the size for the icons */
+  width: 70px; /* Set the size for the icons */
   height: auto; /* Maintain aspect ratio */
 
   
@@ -807,14 +1293,515 @@ height: 35px;
 
 .icon-label {
   margin-top: 8px; /* Space between square and label */
-  font-size: 19px; /* Font size for the label */
+  font-size: 20px; /* Font size for the label */
+}
+
+/* Section containing Project Vault */
+.section3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically if needed */
+  height: 100vh; /* Adjust based on your needs */
+  position: relative;
+}
+
+.projects-title {
+  position: absolute; /* Position title absolutely */
+  top: 5%; /* Place it at the top of the section */
+  left: 50%; /* Move to the center horizontally */
+  transform: translateX(-50%); /* Center it properly */
+  font-size: 26px;
+  width: 200px;
+  font-weight: 600;
+  box-shadow: 8px 8px 4px 0px #000000;
+  color: #6B7280;
+  padding: 10px;
+  background-color: #E9BA52;
+  text-align: center; /* Center text inside */
+}
+
+/* Vault Container */
+/* Project Vault Container */
+.vault-container {
+  position: relative;
+  width: 65%; /* Adjust width as needed */
+  height: 50%; /* Adjust height as needed */
+  background-color: #ffffff; /* Main gray color for vault */
+  border: 8px solid #808080; /* Darker gray for vault border */
+  border-radius: 15px; /* Slightly rounded edges */
+  box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Prevent overflow */
+  padding: 10px;
+}
+
+/* Vault Door */
+.vault-door {
+  width: 100%; /* Slightly smaller than the container */
+  height: 100%;
+  background-color: #0a3f64; /* Light gray for door */
+  border-radius: 1px; /* Slightly rounded edges */
+  box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.1); /* Inner shadow for depth */
+}
+
+/* Vault Feet */
+.vault-foot {
+  position: absolute;
+  bottom: -10px; /* Position just below the vault container */
+  width: 40px;
+  height: 20px;
+  background-color: #808080; /* Same color as vault border */
+  border-radius: 5px 5px 0 0; /* Rounded top edges */
+}
+
+/* Position left and right feet */
+.vault-foot-left {
+  left: 20px; /* Position to the left */
+}
+
+.vault-foot-right {
+  right: 20px; /* Position to the right */
+}
+
+/* Vault Key Styling */
+.vault-key {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px; /* Adjust size as needed */
+  height: 80px; /* Adjust size as needed */
+  cursor: pointer;
+  transition: transform 1s ease; /* Smooth rotation over 1 second */
+  transform-origin: center; /* Set the rotation center */
+}
+
+/* Rotate the key on click */
+.vault-key.rotate {
+  transform: translate(-50%, -50%) rotate(360deg); /* Apply both translate and rotation */
+}
+
+
+/* Project Card */
+.project-card {
+  width: 95%; /* Adjust width as needed */
+  max-height: 90%; /* Limit height to enable scrolling */
+  border: 3px solid #000000; /* Darker gray for vault border */
+  border-radius: 5px;
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 20px; /* Padding for better content spacing */
+  background-color: #f9f9f9; /* Background color for card */
+  margin: 10px auto; /* Center card inside vault */
+}
+/* Center Project Cards within Vault Container */
+.project-card-container {
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  overflow-y: auto; /* Enable scrolling if cards overflow */
+}
+/* Navigation Buttons */
+.nav-button {
+  background-color: transparent;
+  border: none;
+  color: #a0462b;
+  ;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.card-title {
+  background-color: #B32324; /* Red background */
+  padding: 10px;
+  margin-top: 20px;
+  color: white; /* White text */
+  width: 65%; /* Adjust width as needed */
+  margin: 10px auto; /* Center the title horizontally */
+  font-weight: bold;
+  font-size: 20px;
+  box-shadow: 8px 8px 4px 0px #000000; /* Shadow for depth */
+  text-align: center; /* Center text inside */
+  
+}
+/* Description Container */
+.card-description-container {
+  width: 100%; /* Full width of the card */
+  margin-top: 18px; /* Space above the description section */
+ 
+}
+
+/* Description Title */
+.description-title {
+  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+  font-weight: 600;
+  font-size: 18px;
+  text-align: left; /* Align to the left */
+  margin-top: 30px;
+  margin-bottom: 7px; /* Space below the title */
+  margin-left: 3px;
+}
+
+/* Scrollable Description Content */
+.description-content {
+  width: 100%; /* Slightly reduce width for spacing */
+
+  margin: 0 auto; /* Center within parent horizontally */
+  background-color: #e9e9e9; /* Light gray background */
+  padding: 10px;
+  max-height: 100px; /* Limit height */
+  overflow-y: auto; /* Scroll vertically if content overflows */
+  border-radius: 5px; /* Rounded corners */
+  border: 1px solid;
+  word-wrap: break-word; /* Break long words */
+  word-break: break-word; /* Break long words in smaller pieces */
+  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+  font-size: 16px;
+  line-height: 1.5;
+  
+}
+/* Tools Container */
+.tools-container {
+  width: 100%; /* Full width of the card */
+  margin-top: 18px; /* Space above the tools section */
+}
+
+/* Tools Title */
+.tools-icons {
+  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+  font-weight: 600;
+  font-size: 18px;
+  text-align: left; /* Align title to the left */
+  margin-bottom: 5px; /* Space below the title */
+  margin-left: 3px; /* Align with other titles */
+}
+
+/* Scrollable Content for Tools */
+.toolsIcons-content {
+  display: flex;
+  flex-wrap: wrap; /* Allow icons to wrap to next line */
+  gap: 10px; /* Space between icons */
+  width: 100%; /* Slightly reduce width for spacing */
+  margin: 0 auto; /* Center within parent horizontally */
+  max-height: 120px; /* Limit height for scrolling */
+  overflow-y: auto; /* Scroll vertically if content overflows */
+  padding: 10px;
+  background-color: #e9e9e9; /* Light gray background */
+  border-radius: 5px; /* Rounded corners */
+  border: 1px solid; /* Border for consistency */
+}
+
+/* Tool Icons Styling */
+.tool-icon-item {
+  width: 40px; /* Adjust size as needed */
+  height: 40px; /* Adjust size as needed */
+}
+/* Container for the Creation Path Section */
+.creation-path-container {
+  width: 100%; /* Width relative to card */
+  margin: 0 auto; /* Center within card */
+}
+
+/* Creation Path Title */
+.creation-path-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: left; /* Align to the left */
+  margin-bottom: 10px; /* Space below the title */
+  margin-left: 3px; /* Align with other section titles */
+  margin-top: 18px; /* Space above title */
+}
+
+/* Vertical Line Container */
+.progress-line-vertical {
+  display: flex;
+  flex-direction: column; /* Arrange steps vertically */
+  align-items: center; /* Center-align the bubbles */
+  background-color: #e9e9e9; /* Light gray background */
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid; /* Add border for consistent styling */
+  width: 100%; /* Full width of the container */
+  margin: 0 auto; /* Center the vertical path within the card */
+}
+
+/* Container for each step */
+.progress-step {
+  display: flex;
+  align-items: center; /* Align bubble and text vertically */
+  justify-content: flex-start; /* Align items to the start (left) */
+  margin-bottom: 20px; /* Space between steps */
+  width: 100%; /* Full width */
+  position: relative; /* To align the text and bubble */
+}
+
+/* Phase Text */
+.progress-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px; /* Adjust as needed */
+  margin-right: 20px; /* Space between text and bubble */
+  width: 80px; /* Fixed width to align properly */
+  text-align: left; /* Align text to the left */
+  position: absolute;
+  left: 0;
+}
+
+/* Bubbles representing each phase */
+.progress-bubble {
+  width: 20px; /* Adjust size */
+  height: 20px; /* Adjust size */
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid #000;
+  cursor: pointer;
+  margin-left: auto; /* Align the bubble to the right side */
+}
+
+/* Completed Phase Styling */
+.progress-bubble.completed {
+  background-color: #FFD700; /* Change to filled color when completed */
+}
+
+.tool-icon-item {
+  width: 30px; /* Adjust size as needed */
+  height: 30px;
+  margin: 5px;
+}
+
+.toolsIcons-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-height: 120px;
+  overflow-y: auto;
+  padding: 10px;
+  background-color: #e9e9e9;
+  border-radius: 5px;
+}
+.expand-button {
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  background: transparent; /* Make button background transparent */
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #000; /* Adjust color */
+}
+
+
+
+/* Vault Container - Expanded State */
+.vault-container.expanded {
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  position: fixed; /* Overlay entire screen */
+  top: 0;
+  left: 0;
+  background-color: #ffffff; /* Adjust background color */
+  z-index: 10; /* Bring to front */
+  padding: 20px; /* Extra padding for spacing */
+  box-shadow: none; /* Remove box-shadow for expanded view */
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+/* Project Card - Expanded State */
+/* Project Card - Expanded State */
+.project-card.expanded {
+  width: 95%; /* Almost the full width of the vault */
+  height: 95%; /* Almost the full height of the vault */
+  position: absolute; /* Allow it to cover more space within the vault */
+  top: 2.5%; /* Center the card vertically */
+  left: 2.5%; /* Center the card horizontally */
+  margin: 0 auto; /* Center card within the vault */
+  overflow-y: auto; /* Enable scrolling for overflowing content */
+  padding: 20px; /* Add padding for better content spacing */
+  transition: all 0.5s ease-in-out; /* Smooth transition for expansion */
+  z-index: 1; /* Ensure it's above other elements */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.expand-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent; /* Transparent background */
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #000; /* Adjust button color */
+  z-index: 20; /* Make sure it appears above content */
+}
+/* Adjust card content for expanded view */
+.project-card.expanded .card-description-container,
+.project-card.expanded .tools-container,
+.project-card.expanded .creation-path-container {
+  width: 98%; /* Make content wider */
+  margin: 20px auto; /* Center content within expanded card */
+}
+
+/* Expanded Content Styling */
+.expanded-content {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between sections */
+}
+
+
+/* Shared container for cards */
+.shared-cards-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* Shared styling for each card */
+.shared-card {
+  width: 180px; 
+  height: 250px; 
+  background-color: #ffffff; 
+  border-radius: 8px; 
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); 
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  cursor: pointer; 
+  transition: transform 0.2s ease;
+}
+
+/* Hover effect for shared cards */
+.shared-card:hover {
+  transform: scale(1.05);
+}
+
+/* Title for each shared card */
+.shared-card h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+}
+/* Lightbox Styles */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Make sure it's on top */
+}
+
+/* Lightbox Content */
+.lightbox-content img {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Navigation Buttons */
+.nav-button2 {
+  background: transparent;
+  border: none;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nav-button2.left {
+  left: 20px;
+}
+
+.nav-button2.right {
+  right: 20px;
+}
+
+/* Close Button */
+.close-button {
+  position: absolute;
+  top: 20px;
+  left: 150px;
+  background: transparent;
+  color: #891c1c;
+  border: none;
+  width: 100%;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.detailedcards-container {
+  background-color: #d3d3d3; /* Light gray background */
+  padding: 10px; /* Padding for some spacing */
+  border-radius: 10px; /* Rounded corners */
+  margin: 14px 0; /* Margin to separate from other sections */
+}
+
+.sketches-svg {
+  width: 90%; /* Adjust the width of the SVG */
+  height: auto; /* Maintain aspect ratio */
+}
+.mockups-card h4 {
+  font-family: 'Poppins', sans-serif; /* Use your desired font */
+  font-size: 18px; /* Adjust font size */
+  font-weight: 500;
+  color: #ffffff; /* Change text color */
+  
+  background-color: #333;
+}
+/* Ensure the prototype card uses a column layout */
+.prototype {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align text if needed */
+}
+
+/* Style for Final */
+.final-text {
+  font-size: 18px; /* Adjust font size */
+  font-weight: bold; /* Bold or adjust as needed */
+  color: #333; /* Adjust text color */
+  margin: 0; /* Remove margin if needed */
+  text-align: center; /* Center text */
+  background-color: #FE3E01;
+  
+}
+
+/* Style for Prototype */
+.prototype-text {
+  font-size: 18px; /* Adjust font size */
+  font-weight: normal; /* Adjust weight */
+  color: #666; /* Adjust text color */
+  margin: 0; /* Remove margin if needed */
+  text-align: center; /* Center text */
+  background-color: #FFE052
+  
+}
+
+
+
+
 }
 
 
 
 
 
-}
 
 
 
@@ -853,13 +1840,7 @@ height: 35px;
 
 
 
-
-
-
-
-
-
-@media (min-width: 901px)  {
+@media (min-width: 900px) and (max-width: 1199px) {
   /* Words container adjustment */
   .words-container {
     position: relative;
@@ -869,34 +1850,34 @@ height: 35px;
     display: flex;
     justify-content: center; /* Center the words horizontally */
     gap: 20px;
-    top: 100px; /* Space from the top */
+    top: 180px; /* Space from the top */
     opacity: 1; /* Ensure full visibility */
-    padding-bottom: 60px;
+    padding-bottom: 300px;
   }
 
   /* Adjust font size for the text elements */
   .innovation,
   .creativity,
   .simplicity {
-    font-size: 40px; /* Increase font size for larger screens */
+    font-size: 36px; /* Increase font size for larger screens */
   }
 
   /* Layout to align image on the left and text on the right */
   .content-container {
     display: flex;
-    flex-direction: row; /* Align image and text side by side */
+    flex-direction: row; /* Keep image and text side by side */
     align-items: center; /* Center items vertically */
     justify-content: center; /* Center content horizontally */
     width: 90%;
     max-width: 1186px;
     margin: 0 auto;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 50px; /* Equal spacing above */
+    padding-bottom: 50px; /* Equal spacing below */
   }
 
   /* Profile photo adjustment - aligned to the left */
   .profile-photo {
-    width: 200px;
+    width: 260px;
     margin-right: 60px; /* Space between image and text */
     box-shadow: 8px 8px 4px 0px #FF3B30;
   }
@@ -914,7 +1895,7 @@ height: 35px;
     transform: translateX(100%); /* Start off-screen to the right */
     animation: slideInFromRight 1s forwards;
     font-family: 'Poppins', sans-serif;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 500;
     line-height: 1.5;
     color: #6B7280;
@@ -947,27 +1928,30 @@ height: 35px;
     height: auto; /* Let the height adjust based on content */
     position: relative;
     box-sizing: border-box; /* Ensure padding is included in height calculations */
-    overflow: auto; /* Allow content to overflow naturally */
-  }
-  
+    
+  } 
+
   .section1 h1 {
-    width: 25%; /* Adjust width for mobile */
+    width: 45%; /* Adjust width for mobile */
     text-align: center; /* Center the heading text */
-    margin-top: 50px; 
-    margin-bottom: 50px; /* Space between heading and text */
+ height: 60%;
+    font-size: 33px;
+    margin-top: 80px; 
+    margin-bottom: 10px; /* Space between heading and text */
   }
   
   .about-text {
     font-family: 'Poppins', sans-serif;
-    font-size: 14px; /* Adjust font size for mobile */
+    font-size: 22px; /* Adjust font size for mobile */
     font-weight: 500;
     line-height: 1.5;
     text-align: left;
     color: #6B7280;
-    max-width: 50%; /* Ensure text fits within mobile view */
+    max-width: 55%; /* Ensure text fits within mobile view */
     padding: 0 10px; /* Reduce padding for mobile */
+    bottom: 60px;
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
   
   .about-container {
@@ -980,6 +1964,7 @@ height: 35px;
     bottom: 0; /* Stick to the bottom of the cotainer */
     box-sizing: border-box;
     position: relative; /* Make the container the reference point for absolute positioning */
+    top: 180px;
   }
   
   .about-image {
@@ -987,21 +1972,21 @@ height: 35px;
     position: absolute; /* Use absolute positioning */
     bottom: 0; /* Stick to the bottom of the container */
     right:75px; /* Adjust as needed */
-    width: 290px; /* Adjust the size */
+    width: 400px; /* Adjust the size */
   }
 
 
   .popup-window {
     width: 85%; /* Width suitable for mobile */
     max-width: 700px; /* Max width for larger screens */
-    height: 70%;
+    height: 60%;
   
    
   }
   
   /* Top bar styling */
   .top-bar {
-  height: 53px;
+  height: 65px;
   
   
   }
@@ -1009,8 +1994,8 @@ height: 35px;
   
   /* Title styling */
   .bar-title {
-  font-size: 14px;
-  height: 35px;
+  font-size: 24px;
+  height: 45px;
   }
   
   .nav-button {
@@ -1021,12 +2006,13 @@ height: 35px;
   /* Folder SVG icon */
   .folder-icon {
     width: 70px; /* Adjust size as necessary */
+    
   
   }
   
   /* Folder label */
   .folder-label {
-    font-size: 14px; /* Adjust size as necessary */
+    font-size: 18px; /* Adjust size as necessary */
   
   }
   
@@ -1035,29 +2021,30 @@ height: 35px;
   .code-arsenal {
     top: 30px; /* Adjust vertical position */
     left: 10px; /* Adjust horizontal position */
+
   }
   
   /* Framework Forge Folder */
   .framework-forge {
-    top: 60px; /* Same vertical line as Code Arsenal */
+    top: 160px; /* Same vertical line as Code Arsenal */
     left: 370px; /* Shift to the right */
   }
   
   /* UI/UX Workshop Folder */
   .uiux-workshop {
-    top: 180px; /* Move down vertically */
+    top: 300px; /* Move down vertically */
     left: 80px; /* Same horizontal position as Code Arsenal */
   }
   
   /* Data Science Lab Folder */
   .data-science-lab {
-    top: 240px; /* Same vertical line as UI/UX Workshop */
+    top: 440px; /* Same vertical line as UI/UX Workshop */
     left: 400px; /* Align horizontally with Framework Forge */
   }
   
   /* Creative Vault Folder */
   .creative-vault {
-    top: 350px; /* Position below other folders */
+    top: 550px; /* Position below other folders */
     left: 85px; /* Center it horizontally */
   }
   
@@ -1081,14 +2068,7 @@ height: 35px;
   .folder-icon-item {
     width: 65px; /* Set the size for the icons */
     height: auto; /* Maintain aspect ratio */
-  
-    
   }
-  
-  
-  
-  
-  
   .icon-initial {
     width: 60px; /* Square size */
     height: 60px; /* Square size */
@@ -1098,14 +2078,254 @@ height: 35px;
   
   .icon-label {
     margin-top: 8px; /* Space between square and label */
-    font-size: 19px; /* Font size for the label */
+    font-size: 25px; /* Font size for the label */
   }
   
-  
+  /* Section containing Project Vault */
+.section3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically if needed */
+  height: 100vh; /* Adjust based on your needs */
+  position: relative;
+}
+
+.projects-title {
+
+  font-size: 28px;
+
+}
+
+/* Vault Container */
+/* Project Vault Container */
+.vault-container {
+  position: relative;
+  width: 65%; /* Adjust width as needed */
+  height: 60%; /* Adjust height as needed */
+}
+
+/* Project Card */
+.project-card {
+  width: 98%; /* Adjust width as needed */
+  max-height: 97%; /* Limit height to enable scrolling */
+  border: 3px solid #000000; /* Darker gray for vault border */
+  border-radius: 5px;
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 20px; /* Padding for better content spacing */
+  background-color: #f9f9f9; /* Background color for card */
+  margin: 10px auto; /* Center card inside vault */
+}
+/* Center Project Cards within Vault Container */
+.project-card-container {
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  overflow-y: auto; /* Enable scrolling if cards overflow */
+}
+/* Navigation Buttons */
+.nav-button {
+  background-color: transparent;
+  border: none;
+  color: #a0462b;
+  ;
+  font-size: 45px;
+  cursor: pointer;
+}
+
+.card-title {
+
+  font-size: 24px;
+}
+/* Description Title */
+.description-title {
+
+  font-size: 22px;
+
+}
+
+/* Scrollable Description Content */
+.description-content {
+
+  font-size: 20px;
+}
+
+/* Tools Title */
+.tools-icons {
+  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+  font-weight: 600;
+  font-size: 22px;
+  text-align: left; /* Align title to the left */
+  margin-bottom: 5px; /* Space below the title */
+  margin-left: 3px; /* Align with other titles */
+}
+
+
+
+/* Tool Icons Styling */
+.tool-icon-item {
+  width: 60px; /* Adjust size as needed */
+  height: 60px; /* Adjust size as needed */
+}
+/* Container for the Creation Path Section */
+
+
+/* Creation Path Title */
+.creation-path-title {
+
+  font-size: 22px;
+
+}
+
+/* Container for each step */
+.progress-step {
+  display: flex;
+  align-items: center; /* Align bubble and text vertically */
+  justify-content: flex-start; /* Align items to the start (left) */
+  margin-bottom: 20px; /* Space between steps */
+  width: 100%; /* Full width */
+  position: relative; /* To align the text and bubble */
+}
+
+/* Phase Text */
+.progress-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px; /* Adjust as needed */
+  margin-right: 20px; /* Space between text and bubble */
+  width: 80px; /* Fixed width to align properly */
+  text-align: left; /* Align text to the left */
+  position: absolute;
+  width: 60%;
+  left: 0;
+}
+
+/* Bubbles representing each phase */
+.progress-bubble {
+  width: 20px; /* Adjust size */
+  height: 20px; /* Adjust size */
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid #000;
+  cursor: pointer;
+  margin-left: auto; /* Align the bubble to the right side */
+}
+
+/* Completed Phase Styling */
+.progress-bubble.completed {
+  background-color: #FFD700; /* Change to filled color when completed */
+}
+
+.tool-icon-item {
+  width: 30px; /* Adjust size as needed */
+  height: 30px;
+  margin: 5px;
+}
+
+.toolsIcons-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-height: 120px;
+  overflow-y: auto;
+  padding: 10px;
+  background-color: #e9e9e9;
+  border-radius: 5px;
+}
+.expand-button {
+  position: absolute;
+  top: 10px;
+  right:10px;
+  background: transparent; /* Make button background transparent */
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #000; /* Adjust color */
+}
+.expand-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent; /* Transparent background */
+  border: none;
+  cursor: pointer;
+  font-size: 34px;
+  color: #000; /* Adjust button color */
+  z-index: 20; /* Make sure it appears above content */
+}
+
+/* Shared styling for each card */
+.shared-card {
+  width: 250px; 
+  height: 340px; 
+
+}
+
+/* Hover effect for shared cards */
+.shared-card:hover {
+  transform: scale(1.05);
+}
+
+/* Title for each shared card */
+.shared-card h4 {
+  font-size: 24px;
+
+}
+.nav-button2.left {
+  left: 60px;
   
 }
 
-  @media (min-width: 1199px) {
+.nav-button2.right {
+  right: 60px;
+}
+
+/* Close Button */
+.close-button {
+  
+  top: 60px;
+  left: 450px;
+
+  color: #891c1c;
+  width: 100%;
+  font-size: 40px;
+
+}
+
+
+
+.sketches-svg {
+  width: 110%; /* Adjust the width of the SVG */
+
+}
+.mockups-card h4 {
+  
+  font-size: 30px; /* Adjust font size */
+
+  
+  background-color: #333;
+}
+
+
+/* Style for Final */
+.final-text {
+  font-size: 43px; /* Adjust font size */
+
+  
+}
+
+/* Style for Prototype */
+.prototype-text {
+  font-size: 26px; /* Adjust font size */
+
+  
+}
+
+  
+}
+
+  @media (min-width: 1200px) {
 
 /* Words container adjustment */
 .words-container {
@@ -1127,6 +2347,10 @@ height: 35px;
 .simplicity {
   font-size: 40px; /* Increase font size for larger screens */
 }
+.shared-card h4 {
+  font-size: 20px;
+
+}
 
 /* Layout to align image on the left and text on the right */
 .content-container {
@@ -1147,7 +2371,7 @@ height: 35px;
   
  /* Profile photo adjustment - aligned to the left */
  .profile-photo {
-  width: 200px;
+  width: 230px;
   margin-right: 60px; /* Space between image and text */
   box-shadow: 8px 8px 4px 0px #FF3B30;
 }
@@ -1206,7 +2430,7 @@ height: 35px;
   width: 15%; /* Adjust width for mobile */
   text-align: center; /* Center the heading text */
   margin-top: 50px; 
-  margin-bottom: 50px; /* Space between heading and text */
+  margin-bottom: 70px; /* Space between heading and text */
 }
 
 .about-text {
@@ -1219,7 +2443,7 @@ height: 35px;
   max-width: 50%; /* Ensure text fits within mobile view */
   padding: 0 10px; /* Reduce padding for mobile */
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .about-container {
@@ -1248,7 +2472,7 @@ height: 35px;
 .popup-window {
   width: 90%; /* Width suitable for mobile */
   max-width: 700px; /* Max width for larger screens */
-  height: 70%;
+  height: 60%;
   background-color: white; /* White background */
   border-radius: 20px; /* Rounded corners */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
@@ -1263,6 +2487,17 @@ height: 35px;
 
 }
 
+
+
+.nav-button {
+  background: none;
+  border: none;
+  font-size: 12px;
+  margin-left: 5px;
+  color: #7972a9;
+  cursor: pointer;
+  outline: none;
+}
 
 /* Folder SVG icon */
 .folder-icon {
@@ -1315,7 +2550,235 @@ height: 35px;
   
 }
 
+  /* Section containing Project Vault */
+  .section3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically if needed */
+    height: 100vh; /* Adjust based on your needs */
+    position: relative;
+  }
+  
+  .projects-title {
+  
+    font-size: 28px;
 
+  
+  }
+  
+  /* Vault Container */
+  /* Project Vault Container */
+  .vault-container {
+    position: relative;
+    width: 45%; /* Adjust width as needed */
+    height: 70%; /* Adjust height as needed */
+  }
+  
+  /* Project Card */
+  .project-card {
+    width: 98%; /* Adjust width as needed */
+    max-height: 97%; /* Limit height to enable scrolling */
+    border: 3px solid #000000; /* Darker gray for vault border */
+    border-radius: 5px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 20px; /* Padding for better content spacing */
+    background-color: #f9f9f9; /* Background color for card */
+    margin: 10px auto; /* Center card inside vault */
+  }
+  /* Center Project Cards within Vault Container */
+  .project-card-container {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    overflow-y: auto; /* Enable scrolling if cards overflow */
+  }
+  /* Navigation Buttons */
+  .nav-button {
+    background-color: transparent;
+    border: none;
+    color: #a0462b;
+    ;
+    font-size: 45px;
+    cursor: pointer;
+  }
+  
+  .card-title {
+  
+    font-size: 24px;
+    width: 30%;
+  }
+  /* Description Title */
+  .description-title {
+  
+    font-size: 18px;
+  
+  }
+  
+  /* Scrollable Description Content */
+  .description-content {
+  
+    font-size: 16px;
+  }
+  
+  /* Tools Title */
+  .tools-icons {
+    font-family: 'Poppins', sans-serif; /* Use Poppins font */
+    font-weight: 600;
+    font-size: 18px;
+    text-align: left; /* Align title to the left */
+    margin-bottom: 5px; /* Space below the title */
+    margin-left: 3px; /* Align with other titles */
+  }
+  
+  
+  
+  /* Tool Icons Styling */
+  .tool-icon-item {
+    width: 60px; /* Adjust size as needed */
+    height: 60px; /* Adjust size as needed */
+  }
+  /* Container for the Creation Path Section */
+  
+  
+  /* Creation Path Title */
+  .creation-path-title {
+  
+    font-size: 18px;
+  
+  }
+  
+ 
+  /* Phase Text */
+  .progress-label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px; /* Adjust as needed */
+    margin-right: 20px; /* Space between text and bubble */
+    width: 80px; /* Fixed width to align properly */
+    text-align: left; /* Align text to the left */
+    position: absolute;
+    width: 60%;
+    left: 0;
+  }
+  
+  /* Bubbles representing each phase */
+  .progress-bubble {
+    width: 20px; /* Adjust size */
+    height: 20px; /* Adjust size */
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid #000;
+    cursor: pointer;
+    margin-left: auto; /* Align the bubble to the right side */
+  }
+  
+  /* Completed Phase Styling */
+  .progress-bubble.completed {
+    background-color: #FFD700; /* Change to filled color when completed */
+  }
+  
+  .tool-icon-item {
+    width: 30px; /* Adjust size as needed */
+    height: 30px;
+    margin: 5px;
+  }
+  
+
+
+  .expand-button {
+    top: 30px;
+    right: 65px;
+    font-size: 34px;
+
+  }
+  
+  /* Shared styling for each card */
+  .shared-card {
+    width: 250px; 
+    height: 340px; 
+  
+  }
+  
+  /* Hover effect for shared cards */
+  .shared-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Title for each shared card */
+  .shared-card h4 {
+    font-size: 22px;
+  
+  }
+  .nav-button2.left {
+    left: 60px;
+    
+  }
+  
+  .nav-button2.right {
+    right: 60px;
+  }
+  
+  /* Close Button */
+  .close-button {
+    
+    top: 60px;
+    left: 450px;
+  
+    color: #891c1c;
+    width: 100%;
+    font-size: 40px;
+  
+  }
+   /* Top bar styling */
+   .top-bar {
+    height: 65px;
+    
+    
+    }
+    
+    
+    /* Title styling */
+    .bar-title {
+    font-size: 22px;
+    height: 40px;
+    }
+    
+    .nav-button {
+      font-size: 33px;
+    
+    }
+  
+  
+  
+  .sketches-svg {
+    width: 90%; /* Adjust the width of the SVG */
+  
+  }
+  .mockups-card h4 {
+    
+    font-size: 24px; /* Adjust font size */
+  
+    
+    background-color: #333;
+  }
+  
+  
+  /* Style for Final */
+  .final-text {
+    font-size: 36px; /* Adjust font size */
+  
+    
+  }
+  
+  /* Style for Prototype */
+  .prototype-text {
+    font-size: 30px; /* Adjust font size */
+  
+    
+  }
+  
 
 }
 
