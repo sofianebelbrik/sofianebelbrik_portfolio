@@ -9,8 +9,72 @@
 .App {
   font-family: 'Roboto', sans-serif;
 }
+.aime-avatar {
+  position: fixed;
+  bottom: 0px;          /* Position the avatar at the bottom */
+  right: 42%;           /* Center the avatar horizontally */
+  transform: translateX(50%); /* Adjust for center alignment */
+  width: 18vw;          /* Responsive width */
+  height: auto;         /* Maintain aspect ratio */
+  opacity: 1;           /* Ensure it's visible */
+  z-index: 1000;        /* Adjust as needed */
+  animation: riseUp 2s ease-out forwards;
+}
 
+/* Rise-up animation */
+@keyframes riseUp {
+  0% {
+    transform: translateY(50px); /* Start below */
+    opacity: 0; /* Invisible */
+  }
+  100% {
+    transform: translateY(0); /* End at position */
+    opacity: 1; /* Fully visible */
+  }
+}
+.chat-bubble {
+  position: fixed;      /* Fixed positioning */
+  bottom: 70px;         /* Adjust this to position above the avatar */
+  right: calc(50% - 155px); /* Centered relative to the avatar */
+  background-color: #EDBC32;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  padding: 10px;
+  height: 60px;
+  max-height: 200px;    /* Maximum height for the bubble */
+  overflow-y: auto;     /* Enable vertical scrolling */
+  overflow-x: hidden;   /* Prevent horizontal scrolling */
+  box-shadow: 0 2px 10px rgba(72, 52, 52, 0.2);
+  z-index: 1000;        /* Ensure it stays above other elements */
+  font-size: 12px;
+  font-weight: 600;
+  width: 130px;         /* Fixed width */
+  box-sizing: border-box; /* Include padding in width */
+  opacity: 1;           /* Ensure it's visible */
+  animation: riseUp 2s ease-out forwards; /* Animate the rise-up effect */
 
+}
+
+/* Rise-up animation */
+@keyframes riseUp {
+  0% {
+    transform: translateY(50px); /* Start below */
+    opacity: 0; /* Invisible */
+  }
+  100% {
+    transform: translateY(0); /* End at position */
+    opacity: 1; /* Fully visible */
+  }
+}
+.avatar-container {
+  position: fixed; /* Or use 'absolute' if necessary */
+  bottom: 20px; /* Adjust as needed */
+  right: 40px; /* Adjust as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
 
 .hero-content {
   display: flex;
@@ -395,7 +459,7 @@
 
 /* Folder SVG icon */
 .folder-icon {
-  width: 35px; /* Adjust size as necessary */
+  width: 30px; /* Adjust size as necessary */
   height: auto; /* Maintain aspect ratio */
   margin-bottom: 10px; /* Space between icon and label */
 }
@@ -403,7 +467,7 @@
 /* Folder label */
 .folder-label {
   font-family: 'Press Start 2P', sans-serif; /* Use the pixelated font */
-  font-size: 12px; /* Adjust size as necessary */
+  font-size: 10px; /* Adjust size as necessary */
   text-align: center;
   color: #333; /* Choose a color that stands out */
 }
@@ -442,8 +506,8 @@
 
 /* Creative Vault Folder */
 .creative-vault {
-  top: 320px; /* Position below other folders */
-  left: 85px; /* Center it horizontally */
+  top: 260px; /* Position below other folders */
+  left: 45px; /* Center it horizontally */
 }
 
 .icons-grid {
@@ -489,7 +553,7 @@
   font-size: 36px; /* Font size for the initial */
   font-weight: bold;
   color: #fff; /* White color for the text */
-  border-radius: 8px; /* Rounded corners for a nice effect */
+  border-radius: 6px; /* Rounded corners for a nice effect */
 }
 
 .icon-label {
@@ -505,6 +569,7 @@
   justify-content: center; /* Center vertically if needed */
   height: 100vh; /* Adjust based on your needs */
   position: relative;
+  background-color: #FFFFF0;
 }
 
 .projects-title {
@@ -520,11 +585,12 @@
   padding: 10px;
   background-color: #E9BA52;
   text-align: center; /* Center text inside */
+ 
 }
 
-/* Vault Container */
-/* Project Vault Container */
+
 .vault-container {
+ 
   position: relative;
   width: 80%; /* Adjust width as needed */
   height: 70%; /* Adjust height as needed */
@@ -538,6 +604,7 @@
   justify-content: center;
   overflow: hidden; /* Prevent overflow */
   padding: 10px;
+ 
 }
 
 /* Vault Door */
@@ -591,11 +658,11 @@
 .project-card {
   width: 95%; /* Adjust width as needed */
   max-height: 90%; /* Limit height to enable scrolling */
-  border: 3px solid #000000; /* Darker gray for vault border */
+  border: 3px solid #f7dbad; /* Darker gray for vault border */
   border-radius: 5px;
   overflow-y: auto; /* Enable vertical scrolling */
   padding: 20px; /* Padding for better content spacing */
-  background-color: #f9f9f9; /* Background color for card */
+  background-color: #FFFFF0; /* Background color for card */
   margin: 10px auto; /* Center card inside vault */
 }
 /* Center Project Cards within Vault Container */
@@ -618,15 +685,16 @@
 }
 
 .card-title {
-  background-color: #B32324; /* Red background */
+  background-color: #FE3E01
+  ; /* Red background */
   padding: 18px;
   margin-top: 20px;
   color: white; /* White text */
   width: 65%; /* Adjust width as needed */
   margin: 10px auto; /* Center the title horizontally */
-  font-weight: bold;
+  font-weight: 600;
   font-size: 18px;
-  box-shadow: 8px 8px 4px 0px #000000; /* Shadow for depth */
+  border-radius: 10px;
   text-align: center; /* Center text inside */
   
 }
@@ -634,6 +702,7 @@
 .card-description-container {
   width: 100%; /* Full width of the card */
   margin-top: 18px; /* Space above the description section */
+  
  
 }
 
@@ -653,7 +722,7 @@
   width: 100%; /* Slightly reduce width for spacing */
 
   margin: 0 auto; /* Center within parent horizontally */
-  background-color: #e9e9e9; /* Light gray background */
+  background-color: hsl(0, 0%, 100%); /* Light gray background */
   padding: 10px;
   max-height: 100px; /* Limit height */
   overflow-y: auto; /* Scroll vertically if content overflows */
@@ -693,7 +762,7 @@
   max-height: 120px; /* Limit height for scrolling */
   overflow-y: auto; /* Scroll vertically if content overflows */
   padding: 10px;
-  background-color: #e9e9e9; /* Light gray background */
+  background-color: #ffffff; /* Light gray background */
   border-radius: 5px; /* Rounded corners */
   border: 1px solid; /* Border for consistency */
 }
@@ -702,6 +771,8 @@
 .tool-icon-item {
   width: 40px; /* Adjust size as needed */
   height: 40px; /* Adjust size as needed */
+  margin: 10px 5px;
+ 
 }
 /* Container for the Creation Path Section */
 .creation-path-container {
@@ -725,9 +796,9 @@
   display: flex;
   flex-direction: column; /* Arrange steps vertically */
   align-items: center; /* Center-align the bubbles */
-  background-color: #e9e9e9; /* Light gray background */
+  background-color: #ffffff; /* Light gray background */
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 0px;
   border: 1px solid; /* Add border for consistent styling */
   width: 100%; /* Full width of the container */
   margin: 0 auto; /* Center the vertical path within the card */
@@ -769,22 +840,32 @@
 .progress-bubble.completed {
   background-color: #f5552e; /* Change to filled color when completed */
 }
-
+.tool-icon-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tool-icon-label {
+  margin-top: 3px; /* Add space between icon and label */
+  font-size: 12px; /* Adjust font size if needed */
+  text-align: center;
+}
 .tool-icon-item {
   width: 30px; /* Adjust size as needed */
   height: 30px;
-  margin: 5px;
+  margin: 12px 5px;
 }
 
 .toolsIcons-content {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  max-height: 120px;
+  gap: 17px;
+  max-height: 190px;
   overflow-y: auto;
-  padding: 10px;
-  background-color: #e9e9e9;
+  padding: 17px;
+  background-color: #ffffff;
   border-radius: 5px;
+  
 }
 .expand-button {
   position: absolute;
@@ -836,8 +917,8 @@
   background: transparent; /* Transparent background */
   border: none;
   cursor: pointer;
-  font-size: 18px;
-  color: #000; /* Adjust button color */
+  font-size: 28px;
+  color: #d14848; /* Adjust button color */
   z-index: 20; /* Make sure it appears above content */
 }
 /* Adjust card content for expanded view */
@@ -907,12 +988,14 @@
   z-index: 1000; /* Make sure it's on top */
 }
 
-/* Lightbox Content */
+/* Image Styles */
 .lightbox-content img {
   max-width: 80%;
   max-height: 80%;
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+  display: block;
+  margin: 0 auto; /* Ensures the image is centered inside its container */
 }
 
 /* Navigation Buttons */
@@ -944,7 +1027,7 @@
   color: #891c1c;
   border: none;
   width: 100%;
-  font-size: 30px;
+  font-size: 50px;
   cursor: pointer;
 }
 
@@ -1026,15 +1109,79 @@
 
 
 .section4 {
-  height: 100vh; /* Full height for sections */
+  min-height: 70vh;
   display: flex;
-  background-color: #B32324;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  text-align: center;
-  border-bottom: 2px solid #ddd; /* Add visual separation */
+  background-color: #fff4d0;
 }
 
+.contact-box {
+  margin-top: 40px;
+  padding: 20px;
+  box-shadow: 5px 5px 4px 0px #000000;
+  background-color: #FF3B30;
+  font-weight: 500;
+  color: #ffffff;
+  text-align: center;
+}
+
+.contact-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.linkedIn {
+  width: 200px;
+  padding: 10px;
+  margin: 10px 0;
+  
+  background-color: #0A66C2;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.linkedIn a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+}
+.Email {
+  width: 200px;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #6001D2;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px;
+}
+
+.Email a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.Phone {
+  width: 200px;
+  padding: 10px;
+  margin: 10px 0;
+border: 1px;
+  background-color: #25D366;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.Phone a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+}
 
 
 
@@ -1416,8 +1563,9 @@ height: 45px;
   cursor: pointer;
 }
 
+
 .card-title {
-  background-color: #B32324; /* Red background */
+  background-color: #FE3E01; /* Red background */
   padding: 10px;
   margin-top: 20px;
   color: white; /* White text */
@@ -1425,7 +1573,7 @@ height: 45px;
   margin: 10px auto; /* Center the title horizontally */
   font-weight: bold;
   font-size: 20px;
-  box-shadow: 8px 8px 4px 0px #000000; /* Shadow for depth */
+  box-shadow: 8px 8px 4px 0px #682828; /* Shadow for depth */
   text-align: center; /* Center text inside */
   
 }
@@ -1452,7 +1600,7 @@ height: 45px;
   width: 100%; /* Slightly reduce width for spacing */
 
   margin: 0 auto; /* Center within parent horizontally */
-  background-color: #e9e9e9; /* Light gray background */
+  background-color: #ffffff; /* Light gray background */
   padding: 10px;
   max-height: 100px; /* Limit height */
   overflow-y: auto; /* Scroll vertically if content overflows */
@@ -1485,13 +1633,13 @@ height: 45px;
 .toolsIcons-content {
   display: flex;
   flex-wrap: wrap; /* Allow icons to wrap to next line */
-  gap: 10px; /* Space between icons */
+  gap: 17px; /* Space between icons */
   width: 100%; /* Slightly reduce width for spacing */
   margin: 0 auto; /* Center within parent horizontally */
   max-height: 120px; /* Limit height for scrolling */
   overflow-y: auto; /* Scroll vertically if content overflows */
   padding: 10px;
-  background-color: #e9e9e9; /* Light gray background */
+  background-color: #ffffff; /* Light gray background */
   border-radius: 5px; /* Rounded corners */
   border: 1px solid; /* Border for consistency */
 }
@@ -1569,19 +1717,21 @@ height: 45px;
 }
 
 .tool-icon-item {
-  width: 30px; /* Adjust size as needed */
-  height: 30px;
-  margin: 5px;
+  width: 30px; /* Icon width */
+  height: 30px; /* Icon height */
+  margin: 10px 5px; /* Add space above and below each icon */
 }
 
+/* Updated container for scrollable icons */
 .toolsIcons-content {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  max-height: 120px;
-  overflow-y: auto;
+  gap: 17px; /* Horizontal spacing between icons */
+  row-gap: 20px; /* Vertical spacing between rows of icons */
+  max-height: 120px; /* Limit height for scrolling */
+  overflow-y: auto; /* Enable vertical scrolling */
   padding: 10px;
-  background-color: #e9e9e9;
+  background-color: #ffffff;
   border-radius: 5px;
 }
 .expand-button {
@@ -1793,7 +1943,30 @@ height: 45px;
   
 }
 
+.aime-avatar {
+  right: 42%;           /* Center the avatar horizontally */
+  width: 12vw;          /* Responsive width */
+}
 
+
+.chat-bubble {
+
+  bottom: 80px;         /* Adjust this to position above the avatar */
+  right: calc(50% - 215px); /* Centered relative to the avatar */
+  height: 70px;
+  box-shadow: 0 2px 10px rgba(72, 52, 52, 0.2);
+  z-index: 1000;        /* Ensure it stays above other elements */
+  font-size: 14px;
+  font-weight: 600;
+  width: 170px;         /* Fixed width */
+}
+
+.contact-info-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 60px;
+}
 
 
 }
@@ -2226,11 +2399,11 @@ height: 45px;
 .toolsIcons-content {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 17px;
   max-height: 120px;
   overflow-y: auto;
   padding: 10px;
-  background-color: #e9e9e9;
+  background-color: #ffffff;
   border-radius: 5px;
 }
 .expand-button {
@@ -2321,7 +2494,30 @@ height: 45px;
 
   
 }
+.aime-avatar {
+  right: 42%;           /* Center the avatar horizontally */
+  width: 9vw;          /* Responsive width */
+}
 
+
+.chat-bubble {
+
+  bottom: 110px;         /* Adjust this to position above the avatar */
+  right: calc(50% - 225px); /* Centered relative to the avatar */
+  height: 70px;
+  border: 2px solid #000000;
+  box-shadow: 0 2px 10px rgba(72, 52, 52, 0.2);
+  z-index: 1000;        /* Ensure it stays above other elements */
+  font-size: 14px;
+  font-weight: 600;
+  width: 170px;         /* Fixed width */
+}
+.contact-info-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 60px;
+}
   
 }
 
@@ -2779,6 +2975,47 @@ height: 45px;
     
   }
   
+  .aime-avatar {
+    right: 42%;           /* Center the avatar horizontally */
+    width: 6vw;          /* Responsive width */    
+    left: 50%;
+    right: 50%;
+  }
+  
+  
+  .chat-bubble {
+  
+    bottom: 80px;         /* Adjust this to position above the avatar */
+    right: calc(50% - 230px); /* Centered relative to the avatar */
+
+    height: 70px;
+    border: 2px solid #000000;
+    box-shadow: 0 2px 10px rgba(72, 52, 52, 0.2);
+    z-index: 1000;        /* Ensure it stays above other elements */
+    font-size: 13px;
+    font-weight: 600;
+    width: 170px;         /* Fixed width */
+  }
+  .section4{
+    min-height: 50vh;
+  }
+  .contact-info-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; /* Centers the items */
+    margin-top: 60px;
+    gap: 70px; /* Adds space between the items */
+  }
+  
+  .info-box {
+    width: 200px;
+    padding: 10px;
+    box-shadow: 8px 8px 4px 0px #000000;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+  }
 
 }
 

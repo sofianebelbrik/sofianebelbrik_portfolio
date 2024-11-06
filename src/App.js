@@ -1,10 +1,56 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import { projects } from './projectData';
 
 
 
 function App() {
+  
+
+  const [chatContent, setChatContent] = useState("Hey, welcome to my portfolio! I’m AIME, and I’ll be your guide. Feel free to explore, and I’ll be here to help you navigate the site. Let’s make sure everything is smooth and easy!");
+
+  const handleScroll = () => {
+    const sections = document.querySelectorAll('.section, .section1, .section2, .section3, .section4');
+    sections.forEach((section) => {
+      const rect = section.getBoundingClientRect();
+      console.log(`Section ID: ${section.id}, Position: ${rect.top}`); // Log each section's ID and position
+      if (rect.top >= 0 && rect.top < window.innerHeight) {
+        handleSectionChange(section.id); // Call handleSectionChange with the  section ID
+      }
+    });
+  };
+
+  const handleSectionChange = (sectionId) => {
+    switch (sectionId) {
+      case 'hero':
+        setChatContent("Hey, welcome to my portfolio! I’m AIME, and I’ll be your guide. Feel free to explore, and I’ll be here to help you navigate the site. Let’s make sure everything is smooth and easy!");
+        break;
+      case 'aboutmee':
+        setChatContent("This is a bit about moi! If you want to know what makes me tick, just scroll down and check out what I’ve been up to!");
+        break;
+      case 'skills':
+        setChatContent("Here’s where you can explore my skills! Click on the folders to see what I’ve got, from coding to design and more.");
+        break;
+      case 'project-vault':
+        setChatContent("Welcome to the Project Vault! Press the vault door to unlock and explore my projects.");
+        break;
+      case 'contact':
+        setChatContent("Feel free to reach out if you have any questions!");
+        break;
+      default:
+        setChatContent("Hi! How can I help you?");
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    console.log("Scroll event listener added");
+    return () => {
+      window.removeEventListener('scroll', handleScroll); // Cleanup
+      console.log("Scroll event listener removed");
+    };
+  }, []);
+  
   const SectionCards = ({ title, cards }) => (
     <div className="section-cards">
       <h3>{title}</h3>
@@ -114,6 +160,7 @@ const MlLAB = [
   { path: `${process.env.PUBLIC_URL}/ML/datap.svg`, title: 'Data Pre-processing' },
   { path: `${process.env.PUBLIC_URL}/ML/modelT.svg`, title: 'Model Training' },
   { path: `${process.env.PUBLIC_URL}/ML/dataA.svg`, title: 'Data Analysis' }
+  
 ];
 
 const Frameworkicons = [
@@ -124,7 +171,9 @@ const Frameworkicons = [
   { name: 'Django', color: '#092E20', initial: 'D' },
   { name: 'React', color: '#61DBFB', initial: 'R' },
   { name: 'Node.js', color: '#68A063', initial: 'N' },
-  { name: 'Express.js', color: '#000000', initial: 'E' }
+  { name: 'Express.js', color: '#000000', initial: 'E' },
+  { name: 'Next.js', color: '#000000', initial: 'Nj' }
+
 ];
 const creativeIcons = [
   { name: 'Filming & Video Editing', path: `${process.env.PUBLIC_URL}/creativev/Filming&Video Editing.svg` },
@@ -144,31 +193,43 @@ const allIcons = [
 const allFrameworkicons = [...Frameworkicons];
 // Function to find matching icon
 const findIconPath = (tool) => {
-  // First check for SVG icons
+  // First check for SVG icons in the main array (for cases like Figma, Canva)
   const icon = allIcons.find(icon => icon.title === tool);
-  if (icon) return <img src={icon.path} alt={icon.title} className="tool-icon-item" />;
-
-  // Then check for Data Science icons which use color & initial
-  const dataIcon = Frameworkicons.find(icon => icon.name === tool);
-  if (dataIcon) {
+  if (icon) {
     return (
-      <div
-        style={{
-          backgroundColor: dataIcon.color,
-          width: '20px',
-          height: '20px',
-          borderRadius: '50%',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          color: 'white',
-          fontSize: '12px'
-        }}
-      >
-        {dataIcon.initial}
+      <div className="tool-icon-wrapper">
+        <img src={icon.path} alt={icon.title} className="tool-icon-item" />
+        <p className="tool-icon-label">{icon.title}</p> {/* Display the title */}
       </div>
     );
   }
+
+  // Check for icons in Frameworkicons using color and initials
+  const dataIcon = Frameworkicons.find(icon => icon.name === tool);
+  if (dataIcon) {
+    return (
+      <div className="tool-icon-wrapper">
+        <div
+          style={{
+            backgroundColor: dataIcon.color,
+            width: '35px', // Adjust size if needed
+            height: '35px',
+            borderRadius: '4px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            color: 'white',
+            fontSize: '14px',
+            
+          }}
+        >
+          {dataIcon.initial}
+        </div>
+        <p className="tool-icon-label">{dataIcon.name}</p> {/* Display the name */}
+      </div>
+    );
+  }
+
   return null;
 };
 
@@ -225,8 +286,19 @@ const handleExpandToggle = () => {
 
   return (
     
+    
     <div className="App">
       
+      <div className="avatar-container">
+  <img 
+    src={`${process.env.PUBLIC_URL}/AIMEavatar.png`} 
+    alt="AIME Avatar" 
+    className="aime-avatar"
+  />
+  <div className="chat-bubble">
+    <span>{chatContent}</span>
+  </div>
+</div>
       
       <section id="hero" className="section hero">
         <div className="words-container">
@@ -258,18 +330,15 @@ const handleExpandToggle = () => {
 
             {/* Second paragraph of text */}
             <div className="second-intro-text">
-              <p>
-                And if you’re in a hurry or need some quick info, meet
-                <span className="aime"> A.I.M.E</span>, my latest project. He's right down
-                there (in the bottom-right corner), ready to assist you with any questions
-                and guide you through the site.
-              </p>
+            <p>
+  Need a quick overview? That’s me down there, in the bottom of the screen. My avatar will be sharing brief messages about each section to guide you as you scroll through. Just follow along as the messages update with each section!
+</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="about" className="section1">
+      <section id="aboutmee" className="section1">
   <h1>About Me</h1>
   <div className="about-container">
  
@@ -279,9 +348,7 @@ const handleExpandToggle = () => {
     that users enjoy both functionally and aesthetically.
   </p>
   <p className="about-text">
-    With a Bachelor’s in Computing Systems and a Master’s in AI, I’ve gained a deep understanding of how to integrate web development,
-    app development, and AI to solve real-world issues. My educational journey in London opened my eyes to the endless possibilities of
-    software development, while my AI work has pushed me to new levels, constantly finding ways to merge these two fields to create groundbreaking solutions.
+  With a Bachelor’s in Computing Systems and a Master’s in AI, I’ve built a strong foundation in software development and a passion for creating innovative solutions. My experience includes an internship in web development with ShiftIn in Algeria, where I contrinuted in designing and implementing both front-end and back-end solutions for multiple brands, honing my skills in user-centered design and robust architecture. Currently, I’m expanding my expertise in the energy sector, working hands-on with control systems and technical support. Each of these experiences continues to shape and elevate the software developer I aspire to be. 
   </p>
   <p className="about-text">
     What excites me most is combining creativity and technology—taking a simple idea and transforming it into something elegant and user-friendly.
@@ -290,7 +357,7 @@ const handleExpandToggle = () => {
   </div>
   <img src={`${process.env.PUBLIC_URL}/aboutmepic.PNG`} alt="About Me" className="about-image" />
 
-</section>
+      </section>
 
 <section id="skills" className="section2">
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"></link>
@@ -513,7 +580,27 @@ const handleExpandToggle = () => {
 
           {/* Card Title */}
           <h2 className="card-title">{projects[currentProjectIndex].title}</h2>
-          
+          {projects[currentProjectIndex].githubLink && (
+  <a 
+    href={projects[currentProjectIndex].githubLink} 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    className="github-repo-button"
+    style={{
+      display: 'inline-block',
+      padding: '6px 12px',
+      fontSize: '14px',
+      fontWeight: '600',
+      color: '#fff',
+      backgroundColor: '#24292e',
+      borderRadius: '6px',
+      textDecoration: 'none',
+      border: '1px solid #24292e'
+    }}
+  >
+    GitHub Repo
+  </a>
+)}
           {/* Description Section */}
           <div className="card-description-container">
             <h3 className="description-title">Description</h3>
@@ -534,7 +621,7 @@ const handleExpandToggle = () => {
 
           {/* Creation Path Section */}
           <div className="creation-path-container">
-            <h3 className="creation-path-title">Creation Path</h3>
+            <h3 className="creation-path-title">Current Scope</h3>
             <div className="progress-line-vertical">
               <div className="continuous-line"></div>
 
@@ -557,8 +644,7 @@ const handleExpandToggle = () => {
             </div>
           </div>
 
-          {/* Additional Sections - Rendered Only When Expanded */}
-       
+  
           {isExpanded && (
   <div className="expanded-content">
     {/* UI/UX Section */}
@@ -651,10 +737,24 @@ const handleExpandToggle = () => {
   </div>
 </section>
 
-      <section id="contact" className="section4">
-        <h1>Contact Me Section</h1>
-      </section>
+<section id="contact" className="section4">
+  <div class="contact-box">
+    <h1>Contact Me</h1>
+  </div>
+  
+  <div class="contact-info-container">
+    <div class="linkedIn">
+      <a href="https://www.linkedin.com/in/sofiane-belbrik/" target="_blank">LinkedIn</a>
     </div>
+    <div class="Email">
+      <a href="belbrik_sofiane@yahoo.com">Email</a>
+    </div>
+    <div class="Phone">
+      <a href="tel:+44 7554673692">Phone</a>
+    </div>
+  </div>
+</section>
+    </div>    
   );
 }
 
