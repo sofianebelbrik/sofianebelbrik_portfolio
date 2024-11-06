@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/sofianebelbrik_portfolio/static/css/main.65614a4e.css",
+    "main.js": "/sofianebelbrik_portfolio/static/js/main.2a00aa48.js",
+    "index.html": "/sofianebelbrik_portfolio/index.html",
+    "main.65614a4e.css.map": "/sofianebelbrik_portfolio/static/css/main.65614a4e.css.map",
+    "main.2a00aa48.js.map": "/sofianebelbrik_portfolio/static/js/main.2a00aa48.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.65614a4e.css",
+    "static/js/main.2a00aa48.js"
+  ]
+}
