@@ -1,4 +1,4 @@
-/* General Reset and Base Styles */
+
 
 * {
   margin: 0;
@@ -11,65 +11,65 @@
 }
 .aime-avatar {
   position: fixed;
-  bottom: 0px;          /* Position the avatar at the bottom */
-  right: 42%;           /* Center the avatar horizontally */
-  transform: translateX(50%); /* Adjust for center alignment */
-  width: 18vw;          /* Responsive width */
-  height: auto;         /* Maintain aspect ratio */
-  opacity: 1;           /* Ensure it's visible */
-  z-index: 1000;        /* Adjust as needed */
+  bottom: 0px;        
+  right: 42%;          
+  transform: translateX(50%); 
+  width: 18vw;         
+  height: auto;         
+  opacity: 1;          
+  z-index: 1000;      
   animation: riseUp 2s ease-out forwards;
 }
 
 /* Rise-up animation */
 @keyframes riseUp {
   0% {
-    transform: translateY(50px); /* Start below */
-    opacity: 0; /* Invisible */
+    transform: translateY(50px); 
+    opacity: 0; 
   }
   100% {
-    transform: translateY(0); /* End at position */
-    opacity: 1; /* Fully visible */
+    transform: translateY(0); 
+    opacity: 1; 
   }
 }
 .chat-bubble {
-  position: fixed;      /* Fixed positioning */
-  bottom: 70px;         /* Adjust this to position above the avatar */
-  right: calc(50% - 155px); /* Centered relative to the avatar */
+  position: fixed;     
+  bottom: 70px;         
+  right: calc(50% - 155px);
   background-color: #EDBC32;
   border: 1px solid #000000;
   border-radius: 10px;
   padding: 10px;
   height: 60px;
-  max-height: 200px;    /* Maximum height for the bubble */
-  overflow-y: auto;     /* Enable vertical scrolling */
-  overflow-x: hidden;   /* Prevent horizontal scrolling */
+  max-height: 200px;    
+  overflow-y: auto;     
+  overflow-x: hidden;  
   box-shadow: 0 2px 10px rgba(72, 52, 52, 0.2);
-  z-index: 1000;        /* Ensure it stays above other elements */
+  z-index: 1000;        
   font-size: 12px;
   font-weight: 600;
-  width: 130px;         /* Fixed width */
-  box-sizing: border-box; /* Include padding in width */
-  opacity: 1;           /* Ensure it's visible */
-  animation: riseUp 2s ease-out forwards; /* Animate the rise-up effect */
+  width: 130px;         
+  box-sizing: border-box; 
+  opacity: 1;           
+  animation: riseUp 2s ease-out forwards; 
 
 }
 
 /* Rise-up animation */
 @keyframes riseUp {
   0% {
-    transform: translateY(50px); /* Start below */
-    opacity: 0; /* Invisible */
+    transform: translateY(50px); 
+    opacity: 0; 
   }
   100% {
-    transform: translateY(0); /* End at position */
-    opacity: 1; /* Fully visible */
+    transform: translateY(0); 
+    opacity: 1; 
   }
 }
 .avatar-container {
-  position: fixed; /* Or use 'absolute' if necessary */
-  bottom: 20px; /* Adjust as needed */
-  right: 40px; /* Adjust as needed */
+  position: fixed; 
+  bottom: 20px; 
+  right: 40px; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -79,34 +79,33 @@
 .hero-content {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center content horizontally */
+  align-items: center; 
   width: 100%;
-  flex: none; /* Prevents the div from stretching */
+  flex: none; 
 }
 /* HERO SECTION */
 .hero {
   background-color: #FFFFF0;
-  min-height: 100vh; /* Full height of viewport */
+  min-height: 100vh; 
   display: flex;
-  justify-content: flex-start; /* Align content to the top */
-  align-items: center; /* Center the content horizontally */
-  padding-top: 20px; /* Space between top of screen and words */
+  justify-content: flex-start; 
+  align-items: center; 
+  padding-top: 20px; 
   flex-direction: column; /* Stack content vertically */
 }
 
 /* Words Container */
 .words-container {
   display: flex;
-  flex-direction: column; /* Stack words vertically */
-  align-items: center;    /* Center horizontally */
-  justify-content: flex-start; /* Align items to the top vertically */
-  gap: 10px; /* Space between words */
-  width: 100%; /* Full width */
+  flex-direction: column; 
+  align-items: center;    
+  justify-content: flex-start; 
+  gap: 10px; 
+  width: 100%; 
   position: relative;
-  margin-bottom:0px; /* Optional: Adjust top space */
+  margin-bottom:0px; 
 }
 
-/* Word Styling (Base for Mobile) */
 .innovation, .creativity, .simplicity {
   font-family: 'Roboto', sans-serif;
   font-size: 30px; /* Default size for mobile */
@@ -188,8 +187,8 @@
   opacity: 0;
   transform: translateX(-100%);
   animation: slideInFromLeft 2s forwards;
-  margin-top: 20px; /* Space between the words and the image */
-  box-shadow: 8px 8px 4px 0px #FF3B30; /* Add the box shadow */
+  margin-top: 20px; 
+  box-shadow: 8px 8px 4px 0px #FF3B30; 
 }
 
 /* Animation for Profile Photo (Slide-In from Left) */
@@ -203,25 +202,25 @@
     transform: translateX(0);
   }
 }
-/* Introductory Text Styling */
+
 .intro-text,
 .second-intro-text {
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 500;
-  line-height: 1.5; /* Adjust as needed */
+  line-height: 1.5; 
   text-align: center;
-  color: #6B7280; /* Set the background color */
-  padding: 20px; /* Optional padding for better spacing */
-  margin-top: 20px; /* Space between elements */
+  color: #6B7280; 
+  padding: 20px; 
+  margin-top: 20px; 
   opacity: 0;
   transform: translateY(50px);
   animation: slideUpText 1s forwards;
 }
 
-/* Add a delay for the second paragraph */
+
 .second-intro-text {
-  animation-delay: 0.5s; /* Adjust delay as needed */
+  animation-delay: 0.5s; 
 }
 
 /* Animation Keyframes */
@@ -235,15 +234,15 @@
 /* Styling for 'A.I.M.E' text */
 .aime {
   font-weight: bold;
-  color: #FFD60A; /* Yellow color */
+  color: #FFD60A; 
 }
 /* Base styles for content-container and text-container */
 .content-container {
   display: flex;
-  flex-direction: column; /* Stack items vertically on mobile */
-  align-items: center;    /* Center items horizontally */
+  flex-direction: column; 
+  align-items: center;    
   width: 100%;
-  margin-top: 20px;       /* Space between words-container and content-container */
+  margin-top: 20px;     
 }
 
 .text-container {
@@ -268,16 +267,16 @@
 
 /* About Me Heading */
 .section1 h1 {
-  background: #B32324; /* Red background for the box */
-  color: white; /* Text color */
-  width:170px; /* Fixed width */
-  height: auto; /* Fixed height */
-  line-height: 50px; /* Vertically center the text */
-  text-align: center; /* Center text horizontally */
+  background: #B32324; 
+  color: white; 
+  width:170px; 
+  height: auto; 
+  line-height: 50px; 
+  text-align: center; 
   position: relative;
   margin-top: 40px;
   font-size: 20px;
-  margin-bottom: 50px; /* Add margin to space between the heading and text */
+  margin-bottom: 50px; 
   box-shadow: 8px 8px 4px 0px #000000; /* Shadow effect */
 }
 
@@ -286,11 +285,11 @@
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.5; /* Adjust for better readability */
+  line-height: 1.5; 
   text-align: center;
-  color: #6B7280; /* Text color */
-  max-width: 800px; /* Limit width for better readability */
-  margin-bottom: 20px; /* Space between paragraphs */
+  color: #6B7280; 
+  max-width: 800px; 
+  margin-bottom: 20px; 
 }
 
 
@@ -302,29 +301,29 @@
 
 
 .section2 {
-  background-color: #f9dfb2; /* Set the background color */
+  background-color: #f9dfb2; 
   min-height: 100vh;
-  padding: 20px; /* Add padding for spacing */
-  text-align: center; /* Center any content horizontally */
-  height: auto; /* Let the height adjust based on content */
-  box-sizing: border-box; /* Include padding in the height/width calculations */
-  position: relative; /* Make the section a positioning context for absolute elements */
+  padding: 20px; 
+  text-align: center; 
+  height: auto; 
+  box-sizing: border-box; 
+  position: relative; 
   overflow: hidden; /* Hide any content that overflows beyond the section */
 }
 
 .cloud {
   position: absolute;
-  width: 290px; /* Set the size of the cloud */
-  height: auto; /* Maintain aspect ratio */
-  animation: moveClouds 30s linear infinite; /* Move all clouds in 20 seconds */
+  width: 290px; 
+  height: auto; 
+  animation: moveClouds 30s linear infinite; 
 
 }
 
 /* Position each cloud individually */
 .cloud1 {
-  top: 10%; /* Position the cloud relative to the section */
+  top: 10%; 
   left: 20%;
-  width: 100%; /* Adjust size */
+  width: 100%; 
 }
 
 .cloud2 {
@@ -379,20 +378,20 @@
 }
 /* Popup window */
 .popup-window {
-  width: 85%; /* Width suitable for mobile */
-  max-width: 400px; /* Max width for larger screens */
+  width: 85%; 
+  max-width: 400px; 
   height: 60%;
-  background-color: white; /* White background */
-  border-radius: 20px; /* Rounded corners */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
-  position: fixed; /* Use fixed positioning to center it on the screen */
-  top: 50%; /* Move to the middle of the screen */
-  left: 50%; /* Move to the middle of the screen */
-  transform: translate(-50%, -50%); /* Adjust position to be exactly center */
-  overflow: hidden; /* Ensure no content overflows the window */
-  z-index: 10; /* Ensure it stays on top of other elements */
+  background-color: white; 
+  border-radius: 20px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  position: fixed; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  overflow: hidden; 
+  z-index: 10; 
   position: absolute;
-  border: 3px solid #333; /* Change width and color as needed */
+  border: 3px solid #333; 
 
 }
 
@@ -401,7 +400,7 @@
   display: flex;
   align-items: center;
   height: 50px;
-  background-color: #f3b9b9; /* Similar color to the top bar */
+  background-color: #f3b9b9; 
   padding: 5px 10px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -411,20 +410,20 @@
 .circle {
   width: 17px;
   height: 17px;
-  background-color: #ffffff; /* Or any preferred color */
+  background-color: #ffffff; 
   border-radius: 50%;
-  margin-right: 8px; /* Space between circles */
+  margin-right: 8px; 
 }
 /* Title styling */
 .bar-title {
-  flex-grow: 1; /* Allow it to grow to occupy space */
-  display: flex; /* Enable flexbox for vertical centering */
-  align-items: center; /* Center text vertically */
-  justify-content: center; /* Center text horizontally */
-  text-align: center; /* Center text within this element */
+  flex-grow: 1; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  text-align: center; 
   font-size: 15px;
   font-weight: 500;
-  font-family: 'Press Start 2P', sans-serif; /* Use the pixelated font */
+  font-family: 'Press Start 2P', sans-serif; 
   background-color: #FFFFFF;
   border-radius: 10px;
   height: 30px;
@@ -432,7 +431,7 @@
 
 /* Navigation buttons */
 .nav-buttons {
-  margin-left: auto; /* Push buttons to the right */
+  margin-left: auto; 
 
   
 }
@@ -448,80 +447,79 @@
 }
 
 .window-body {
-  padding: 20px; /* Padding for inner content */
-  background-color: white; /* Ensure background stays white */
-  border-bottom-left-radius: 20px; /* Rounded corners for bottom */
+  padding: 20px; 
+  background-color: white; 
+  border-bottom-left-radius: 20px; 
   border-bottom-right-radius: 20px;
-  min-height: 200px; /* Set a minimum height for content space */
-  position: relative; /* Allow .folder to be positioned relative to this container */
+  min-height: 200px; 
+  position: relative; 
 }
 
 
 /* Folder SVG icon */
 .folder-icon {
-  width: 30px; /* Adjust size as necessary */
-  height: auto; /* Maintain aspect ratio */
-  margin-bottom: 10px; /* Space between icon and label */
+  width: 30px;
+  height: auto; 
+  margin-bottom: 10px; 
 }
 
 /* Folder label */
 .folder-label {
-  font-family: 'Press Start 2P', sans-serif; /* Use the pixelated font */
-  font-size: 10px; /* Adjust size as necessary */
+  font-family: 'Press Start 2P', sans-serif; 
+  font-size: 10px; 
   text-align: center;
-  color: #333; /* Choose a color that stands out */
+  color: #333; 
 }
 
 /* Common folder styles */
 .folder {
   position: absolute;
-  cursor: pointer; /* Make it look clickable */
+  cursor: pointer; 
 }
 
-/* Individual folder positions */
 
 /* Code Arsenal Folder */
 .code-arsenal {
-  top: 30px; /* Adjust vertical position */
-  left: 10px; /* Adjust horizontal position */
+  top: 30px; 
+  left: 10px; 
 }
 
 /* Framework Forge Folder */
 .framework-forge {
-  top: 80px; /* Same vertical line as Code Arsenal */
-  left: 160px; /* Shift to the right */
+  top: 80px; 
+  left: 160px; 
 }
 
 /* UI/UX Workshop Folder */
 .uiux-workshop {
-  top: 150px; /* Move down vertically */
-  left: 20px; /* Same horizontal position as Code Arsenal */
+  top: 150px; 
+  left: 20px; 
 }
 
 /* Data Science Lab Folder */
 .data-science-lab {
-  top: 220px; /* Same vertical line as UI/UX Workshop */
-  left: 170px; /* Align horizontally with Framework Forge */
+  top: 220px; 
+  left: 170px; 
 }
 
 /* Creative Vault Folder */
 .creative-vault {
-  top: 260px; /* Position below other folders */
-  left: 45px; /* Center it horizontally */
+  top: 260px; 
+  left: 45px; 
 }
 
 .icons-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 3 columns */
-  grid-auto-rows: auto; /* Rows auto-size */
-  gap: 14px; /* Space between icons */
-  justify-items: center; /* Center icons in each grid cell */
+  grid-template-columns: repeat(4, 1fr); 
+  grid-auto-rows: auto; 
+  gap: 14px; 
+  justify-items: center; 
   padding: 20px;
 }
 
 .folder-icon-item {
-  width: 40px; /* Set the size for the icons */
-  height: auto; /* Maintain aspect ratio */
+  width: 40px; 
+  height: auto; 
   
 }
 
@@ -530,53 +528,53 @@
 
 .icons-grid1 {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
-  gap: 20px; /* Space between squares */
-  justify-items: center; /* Center squares within the grid */
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px; 
+  justify-items: center; 
   align-items: center;
   padding: 20px;
 }
 
 .icon-square {
   display: flex;
-  flex-direction: column; /* Stack square and label vertically */
-  align-items: center; /* Center content horizontally */
-  text-align: center; /* Center text */
+  flex-direction: column; 
+  align-items: center; 
+  text-align: center; 
 }
 
 .icon-initial {
-  width: 80px; /* Square size */
-  height: 50px; /* Square size */
+  width: 80px; 
+  height: 50px; 
   display: flex;
-  align-items: center; /* Center text vertically */
-  justify-content: center; /* Center text horizontally */
-  font-size: 36px; /* Font size for the initial */
+  align-items: center; 
+  justify-content: center;
+  font-size: 36px; 
   font-weight: bold;
-  color: #fff; /* White color for the text */
-  border-radius: 6px; /* Rounded corners for a nice effect */
+  color: #fff; 
+  border-radius: 6px; 
 }
 
 .icon-label {
-  margin-top: 8px; /* Space between square and label */
-  font-size: 14px; /* Font size for the label */
+  margin-top: 8px; 
+  font-size: 14px; 
 }
 
-/* Section containing Project Vault */
+
 .section3 {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center horizontally */
-  justify-content: center; /* Center vertically if needed */
-  height: 100vh; /* Adjust based on your needs */
+  align-items: center;  
+  justify-content: center; 
+  height: 100vh; 
   position: relative;
   background-color: #FFFFF0;
 }
 
 .projects-title {
-  position: absolute; /* Position title absolutely */
-  top: 5%; /* Place it at the top of the section */
-  left: 50%; /* Move to the center horizontally */
-  transform: translateX(-50%); /* Center it properly */
+  position: absolute; 
+  top: 5%; 
+  left: 50%; 
+  transform: translateX(-50%); 
   font-size: 20px;
   width: 200px;
   font-weight: 600;
@@ -584,97 +582,96 @@
   color: #6B7280;
   padding: 10px;
   background-color: #E9BA52;
-  text-align: center; /* Center text inside */
- 
+  text-align: center; 
 }
 
 
 .vault-container {
  
   position: relative;
-  width: 80%; /* Adjust width as needed */
-  height: 70%; /* Adjust height as needed */
-  background-color: #ffffff; /* Main gray color for vault */
-  border: 8px solid #808080; /* Darker gray for vault border */
-  border-radius: 15px; /* Slightly rounded edges */
-  box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+  width: 80%; 
+  height: 70%; 
+  background-color: #ffffff; 
+  border: 8px solid #808080; 
+  border-radius: 15px; 
+  box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.2); 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: hidden; /* Prevent overflow */
+  overflow: hidden; 
   padding: 10px;
  
 }
 
 /* Vault Door */
 .vault-door {
-  width: 100%; /* Slightly smaller than the container */
+  width: 100%; 
   height: 100%;
-  background-color: #0a3f64; /* Light gray for door */
-  border-radius: 1px; /* Slightly rounded edges */
-  box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.1); /* Inner shadow for depth */
+  background-color: #0a3f64; 
+  border-radius: 1px; 
+  box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
-/* Vault Feet */
+
 .vault-foot {
   position: absolute;
-  bottom: -10px; /* Position just below the vault container */
+  bottom: -10px; 
   width: 40px;
   height: 20px;
-  background-color: #808080; /* Same color as vault border */
-  border-radius: 5px 5px 0 0; /* Rounded top edges */
+  background-color: #808080; 
+  border-radius: 5px 5px 0 0; 
 }
 
-/* Position left and right feet */
+
 .vault-foot-left {
-  left: 20px; /* Position to the left */
+  left: 20px; 
 }
 
 .vault-foot-right {
-  right: 20px; /* Position to the right */
+  right: 20px; 
 }
 
-/* Vault Key Styling */
+
 .vault-key {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80px; /* Adjust size as needed */
-  height: 80px; /* Adjust size as needed */
+  width: 80px; 
+  height: 80px; 
   cursor: pointer;
-  transition: transform 1s ease; /* Smooth rotation over 1 second */
-  transform-origin: center; /* Set the rotation center */
+  transition: transform 1s ease; 
+  transform-origin: center; 
 }
 
-/* Rotate the key on click */
+
 .vault-key.rotate {
-  transform: translate(-50%, -50%) rotate(360deg); /* Apply both translate and rotation */
+  transform: translate(-50%, -50%) rotate(360deg); 
 }
 
 
 /* Project Card */
 .project-card {
-  width: 95%; /* Adjust width as needed */
-  max-height: 90%; /* Limit height to enable scrolling */
-  border: 3px solid #f7dbad; /* Darker gray for vault border */
+  width: 95%; 
+  max-height: 90%; 
+  border: 3px solid #f7dbad; 
   border-radius: 5px;
-  overflow-y: auto; /* Enable vertical scrolling */
-  padding: 20px; /* Padding for better content spacing */
-  background-color: #FFFFF0; /* Background color for card */
-  margin: 10px auto; /* Center card inside vault */
+  overflow-y: auto; 
+  padding: 20px; 
+  background-color: #FFFFF0; 
+  margin: 10px auto; 
 }
-/* Center Project Cards within Vault Container */
+
 .project-card-container {
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
+  width: 100%; 
+  height: 100%;
   display: flex;
-  align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
-  overflow-y: auto; /* Enable scrolling if cards overflow */
+  align-items: center; 
+  justify-content: center; 
+  overflow-y: auto; 
 }
-/* Navigation Buttons */
+
 .nav-button {
   background-color: transparent;
   border: none;
@@ -686,159 +683,159 @@
 
 .card-title {
   background-color: #FE3E01
-  ; /* Red background */
+  ; 
   padding: 18px;
   margin-top: 20px;
-  color: white; /* White text */
-  width: 65%; /* Adjust width as needed */
-  margin: 10px auto; /* Center the title horizontally */
+  color: white; 
+  width: 65%; 
+  margin: 10px auto; 
   font-weight: 600;
   font-size: 18px;
   border-radius: 10px;
-  text-align: center; /* Center text inside */
+  text-align: center; 
   
 }
-/* Description Container */
+
 .card-description-container {
-  width: 100%; /* Full width of the card */
-  margin-top: 18px; /* Space above the description section */
+  width: 100%; 
+  margin-top: 18px; 
   
  
 }
 
-/* Description Title */
+
 .description-title {
-  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+  font-family: 'Poppins', sans-serif; 
   font-weight: 600;
   font-size: 16px;
-  text-align: left; /* Align to the left */
+  text-align: left; 
   margin-top: 30px;
-  margin-bottom: 7px; /* Space below the title */
+  margin-bottom: 7px;
   margin-left: 3px;
 }
 
-/* Scrollable Description Content */
-.description-content {
-  width: 100%; /* Slightly reduce width for spacing */
 
-  margin: 0 auto; /* Center within parent horizontally */
-  background-color: hsl(0, 0%, 100%); /* Light gray background */
+.description-content {
+  width: 100%; 
+
+  margin: 0 auto; 
+  background-color: hsl(0, 0%, 100%); 
   padding: 10px;
-  max-height: 100px; /* Limit height */
-  overflow-y: auto; /* Scroll vertically if content overflows */
-  border-radius: 5px; /* Rounded corners */
+  max-height: 100px; 
+  overflow-y: auto; 
+  border-radius: 5px; 
   border: 1px solid;
-  word-wrap: break-word; /* Break long words */
-  word-break: break-word; /* Break long words in smaller pieces */
-  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+  word-wrap: break-word; 
+  word-break: break-word; 
+  font-family: 'Poppins', sans-serif; 
   font-size: 16px;
   line-height: 1.5;
 
   
 }
-/* Tools Container */
+
 .tools-container {
-  width: 100%; /* Full width of the card */
-  margin-top: 18px; /* Space above the tools section */
+  width: 100%; 
+  margin-top: 18px; 
 }
 
 /* Tools Title */
 .tools-icons {
-  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+  font-family: 'Poppins', sans-serif; 
   font-weight: 600;
   font-size: 16px;
-  text-align: left; /* Align title to the left */
-  margin-bottom: 5px; /* Space below the title */
-  margin-left: 3px; /* Align with other titles */
+  text-align: left; 
+  margin-bottom: 5px; 
+  margin-left: 3px; 
 }
 
-/* Scrollable Content for Tools */
+
 .toolsIcons-content {
   display: flex;
-  flex-wrap: wrap; /* Allow icons to wrap to next line */
-  gap: 10px; /* Space between icons */
-  width: 100%; /* Slightly reduce width for spacing */
-  margin: 0 auto; /* Center within parent horizontally */
-  max-height: 120px; /* Limit height for scrolling */
-  overflow-y: auto; /* Scroll vertically if content overflows */
+  flex-wrap: wrap; 
+  gap: 10px; 
+  width: 100%; 
+  margin: 0 auto; 
+  max-height: 120px; 
+  overflow-y: auto; 
   padding: 10px;
-  background-color: #ffffff; /* Light gray background */
-  border-radius: 5px; /* Rounded corners */
-  border: 1px solid; /* Border for consistency */
+  background-color: #ffffff; 
+  border-radius: 5px; 
+  border: 1px solid; 
 }
 
-/* Tool Icons Styling */
+
 .tool-icon-item {
-  width: 40px; /* Adjust size as needed */
-  height: 40px; /* Adjust size as needed */
+  width: 40px; 
+  height: 40px; 
   margin: 10px 5px;
  
 }
-/* Container for the Creation Path Section */
+
 .creation-path-container {
-  width: 100%; /* Width relative to card */
-  margin: 0 auto; /* Center within card */
+  width: 100%; 
+  margin: 0 auto; 
 }
 
-/* Creation Path Title */
+
 .creation-path-title {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   font-size: 16px;
-  text-align: left; /* Align to the left */
-  margin-bottom: 10px; /* Space below the title */
-  margin-left: 3px; /* Align with other section titles */
-  margin-top: 18px; /* Space above title */
+  text-align: left; 
+  margin-bottom: 10px; 
+  margin-left: 3px; 
+  margin-top: 18px; 
 }
 
-/* Vertical Line Container */
+
 .progress-line-vertical {
   display: flex;
-  flex-direction: column; /* Arrange steps vertically */
-  align-items: center; /* Center-align the bubbles */
-  background-color: #ffffff; /* Light gray background */
+  flex-direction: column; 
+  align-items: center; 
+  background-color: #ffffff;
   padding: 10px;
   border-radius: 0px;
-  border: 1px solid; /* Add border for consistent styling */
-  width: 100%; /* Full width of the container */
-  margin: 0 auto; /* Center the vertical path within the card */
+  border: 1px solid; 
+  width: 100%; 
+  margin: 0 auto; 
 }
 
-/* Container for each step */
+
 .progress-step {
   display: flex;
-  align-items: center; /* Align bubble and text vertically */
-  justify-content: flex-start; /* Align items to the start (left) */
-  margin-bottom: 20px; /* Space between steps */
-  width: 100%; /* Full width */
-  position: relative; /* To align the text and bubble */
+  align-items: center; 
+  justify-content: flex-start; 
+  margin-bottom: 20px; 
+  width: 100%; 
+  position: relative; 
 }
 
-/* Phase Text */
+
 .progress-label {
   font-family: 'Poppins', sans-serif;
-  font-size: 14px; /* Adjust as needed */
-  margin-right: 20px; /* Space between text and bubble */
-  width: 80px; /* Fixed width to align properly */
-  text-align: left; /* Align text to the left */
+  font-size: 14px; 
+  margin-right: 20px; 
+  width: 80px; 
+  text-align: left; 
   position: absolute;
   left: 0;
 }
 
-/* Bubbles representing each phase */
+
 .progress-bubble {
-  width: 20px; /* Adjust size */
-  height: 20px; /* Adjust size */
+  width: 20px; 
+  height: 20px; 
   border-radius: 50%;
   background-color: white;
   border: 1px solid #000;
   cursor: pointer;
-  margin-left: auto; /* Align the bubble to the right side */
+  margin-left: auto; 
 }
 
-/* Completed Phase Styling */
+
 .progress-bubble.completed {
-  background-color: #f5552e; /* Change to filled color when completed */
+  background-color: #f5552e; 
 }
 .tool-icon-wrapper {
   display: flex;
@@ -846,12 +843,12 @@
   align-items: center;
 }
 .tool-icon-label {
-  margin-top: 3px; /* Add space between icon and label */
-  font-size: 12px; /* Adjust font size if needed */
+  margin-top: 3px; 
+  font-size: 12px; 
   text-align: center;
 }
 .tool-icon-item {
-  width: 30px; /* Adjust size as needed */
+  width: 30px; 
   height: 30px;
   margin: 12px 5px;
 }
@@ -871,74 +868,70 @@
   position: absolute;
   top: 10px;
   right: 10px;
-  background: transparent; /* Make button background transparent */
+  background: transparent; 
   border: none;
   cursor: pointer;
   font-size: 18px;
-  color: #000; /* Adjust color */
+  color: #000;
 }
 
 
-
-/* Vault Container - Expanded State */
 .vault-container.expanded {
-  width: 100vw; /* Full viewport width */
-  height: 100vh; /* Full viewport height */
-  position: fixed; /* Overlay entire screen */
+  width: 100vw; 
+  height: 100vh; 
+  position: fixed; 
   top: 0;
   left: 0;
-  background-color: #ffffff; /* Adjust background color */
-  z-index: 10; /* Bring to front */
-  padding: 20px; /* Extra padding for spacing */
-  box-shadow: none; /* Remove box-shadow for expanded view */
+  background-color: #ffffff; 
+  z-index: 10; 
+  padding: 20px; 
+  box-shadow: none; 
   transition: all 0.3s ease-in-out; /* Smooth transition */
 }
-/* Project Card - Expanded State */
-/* Project Card - Expanded State */
 .project-card.expanded {
-  width: 95%; /* Almost the full width of the vault */
-  height: 95%; /* Almost the full height of the vault */
-  position: absolute; /* Allow it to cover more space within the vault */
-  top: 2.5%; /* Center the card vertically */
-  left: 2.5%; /* Center the card horizontally */
-  margin: 0 auto; /* Center card within the vault */
-  overflow-y: auto; /* Enable scrolling for overflowing content */
-  padding: 20px; /* Add padding for better content spacing */
-  transition: all 0.5s ease-in-out; /* Smooth transition for expansion */
-  z-index: 1; /* Ensure it's above other elements */
+  width: 95%; 
+  height: 95%; 
+  position: absolute; 
+  top: 2.5%; 
+  left: 2.5%; 
+  margin: 0 auto; 
+  overflow-y: auto; 
+  padding: 20px; 
+  transition: all 0.5s ease-in-out; 
+  z-index: 1; 
   border-radius: 10px; /* Rounded corners */
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); 
 }
 
 .expand-button {
   position: absolute;
   top: 10px;
   right: 10px;
-  background: transparent; /* Transparent background */
+  background: transparent; 
   border: none;
   cursor: pointer;
   font-size: 28px;
-  color: #d14848; /* Adjust button color */
-  z-index: 20; /* Make sure it appears above content */
+  color: #d14848; 
+  z-index: 20; 
 }
-/* Adjust card content for expanded view */
+
 .project-card.expanded .card-description-container,
 .project-card.expanded .tools-container,
 .project-card.expanded .creation-path-container {
-  width: 98%; /* Make content wider */
-  margin: 20px auto; /* Center content within expanded card */
+  width: 98%; 
+  margin: 20px auto; 
 }
 
-/* Expanded Content Styling */
+
 .expanded-content {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Space between sections */
+  gap: 20px; 
 }
 
 
-/* Shared container for cards */
+
 .shared-cards-container {
   display: flex;
   justify-content: space-around;
@@ -946,7 +939,7 @@
   margin-top: 15px;
 }
 
-/* Shared styling for each card */
+
 .shared-card {
   width: 130px; 
   height: 150px; 
@@ -961,12 +954,12 @@
 
 }
 
-/* Hover effect for shared cards */
+
 .shared-card:hover {
   transform: scale(1.05);
 }
 
-/* Title for each shared card */
+
 .shared-card h4 {
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
@@ -974,31 +967,31 @@
   text-align: center;
   color: #333;
 }
-/* Lightbox Styles */
+
 .lightbox {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  background: rgba(0, 0, 0, 0.8); 
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000; /* Make sure it's on top */
+  z-index: 1000; 
 }
 
-/* Image Styles */
+
 .lightbox-content img {
   max-width: 80%;
   max-height: 80%;
-  border-radius: 8px; /* Rounded corners */
+  border-radius: 8px; 
   box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
   display: block;
-  margin: 0 auto; /* Ensures the image is centered inside its container */
+  margin: 0 auto; 
 }
 
-/* Navigation Buttons */
+
 .nav-button2 {
   background: transparent;
   border: none;
@@ -1018,7 +1011,7 @@
   right: 20px;
 }
 
-/* Close Button */
+
 .close-button {
   position: absolute;
   top: 20px;
@@ -1032,81 +1025,52 @@
 }
 
 .detailedcards-container {
-  background-color: #d3d3d3; /* Light gray background */
-  padding: 10px; /* Padding for some spacing */
-  border-radius: 10px; /* Rounded corners */
-  margin: 14px 0; /* Margin to separate from other sections */
+  background-color: #d3d3d3; 
+  padding: 10px; 
+  border-radius: 10px; 
+  margin: 14px 0; 
 }
 
 .sketches-svg {
-  width: 80%; /* Adjust the width of the SVG */
-  height: auto; /* Maintain aspect ratio */
+  width: 80%; 
+  height: auto; 
 }
 .mockups-card h4 {
-  font-family: 'Poppins', sans-serif; /* Use your desired font */
-  font-size: 15px; /* Adjust font size */
+  font-family: 'Poppins', sans-serif; 
+  font-size: 15px; 
   font-weight: 500;
-  color: #ffffff; /* Change text color */
+  color: #ffffff; 
   
   background-color: #333;
 }
-/* Ensure the prototype card uses a column layout */
+
 .prototype {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center align text if needed */
+  align-items: center; 
 }
 
-/* Style for Final */
+
 .final-text {
-  font-size: 14px; /* Adjust font size */
-  font-weight: bold; /* Bold or adjust as needed */
-  color: #333; /* Adjust text color */
-  margin: 0; /* Remove margin if needed */
-  text-align: center; /* Center text */
+  font-size: 14px; 
+  font-weight: bold; 
+  color: #333; 
+  margin: 0; 
+  text-align: center; 
   background-color: #FE3E01;
   
 }
 
-/* Style for Prototype */
+
 .prototype-text {
-  font-size: 14px; /* Adjust font size */
-  font-weight: normal; /* Adjust weight */
-  color: #666; /* Adjust text color */
-  margin: 0; /* Remove margin if needed */
-  text-align: center; /* Center text */
+  font-size: 14px; 
+  font-weight: normal; 
+  color: #666; 
+  margin: 0; 
+  text-align: center; 
   background-color: #FFE052
   
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .section4 {
   min-height: 70vh;
@@ -1191,13 +1155,13 @@ border: 1px;
 .hero {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;       /* Keep full viewport height if needed */
+  min-height: 100vh;       
   padding: 20px;
-  align-items: center;     /* Center items horizontally */
-  justify-content: center; /* Center items vertically */
+  align-items: center;     
+  justify-content: center; 
 }
 
-  /* Words Container */
+
   .words-container {
     display: flex;
     flex-direction: row;
@@ -1206,7 +1170,7 @@ border: 1px;
     width: 100%;
     gap: 20px;
     margin-bottom: 20px;
-    margin-top: -70px; /* Adjust the value as needed */
+    margin-top: -70px; 
 
   }
 
@@ -1223,33 +1187,33 @@ border: 1px;
     align-items: flex-start;
     width: 100%;
     margin-top: 20px;
-    /* Remove any bottom margin if present */
+
     margin-bottom: 0;
   }
 
   .profile-photo {
     width: 230px;
-    flex: none;           /* Prevent the image from stretching */
-    margin-right: 20px;   /* Space between image and text */
-    /* Remove align-self property if present */
+    flex: none;         
+    margin-right: 20px;   
+    
   }
 
   .text-container {
-    flex: 1;              /* Take up the remaining space */
-    text-align: left;     /* Align text to the left on tablets */
+    flex: 1;              
+    text-align: left;    
   }
 
-  /* Introductory Text Styling */
+
   .intro-text,
   .second-intro-text {
-    /* Reset previous animations */
+ 
     animation: none;
 
-    /* Apply new animation */
+   
     opacity: 0;
-    transform: translateX(100%); /* Start off-screen to the right */
+    transform: translateX(100%); 
     animation: slideInFromRight 1s forwards;
-    /* Other existing styles */
+ 
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     font-weight: 500;
@@ -1259,7 +1223,7 @@ border: 1px;
     margin-bottom: 20px;
   }
 
-  /* Add animation delay to the second text */
+  
   .second-intro-text {
     animation-delay: 0.5s;
   }
@@ -1277,31 +1241,31 @@ border: 1px;
   }
 
 .section1 {
-  padding: 20px 20px; /* Add padding to ensure content is spaced correctly */
+  padding: 20px 20px; 
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Align content at the top */
+  justify-content: flex-start; 
   align-items: center;
-  height: auto; /* Let the height adjust based on content */
+  height: auto; 
   position: relative;
-  box-sizing: border-box; /* Ensure padding is included in height calculations */
-  overflow: auto /* Allow content to overflow naturally */
+  box-sizing: border-box; 
+  overflow: auto 
   
 }
 
 .section1 h1 {
-  width: 27%; /* Adjust width for mobile */
+  width: 27%; 
   height: auto;
   font-size: 26px;
-  text-align: center; /* Center the heading text */
+  text-align: center; 
   font-weight: 600;
   margin-top: 10px; 
-  margin-bottom: 80px; /* Space between heading and text */
+  margin-bottom: 80px; 
 }
 
 .about-text {
   font-family: 'Poppins', sans-serif;
-  font-size: 16px; /* Adjust font size for mobile */
+  font-size: 16px; 
   font-weight: 500;
   line-height: 1.5;
   text-align: left;
@@ -1315,26 +1279,26 @@ left: 0;
 .about-container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Align text at the top */
+  justify-content: flex-start; 
  
-  width: 100%; /* Full width for container */
-  flex-grow: 1; /* Allow container to grow based on content */
+  width: 100%; 
+  flex-grow: 1; 
   box-sizing: border-box;
 }
 .about-image {
-  display: block; /* Show image on desktop */
-  position: absolute; /* Use absolute positioning */
-  bottom: 0; /* Stick to the bottom of the container */
-  right:35px; /* Adjust as needed */
-  width: 400px; /* Adjust the size */
+  display: block; 
+  position: absolute; 
+  bottom: 0; 
+  right:35px; 
+  width: 400px; 
 }
 
 
 
 /* Popup window */
 .popup-window {
-  width: 75%; /* Width suitable for mobile */
-  max-width: 700px; /* Max width for larger screens */
+  width: 75%; 
+  max-width: 700px; 
 
  
 }
@@ -1362,67 +1326,67 @@ height: 45px;
 
 /* Folder SVG icon */
 .folder-icon {
-  width: 70px; /* Adjust size as necessary */
+  width: 70px; 
 
 }
 
 .folder-label {
   font-family: 'Press Start 2P', sans-serif; /* Use the pixelated font */
-  font-size: 16px; /* Adjust size as necessary */
+  font-size: 16px; 
   text-align: center;
-  color: #333; /* Choose a color that stands out */
+  color: #333; 
 }
 
 /* Code Arsenal Folder */
 .code-arsenal {
-  top: 30px; /* Adjust vertical position */
-  left: 10px; /* Adjust horizontal position */
+  top: 30px; 
+  left: 10px; 
 }
 
 /* Framework Forge Folder */
 .framework-forge {
-  top: 60px; /* Same vertical line as Code Arsenal */
-  left: 370px; /* Shift to the right */
+  top: 60px; 
+  left: 370px; 
 }
 
 /* UI/UX Workshop Folder */
 .uiux-workshop {
-  top: 180px; /* Move down vertically */
-  left: 80px; /* Same horizontal position as Code Arsenal */
+  top: 180px; 
+  left: 80px;
 }
 
 /* Data Science Lab Folder */
 .data-science-lab {
-  top: 240px; /* Same vertical line as UI/UX Workshop */
-  left: 400px; /* Align horizontally with Framework Forge */
+  top: 240px; 
+  left: 400px; 
 }
 
 /* Creative Vault Folder */
 .creative-vault {
-  top: 390px; /* Position below other folders */
-  left: 85px; /* Center it horizontally */
+  top: 390px; 
+  left: 85px; 
 }
 
 .icons-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 3 columns */
-  grid-auto-rows: auto; /* Rows auto-size */
-  gap: 14px; /* Space between icons */
-  justify-items: center; /* Center icons in each grid cell */
+  grid-template-columns: repeat(4, 1fr); 
+  grid-auto-rows: auto; 
+  gap: 14px; 
+  justify-items: center;
   padding: 20px;
 }
 .icons-grid1 {
   display: grid;
-  grid-template-columns: repeat(2, 2fr); /* 3 columns */
-  grid-auto-rows: auto; /* Rows auto-size */
-  gap: 14px; /* Space between icons */
-  justify-items: center; /* Center icons in each grid cell */
+  grid-template-columns: repeat(2, 2fr); 
+  grid-auto-rows: auto; 
+  gap: 14px; 
+  justify-items: center; 
   padding: 20px;
 }
 
 .folder-icon-item {
-  width: 70px; /* Set the size for the icons */
-  height: auto; /* Maintain aspect ratio */
+  width: 70px; 
+  height: auto; 
 
   
 }
@@ -1432,32 +1396,32 @@ height: 45px;
 
 
 .icon-initial {
-  width: 60px; /* Square size */
-  height: 60px; /* Square size */
+  width: 60px; 
+  height: 60px; 
   display: flex;
  
 }
 
 .icon-label {
-  margin-top: 8px; /* Space between square and label */
-  font-size: 20px; /* Font size for the label */
+  margin-top: 8px; 
+  font-size: 20px; 
 }
 
-/* Section containing Project Vault */
+
 .section3 {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center horizontally */
-  justify-content: center; /* Center vertically if needed */
-  height: 100vh; /* Adjust based on your needs */
+  align-items: center; 
+  justify-content: center; 
+  height: 100vh; 
   position: relative;
 }
 
 .projects-title {
-  position: absolute; /* Position title absolutely */
-  top: 5%; /* Place it at the top of the section */
-  left: 50%; /* Move to the center horizontally */
-  transform: translateX(-50%); /* Center it properly */
+  position: absolute; 
+  top: 5%; 
+  left: 50%; 
+  transform: translateX(-50%); 
   font-size: 26px;
   width: 200px;
   font-weight: 600;
@@ -1465,19 +1429,18 @@ height: 45px;
   color: #6B7280;
   padding: 10px;
   background-color: #E9BA52;
-  text-align: center; /* Center text inside */
+  text-align: center; 
 }
 
-/* Vault Container */
-/* Project Vault Container */
+
 .vault-container {
   position: relative;
-  width: 65%; /* Adjust width as needed */
-  height: 50%; /* Adjust height as needed */
-  background-color: #ffffff; /* Main gray color for vault */
-  border: 8px solid #808080; /* Darker gray for vault border */
+  width: 65%; 
+  height: 50%; 
+  background-color: #ffffff; 
+  border: 8px solid #808080; 
   border-radius: 15px; /* Slightly rounded edges */
-  box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+  box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.2); 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1488,69 +1451,69 @@ height: 45px;
 
 /* Vault Door */
 .vault-door {
-  width: 100%; /* Slightly smaller than the container */
+  width: 100%; 
   height: 100%;
-  background-color: #0a3f64; /* Light gray for door */
-  border-radius: 1px; /* Slightly rounded edges */
-  box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.1); /* Inner shadow for depth */
+  background-color: #0a3f64; 
+  border-radius: 1px; 
+  box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
-/* Vault Feet */
+
 .vault-foot {
   position: absolute;
-  bottom: -10px; /* Position just below the vault container */
+  bottom: -10px; 
   width: 40px;
   height: 20px;
-  background-color: #808080; /* Same color as vault border */
-  border-radius: 5px 5px 0 0; /* Rounded top edges */
+  background-color: #808080; 
+  border-radius: 5px 5px 0 0; 
 }
 
-/* Position left and right feet */
+
 .vault-foot-left {
-  left: 20px; /* Position to the left */
+  left: 20px; 
 }
 
 .vault-foot-right {
-  right: 20px; /* Position to the right */
+  right: 20px; 
 }
 
-/* Vault Key Styling */
+
 .vault-key {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80px; /* Adjust size as needed */
-  height: 80px; /* Adjust size as needed */
+  width: 80px; 
+  height: 80px; 
   cursor: pointer;
-  transition: transform 1s ease; /* Smooth rotation over 1 second */
-  transform-origin: center; /* Set the rotation center */
+  transition: transform 1s ease; 
+  transform-origin: center; 
 }
 
-/* Rotate the key on click */
+
 .vault-key.rotate {
-  transform: translate(-50%, -50%) rotate(360deg); /* Apply both translate and rotation */
+  transform: translate(-50%, -50%) rotate(360deg); 
 }
 
 
 /* Project Card */
 .project-card {
-  width: 95%; /* Adjust width as needed */
-  max-height: 90%; /* Limit height to enable scrolling */
-  border: 3px solid #000000; /* Darker gray for vault border */
+  width: 95%; 
+  max-height: 90%; 
+  border: 3px solid #000000; 
   border-radius: 5px;
-  overflow-y: auto; /* Enable vertical scrolling */
-  padding: 20px; /* Padding for better content spacing */
-  background-color: #f9f9f9; /* Background color for card */
-  margin: 10px auto; /* Center card inside vault */
+  overflow-y: auto; 
+  padding: 20px; 
+  background-color: #f9f9f9; 
+  margin: 10px auto; 
 }
-/* Center Project Cards within Vault Container */
+
 .project-card-container {
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
+  width: 100%; 
+  height: 100%; 
   display: flex;
-  align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
+  align-items: center; 
+  justify-content: center; 
   overflow-y: auto; /* Enable scrolling if cards overflow */
 }
 /* Navigation Buttons */
@@ -1565,171 +1528,171 @@ height: 45px;
 
 
 .card-title {
-  background-color: #FE3E01; /* Red background */
+  background-color: #FE3E01; 
   padding: 10px;
   margin-top: 20px;
-  color: white; /* White text */
-  width: 65%; /* Adjust width as needed */
-  margin: 10px auto; /* Center the title horizontally */
+  color: white; 
+  width: 65%; 
+  margin: 10px auto; 
   font-weight: bold;
   font-size: 20px;
-  box-shadow: 8px 8px 4px 0px #682828; /* Shadow for depth */
-  text-align: center; /* Center text inside */
+  box-shadow: 8px 8px 4px 0px #682828; 
+  text-align: center; 
   
 }
 /* Description Container */
 .card-description-container {
-  width: 100%; /* Full width of the card */
-  margin-top: 18px; /* Space above the description section */
+  width: 100%; 
+  margin-top: 18px; 
  
 }
 
-/* Description Title */
+
 .description-title {
-  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+  font-family: 'Poppins', sans-serif; 
   font-weight: 600;
   font-size: 18px;
-  text-align: left; /* Align to the left */
+  text-align: left; 
   margin-top: 30px;
-  margin-bottom: 7px; /* Space below the title */
+  margin-bottom: 7px; 
   margin-left: 3px;
 }
 
-/* Scrollable Description Content */
-.description-content {
-  width: 100%; /* Slightly reduce width for spacing */
 
-  margin: 0 auto; /* Center within parent horizontally */
+.description-content {
+  width: 100%; 
+
+  margin: 0 auto; 
   background-color: #ffffff; /* Light gray background */
   padding: 10px;
-  max-height: 100px; /* Limit height */
-  overflow-y: auto; /* Scroll vertically if content overflows */
-  border-radius: 5px; /* Rounded corners */
+  max-height: 100px; 
+  overflow-y: auto; 
+  border-radius: 5px; 
   border: 1px solid;
-  word-wrap: break-word; /* Break long words */
-  word-break: break-word; /* Break long words in smaller pieces */
-  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+  word-wrap: break-word; 
+  word-break: break-word; 
+  font-family: 'Poppins', sans-serif; 
   font-size: 16px;
   line-height: 1.5;
   
 }
-/* Tools Container */
+
 .tools-container {
-  width: 100%; /* Full width of the card */
-  margin-top: 18px; /* Space above the tools section */
+  width: 100%; 
+  margin-top: 18px; 
 }
 
-/* Tools Title */
+
 .tools-icons {
-  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+  font-family: 'Poppins', sans-serif; 
   font-weight: 600;
   font-size: 18px;
-  text-align: left; /* Align title to the left */
-  margin-bottom: 5px; /* Space below the title */
-  margin-left: 3px; /* Align with other titles */
+  text-align: left; 
+  margin-bottom: 5px; 
+  margin-left: 3px; 
 }
 
-/* Scrollable Content for Tools */
+
 .toolsIcons-content {
   display: flex;
-  flex-wrap: wrap; /* Allow icons to wrap to next line */
-  gap: 17px; /* Space between icons */
-  width: 100%; /* Slightly reduce width for spacing */
-  margin: 0 auto; /* Center within parent horizontally */
-  max-height: 120px; /* Limit height for scrolling */
+  flex-wrap: wrap; 
+  gap: 17px;
+  width: 100%; 
+  margin: 0 auto; 
+  max-height: 120px;
   overflow-y: auto; /* Scroll vertically if content overflows */
   padding: 10px;
   background-color: #ffffff; /* Light gray background */
-  border-radius: 5px; /* Rounded corners */
-  border: 1px solid; /* Border for consistency */
+  border-radius: 5px; 
+  border: 1px solid;
 }
 
-/* Tool Icons Styling */
+
 .tool-icon-item {
-  width: 40px; /* Adjust size as needed */
-  height: 40px; /* Adjust size as needed */
-}
-/* Container for the Creation Path Section */
-.creation-path-container {
-  width: 100%; /* Width relative to card */
-  margin: 0 auto; /* Center within card */
+  width: 40px; 
+  height: 40px; 
 }
 
-/* Creation Path Title */
+.creation-path-container {
+  width: 100%; 
+  margin: 0 auto; 
+}
+
+
 .creation-path-title {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   font-size: 18px;
-  text-align: left; /* Align to the left */
-  margin-bottom: 10px; /* Space below the title */
+  text-align: left; 
+  margin-bottom: 10px; 
   margin-left: 3px; /* Align with other section titles */
-  margin-top: 18px; /* Space above title */
+  margin-top: 18px; 
 }
 
 /* Vertical Line Container */
 .progress-line-vertical {
   display: flex;
-  flex-direction: column; /* Arrange steps vertically */
-  align-items: center; /* Center-align the bubbles */
-  background-color: #e9e9e9; /* Light gray background */
+  flex-direction: column; 
+  align-items: center; 
+  background-color: #e9e9e9; 
   padding: 10px;
   border-radius: 5px;
-  border: 1px solid; /* Add border for consistent styling */
-  width: 100%; /* Full width of the container */
-  margin: 0 auto; /* Center the vertical path within the card */
+  border: 1px solid; 
+  width: 100%; 
+  margin: 0 auto; 
 }
 
-/* Container for each step */
+
 .progress-step {
   display: flex;
-  align-items: center; /* Align bubble and text vertically */
-  justify-content: flex-start; /* Align items to the start (left) */
-  margin-bottom: 20px; /* Space between steps */
-  width: 100%; /* Full width */
-  position: relative; /* To align the text and bubble */
+  align-items: center; 
+  justify-content: flex-start; 
+  margin-bottom: 20px; 
+  width: 100%; 
+  position: relative; 
 }
 
-/* Phase Text */
+
 .progress-label {
   font-family: 'Poppins', sans-serif;
-  font-size: 18px; /* Adjust as needed */
-  margin-right: 20px; /* Space between text and bubble */
-  width: 80px; /* Fixed width to align properly */
-  text-align: left; /* Align text to the left */
+  font-size: 18px; 
+  margin-right: 20px; 
+  width: 80px; 
+  text-align: left; 
   position: absolute;
   left: 0;
 }
 
-/* Bubbles representing each phase */
+
 .progress-bubble {
-  width: 20px; /* Adjust size */
-  height: 20px; /* Adjust size */
+  width: 20px; 
+  height: 20px; 
   border-radius: 50%;
   background-color: white;
   border: 2px solid #000;
   cursor: pointer;
-  margin-left: auto; /* Align the bubble to the right side */
+  margin-left: auto; 
 }
 
-/* Completed Phase Styling */
+
 .progress-bubble.completed {
-  background-color: #FFD700; /* Change to filled color when completed */
+  background-color: #FFD700; 
 }
 
 .tool-icon-item {
-  width: 30px; /* Icon width */
-  height: 30px; /* Icon height */
-  margin: 10px 5px; /* Add space above and below each icon */
+  width: 30px; 
+  height: 30px; 
+  margin: 10px 5px; 
 }
 
-/* Updated container for scrollable icons */
+
 .toolsIcons-content {
   display: flex;
   flex-wrap: wrap;
-  gap: 17px; /* Horizontal spacing between icons */
-  row-gap: 20px; /* Vertical spacing between rows of icons */
-  max-height: 120px; /* Limit height for scrolling */
-  overflow-y: auto; /* Enable vertical scrolling */
+  gap: 17px; 
+  row-gap: 20px; 
+  max-height: 120px; 
+  overflow-y: auto; 
   padding: 10px;
   background-color: #ffffff;
   border-radius: 5px;
@@ -1738,74 +1701,76 @@ height: 45px;
   position: absolute;
   top: 10px;
   right: 0px;
-  background: transparent; /* Make button background transparent */
+  background: transparent; 
   border: none;
   cursor: pointer;
   font-size: 18px;
-  color: #000; /* Adjust color */
+  color: #000; 
 }
 
 
 
-/* Vault Container - Expanded State */
+
 .vault-container.expanded {
-  width: 100vw; /* Full viewport width */
-  height: 100vh; /* Full viewport height */
-  position: fixed; /* Overlay entire screen */
+  width: 100vw;
+  height: 100vh; 
+  position: fixed; 
   top: 0;
   left: 0;
-  background-color: #ffffff; /* Adjust background color */
-  z-index: 10; /* Bring to front */
-  padding: 20px; /* Extra padding for spacing */
-  box-shadow: none; /* Remove box-shadow for expanded view */
-  transition: all 0.3s ease-in-out; /* Smooth transition */
+  background-color: #ffffff; 
+  z-index: 10; 
+  padding: 20px; 
+  box-shadow: none; 
+  transition: all 0.3s ease-in-out; 
 }
-/* Project Card - Expanded State */
-/* Project Card - Expanded State */
+
+
 .project-card.expanded {
-  width: 95%; /* Almost the full width of the vault */
-  height: 95%; /* Almost the full height of the vault */
-  position: absolute; /* Allow it to cover more space within the vault */
-  top: 2.5%; /* Center the card vertically */
-  left: 2.5%; /* Center the card horizontally */
-  margin: 0 auto; /* Center card within the vault */
-  overflow-y: auto; /* Enable scrolling for overflowing content */
-  padding: 20px; /* Add padding for better content spacing */
-  transition: all 0.5s ease-in-out; /* Smooth transition for expansion */
-  z-index: 1; /* Ensure it's above other elements */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  width: 95%; 
+  height: 95%; 
+  position: absolute; 
+  top: 2.5%; 
+  left: 2.5%; 
+  margin: 0 auto; 
+  overflow-y: auto; 
+  padding: 20px; 
+
+  transition: all 0.5s ease-in-out; 
+
+  z-index: 1; 
+  border-radius: 10px; 
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); 
 }
 
 .expand-button {
   position: absolute;
   top: 10px;
   right: 10px;
-  background: transparent; /* Transparent background */
+  background: transparent; 
   border: none;
   cursor: pointer;
   font-size: 24px;
-  color: #000; /* Adjust button color */
-  z-index: 20; /* Make sure it appears above content */
+  color: #000; 
+  z-index: 20; 
 }
-/* Adjust card content for expanded view */
+
 .project-card.expanded .card-description-container,
 .project-card.expanded .tools-container,
 .project-card.expanded .creation-path-container {
-  width: 98%; /* Make content wider */
-  margin: 20px auto; /* Center content within expanded card */
+  width: 98%; 
+  margin: 20px auto; 
 }
 
-/* Expanded Content Styling */
+
 .expanded-content {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Space between sections */
+  gap: 20px; 
 }
 
 
-/* Shared container for cards */
+
 .shared-cards-container {
   display: flex;
   justify-content: space-around;
@@ -1813,7 +1778,7 @@ height: 45px;
   margin-top: 15px;
 }
 
-/* Shared styling for each card */
+
 .shared-card {
   width: 180px; 
   height: 250px; 
@@ -1827,7 +1792,7 @@ height: 45px;
   transition: transform 0.2s ease;
 }
 
-/* Hover effect for shared cards */
+
 .shared-card:hover {
   transform: scale(1.05);
 }
@@ -1847,11 +1812,11 @@ height: 45px;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  background: rgba(0, 0, 0, 0.8); 
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000; /* Make sure it's on top */
+  z-index: 1000; 
 }
 
 /* Lightbox Content */
@@ -1896,69 +1861,68 @@ height: 45px;
 }
 
 .detailedcards-container {
-  background-color: #d3d3d3; /* Light gray background */
-  padding: 10px; /* Padding for some spacing */
-  border-radius: 10px; /* Rounded corners */
-  margin: 14px 0; /* Margin to separate from other sections */
+  background-color: #d3d3d3; 
+  padding: 10px; 
+  border-radius: 10px; 
+  margin: 14px 0; 
 }
 
 .sketches-svg {
-  width: 90%; /* Adjust the width of the SVG */
-  height: auto; /* Maintain aspect ratio */
+  width: 90%; 
+  height: auto; 
 }
 .mockups-card h4 {
-  font-family: 'Poppins', sans-serif; /* Use your desired font */
-  font-size: 18px; /* Adjust font size */
+  font-family: 'Poppins', sans-serif; 
+  font-size: 18px; 
   font-weight: 500;
-  color: #ffffff; /* Change text color */
+  color: #ffffff; 
   
   background-color: #333;
 }
-/* Ensure the prototype card uses a column layout */
+
 .prototype {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center align text if needed */
+  align-items: center; 
 }
 
-/* Style for Final */
 .final-text {
-  font-size: 18px; /* Adjust font size */
-  font-weight: bold; /* Bold or adjust as needed */
-  color: #333; /* Adjust text color */
-  margin: 0; /* Remove margin if needed */
-  text-align: center; /* Center text */
+  font-size: 18px; 
+  font-weight: bold; 
+  color: #333; 
+  margin: 0; 
+  text-align: center; 
   background-color: #FE3E01;
   
 }
 
-/* Style for Prototype */
+
 .prototype-text {
-  font-size: 18px; /* Adjust font size */
-  font-weight: normal; /* Adjust weight */
-  color: #666; /* Adjust text color */
-  margin: 0; /* Remove margin if needed */
-  text-align: center; /* Center text */
+  font-size: 18px; 
+  font-weight: normal; 
+  color: #666; 
+  margin: 0; 
+  text-align: center; 
   background-color: #FFE052
   
 }
 
 .aime-avatar {
-  right: 42%;           /* Center the avatar horizontally */
-  width: 12vw;          /* Responsive width */
+  right: 42%;          
+  width: 12vw;          
 }
 
 
 .chat-bubble {
 
-  bottom: 80px;         /* Adjust this to position above the avatar */
-  right: calc(50% - 215px); /* Centered relative to the avatar */
+  bottom: 80px;         
+  right: calc(50% - 215px); 
   height: 70px;
   box-shadow: 0 2px 10px rgba(72, 52, 52, 0.2);
-  z-index: 1000;        /* Ensure it stays above other elements */
+  z-index: 1000;        
   font-size: 14px;
   font-weight: 600;
-  width: 170px;         /* Fixed width */
+  width: 170px;         
 }
 
 .contact-info-container {
@@ -2014,58 +1978,58 @@ height: 45px;
 
 
 @media (min-width: 900px) and (max-width: 1199px) {
-  /* Words container adjustment */
+  
   .words-container {
     position: relative;
     width: 1186px;
-    flex-direction: row; /* Align words horizontally */
+    flex-direction: row; 
     height: auto;
     display: flex;
-    justify-content: center; /* Center the words horizontally */
+    justify-content: center; 
     gap: 20px;
-    top: 180px; /* Space from the top */
-    opacity: 1; /* Ensure full visibility */
+    top: 180px; 
+    opacity: 1; 
     padding-bottom: 300px;
   }
 
-  /* Adjust font size for the text elements */
+
   .innovation,
   .creativity,
   .simplicity {
-    font-size: 36px; /* Increase font size for larger screens */
+    font-size: 36px; 
   }
 
-  /* Layout to align image on the left and text on the right */
+  
   .content-container {
     display: flex;
-    flex-direction: row; /* Keep image and text side by side */
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center content horizontally */
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: center; 
     width: 90%;
     max-width: 1186px;
     margin: 0 auto;
-    padding-top: 50px; /* Equal spacing above */
-    padding-bottom: 50px; /* Equal spacing below */
+    padding-top: 50px; 
+    padding-bottom: 50px; 
   }
 
-  /* Profile photo adjustment - aligned to the left */
+  
   .profile-photo {
     width: 260px;
-    margin-right: 60px; /* Space between image and text */
+    margin-right: 60px; 
     box-shadow: 8px 8px 4px 0px #FF3B30;
   }
 
-  /* Text container aligned to the right */
+ 
   .text-container {
     width: 100%;
-    text-align: left; /* Align text to the left */
+    text-align: left; 
   }
 
-  /* Introductory text animation */
+
   .intro-text,
   .second-intro-text {
     opacity: 0;
-    transform: translateX(100%); /* Start off-screen to the right */
+    transform: translateX(100%); 
     animation: slideInFromRight 1s forwards;
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
@@ -2076,52 +2040,52 @@ height: 45px;
     margin-bottom: 20px;
   }
 
-  /* Add delay for the second text */
+  
   .second-intro-text {
     animation-delay: 0.5s;
   }
 
-  /* Keyframes for slide-in from the right */
+  
   @keyframes slideInFromRight {
     from {
       opacity: 0;
-      transform: translateX(100%); /* Start off-screen */
+      transform: translateX(100%); 
     }
     to {
       opacity: 1;
-      transform: translateX(0); /* Move into place */
+      transform: translateX(0);
     }
   }
   .section1 {
-    padding: 20px 20px; /* Add padding to ensure content is spaced correctly */
+    padding: 20px 20px; 
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Align content at the top */
+    justify-content: flex-start; 
     align-items: center;
-    height: auto; /* Let the height adjust based on content */
+    height: auto; 
     position: relative;
-    box-sizing: border-box; /* Ensure padding is included in height calculations */
+    box-sizing: border-box; 
     
   } 
 
   .section1 h1 {
-    width: 45%; /* Adjust width for mobile */
-    text-align: center; /* Center the heading text */
+    width: 45%; 
+    text-align: center; 
  height: 60%;
     font-size: 33px;
     margin-top: 80px; 
-    margin-bottom: 10px; /* Space between heading and text */
+    margin-bottom: 10px; 
   }
   
   .about-text {
     font-family: 'Poppins', sans-serif;
-    font-size: 22px; /* Adjust font size for mobile */
+    font-size: 22px; 
     font-weight: 500;
     line-height: 1.5;
     text-align: left;
     color: #6B7280;
-    max-width: 55%; /* Ensure text fits within mobile view */
-    padding: 0 10px; /* Reduce padding for mobile */
+    max-width: 55%; 
+    padding: 0 10px; 
     bottom: 60px;
     margin: 0;
     margin-bottom: 30px;
@@ -2130,28 +2094,28 @@ height: 45px;
   .about-container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Align text at the top */
-    align-items: flex-start; /* Align content to the left */
-    width: 100%; /* Full width for container */
-    flex-grow: 1; /* Allow container to grow based on content */
-    bottom: 0; /* Stick to the bottom of the cotainer */
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    width: 100%; 
+    flex-grow: 1; 
+    bottom: 0; 
     box-sizing: border-box;
-    position: relative; /* Make the container the reference point for absolute positioning */
+    position: relative; 
     top: 180px;
   }
   
   .about-image {
-    display: block; /* Show image on desktop */
-    position: absolute; /* Use absolute positioning */
-    bottom: 0; /* Stick to the bottom of the container */
-    right:75px; /* Adjust as needed */
-    width: 400px; /* Adjust the size */
+    display: block;
+    position: absolute; 
+    bottom: 0; 
+    right:75px; 
+    width: 400px; 
   }
 
 
   .popup-window {
     width: 85%; /* Width suitable for mobile */
-    max-width: 700px; /* Max width for larger screens */
+    max-width: 700px; 
     height: 60%;
   
    
@@ -2178,89 +2142,89 @@ height: 45px;
   
   /* Folder SVG icon */
   .folder-icon {
-    width: 70px; /* Adjust size as necessary */
+    width: 70px; 
     
   
   }
   
   /* Folder label */
   .folder-label {
-    font-size: 18px; /* Adjust size as necessary */
+    font-size: 18px;
   
   }
   
   
   /* Code Arsenal Folder */
   .code-arsenal {
-    top: 30px; /* Adjust vertical position */
-    left: 10px; /* Adjust horizontal position */
+    top: 30px; 
+    left: 10px; 
 
   }
   
   /* Framework Forge Folder */
   .framework-forge {
-    top: 160px; /* Same vertical line as Code Arsenal */
+    top: 160px; 
     left: 370px; /* Shift to the right */
   }
   
   /* UI/UX Workshop Folder */
   .uiux-workshop {
-    top: 300px; /* Move down vertically */
-    left: 80px; /* Same horizontal position as Code Arsenal */
+    top: 300px; 
+    left: 80px; 
   }
   
   /* Data Science Lab Folder */
   .data-science-lab {
-    top: 440px; /* Same vertical line as UI/UX Workshop */
-    left: 400px; /* Align horizontally with Framework Forge */
+    top: 440px; 
+    left: 400px; 
   }
   
   /* Creative Vault Folder */
   .creative-vault {
-    top: 550px; /* Position below other folders */
-    left: 85px; /* Center it horizontally */
+    top: 550px; 
+    left: 85px; 
   }
   
   .icons-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 3 columns */
-    grid-auto-rows: auto; /* Rows auto-size */
-    gap: 14px; /* Space between icons */
-    justify-items: center; /* Center icons in each grid cell */
+    grid-template-columns: repeat(4, 1fr); 
+    grid-auto-rows: auto; 
+    gap: 14px; 
+    justify-items: center; 
     padding: 20px;
   }
   .icons-grid1 {
     display: grid;
-    grid-template-columns: repeat(2, 2fr); /* 3 columns */
-    grid-auto-rows: auto; /* Rows auto-size */
-    gap: 14px; /* Space between icons */
-    justify-items: center; /* Center icons in each grid cell */
+    grid-template-columns: repeat(2, 2fr); 
+    grid-auto-rows: auto; 
+    gap: 14px; 
+    justify-items: center; 
     padding: 20px;
   }
   
   .folder-icon-item {
-    width: 65px; /* Set the size for the icons */
-    height: auto; /* Maintain aspect ratio */
+    width: 65px; 
+    height: auto; 
   }
   .icon-initial {
-    width: 60px; /* Square size */
-    height: 60px; /* Square size */
+    width: 60px; 
+    height: 60px; 
     display: flex;
    
   }
   
   .icon-label {
-    margin-top: 8px; /* Space between square and label */
-    font-size: 25px; /* Font size for the label */
+    margin-top: 8px; 
+    font-size: 25px; 
   }
   
-  /* Section containing Project Vault */
+
 .section3 {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center horizontally */
-  justify-content: center; /* Center vertically if needed */
-  height: 100vh; /* Adjust based on your needs */
+  align-items: center; 
+  justify-content: center; 
+  height: 100vh; 
   position: relative;
 }
 
@@ -2270,35 +2234,34 @@ height: 45px;
 
 }
 
-/* Vault Container */
-/* Project Vault Container */
+
 .vault-container {
   position: relative;
-  width: 65%; /* Adjust width as needed */
-  height: 60%; /* Adjust height as needed */
+  width: 65%; 
+  height: 60%; 
 }
 
-/* Project Card */
+
 .project-card {
-  width: 98%; /* Adjust width as needed */
-  max-height: 97%; /* Limit height to enable scrolling */
-  border: 3px solid #000000; /* Darker gray for vault border */
+  width: 98%; 
+  max-height: 97%; 
+  border: 3px solid #000000; 
   border-radius: 5px;
-  overflow-y: auto; /* Enable vertical scrolling */
-  padding: 20px; /* Padding for better content spacing */
-  background-color: #f9f9f9; /* Background color for card */
-  margin: 10px auto; /* Center card inside vault */
+  overflow-y: auto; 
+  padding: 20px; 
+  background-color: #f9f9f9; 
+  margin: 10px auto; 
 }
-/* Center Project Cards within Vault Container */
+
 .project-card-container {
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
+  width: 100%; 
+  height: 100%; 
   display: flex;
-  align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
-  overflow-y: auto; /* Enable scrolling if cards overflow */
+  align-items: center; 
+  justify-content: center; 
+  overflow-y: auto; 
 }
-/* Navigation Buttons */
+
 .nav-button {
   background-color: transparent;
   border: none;
@@ -2312,40 +2275,40 @@ height: 45px;
 
   font-size: 24px;
 }
-/* Description Title */
+
 .description-title {
 
   font-size: 22px;
 
 }
 
-/* Scrollable Description Content */
+
 .description-content {
 
   font-size: 20px;
 }
 
-/* Tools Title */
+
 .tools-icons {
-  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+  font-family: 'Poppins', sans-serif; 
   font-weight: 600;
   font-size: 22px;
-  text-align: left; /* Align title to the left */
-  margin-bottom: 5px; /* Space below the title */
-  margin-left: 3px; /* Align with other titles */
+  text-align: left; 
+  margin-bottom: 5px; 
+  margin-left: 3px; 
 }
 
 
 
-/* Tool Icons Styling */
+
 .tool-icon-item {
-  width: 60px; /* Adjust size as needed */
-  height: 60px; /* Adjust size as needed */
+  width: 60px; 
+  height: 60px; 
 }
-/* Container for the Creation Path Section */
 
 
-/* Creation Path Title */
+
+
 .creation-path-title {
 
   font-size: 22px;
@@ -2355,43 +2318,43 @@ height: 45px;
 /* Container for each step */
 .progress-step {
   display: flex;
-  align-items: center; /* Align bubble and text vertically */
-  justify-content: flex-start; /* Align items to the start (left) */
-  margin-bottom: 20px; /* Space between steps */
-  width: 100%; /* Full width */
-  position: relative; /* To align the text and bubble */
+  align-items: center; 
+  justify-content: flex-start; 
+  margin-bottom: 20px; 
+  width: 100%; 
+  position: relative; 
 }
 
-/* Phase Text */
+
 .progress-label {
   font-family: 'Poppins', sans-serif;
-  font-size: 22px; /* Adjust as needed */
-  margin-right: 20px; /* Space between text and bubble */
-  width: 80px; /* Fixed width to align properly */
-  text-align: left; /* Align text to the left */
+  font-size: 22px; 
+  margin-right: 20px; 
+  width: 80px; 
+  text-align: left; 
   position: absolute;
   width: 60%;
   left: 0;
 }
 
-/* Bubbles representing each phase */
+
 .progress-bubble {
-  width: 20px; /* Adjust size */
-  height: 20px; /* Adjust size */
+  width: 20px; 
+  height: 20px; 
   border-radius: 50%;
   background-color: white;
   border: 2px solid #000;
   cursor: pointer;
-  margin-left: auto; /* Align the bubble to the right side */
+  margin-left: auto; 
 }
 
-/* Completed Phase Styling */
+
 .progress-bubble.completed {
-  background-color: #FFD700; /* Change to filled color when completed */
+  background-color: #FFD700; 
 }
 
 .tool-icon-item {
-  width: 30px; /* Adjust size as needed */
+  width: 30px; 
   height: 30px;
   margin: 5px;
 }
@@ -2410,32 +2373,31 @@ height: 45px;
   position: absolute;
   top: 10px;
   right:10px;
-  background: transparent; /* Make button background transparent */
+  background: transparent; 
   border: none;
   cursor: pointer;
   font-size: 18px;
-  color: #000; /* Adjust color */
+  color: #000; 
 }
 .expand-button {
   position: absolute;
   top: 20px;
   right: 20px;
-  background: transparent; /* Transparent background */
+  background: transparent; 
   border: none;
   cursor: pointer;
   font-size: 34px;
-  color: #000; /* Adjust button color */
-  z-index: 20; /* Make sure it appears above content */
+  color: #000; 
+  z-index: 20; 
 }
 
-/* Shared styling for each card */
+
 .shared-card {
   width: 250px; 
   height: 340px; 
 
 }
 
-/* Hover effect for shared cards */
 .shared-card:hover {
   transform: scale(1.05);
 }
@@ -2454,7 +2416,7 @@ height: 45px;
   right: 60px;
 }
 
-/* Close Button */
+
 .close-button {
   
   top: 60px;
@@ -2469,48 +2431,48 @@ height: 45px;
 
 
 .sketches-svg {
-  width: 110%; /* Adjust the width of the SVG */
+  width: 110%; 
 
 }
 .mockups-card h4 {
   
-  font-size: 30px; /* Adjust font size */
+  font-size: 30px; 
 
   
   background-color: #333;
 }
 
 
-/* Style for Final */
+
 .final-text {
-  font-size: 43px; /* Adjust font size */
+  font-size: 43px; 
 
   
 }
 
-/* Style for Prototype */
+
 .prototype-text {
-  font-size: 26px; /* Adjust font size */
+  font-size: 26px; 
 
   
 }
 .aime-avatar {
-  right: 42%;           /* Center the avatar horizontally */
-  width: 9vw;          /* Responsive width */
+  right: 42%;           
+  width: 9vw;         
 }
 
 
 .chat-bubble {
 
-  bottom: 110px;         /* Adjust this to position above the avatar */
-  right: calc(50% - 225px); /* Centered relative to the avatar */
+  bottom: 110px;         
+  right: calc(50% - 225px); 
   height: 70px;
   border: 2px solid #000000;
   box-shadow: 0 2px 10px rgba(72, 52, 52, 0.2);
-  z-index: 1000;        /* Ensure it stays above other elements */
+  z-index: 1000;        
   font-size: 14px;
   font-weight: 600;
-  width: 170px;         /* Fixed width */
+  width: 170px;         
 }
 .contact-info-container {
   display: flex;
@@ -2523,7 +2485,7 @@ height: 45px;
 
   @media (min-width: 1200px) {
 
-/* Words container adjustment */
+
 .words-container {
   position: relative;
   width: 1186px;
@@ -2532,28 +2494,27 @@ height: 45px;
   display: flex;
   justify-content: center; /* Center the words horizontally */
   gap: 20px;
-  top: 100px; /* Space from the top */
-  opacity: 1; /* Ensure full visibility */
+  top: 100px; 
+  opacity: 1; 
   padding-bottom: 60px;
 }
 
-/* Adjust font size for the text elements */
 .innovation,
 .creativity,
 .simplicity {
-  font-size: 40px; /* Increase font size for larger screens */
+  font-size: 40px; 
 }
 .shared-card h4 {
   font-size: 20px;
 
 }
 
-/* Layout to align image on the left and text on the right */
+
 .content-container {
   display: flex;
-  flex-direction: row; /* Align image and text side by side */
-  align-items: center; /* Center items vertically */
-  justify-content: center; /* Center content horizontally */
+  flex-direction: row; 
+  align-items: center; 
+  justify-content: center; 
   width: 90%;
   max-width: 1186px;
   margin: 0 auto;
@@ -2565,24 +2526,24 @@ height: 45px;
 
 
   
- /* Profile photo adjustment - aligned to the left */
+ 
  .profile-photo {
   width: 230px;
-  margin-right: 60px; /* Space between image and text */
+  margin-right: 60px;
   box-shadow: 8px 8px 4px 0px #FF3B30;
 }
 
-/* Text container aligned to the right */
+
 .text-container {
   width: 100%;
-  text-align: left; /* Align text to the left */
+  text-align: left; 
 }
 
-/* Introductory text animation */
+
 .intro-text,
 .second-intro-text {
   opacity: 0;
-  transform: translateX(100%); /* Start off-screen to the right */
+  transform: translateX(100%); 
   animation: slideInFromRight 1s forwards;
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
@@ -2593,51 +2554,51 @@ height: 45px;
   margin-bottom: 20px;
 }
 
-/* Add delay for the second text */
+
 .second-intro-text {
   animation-delay: 0.5s;
 }
 
-/* Keyframes for slide-in from the right */
+
 @keyframes slideInFromRight {
   from {
     opacity: 0;
-    transform: translateX(100%); /* Start off-screen */
+    transform: translateX(100%); 
   }
   to {
     opacity: 1;
-    transform: translateX(0); /* Move into place */
+    transform: translateX(0); 
   }
   
 }
 .section1 {
-  padding: 20px 20px; /* Add padding to ensure content is spaced correctly */
+  padding: 20px 20px; 
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Align content at the top */
+  justify-content: flex-start; 
   align-items: center;
-  height: auto; /* Let the height adjust based on content */
+  height: auto; 
   position: relative;
-  box-sizing: border-box; /* Ensure padding is included in height calculations */
+  box-sizing: border-box; 
   overflow: auto; /* Allow content to overflow naturally */
 }
 
 .section1 h1 {
-  width: 15%; /* Adjust width for mobile */
-  text-align: center; /* Center the heading text */
+  width: 15%; 
+  text-align: center; 
   margin-top: 50px; 
-  margin-bottom: 70px; /* Space between heading and text */
+  margin-bottom: 70px; 
 }
 
 .about-text {
   font-family: 'Poppins', sans-serif;
-  font-size: 16px; /* Adjust font size for mobile */
+  font-size: 16px; 
   font-weight: 500;
   line-height: 1.5;
   text-align: left;
   color: #6B7280;
-  max-width: 50%; /* Ensure text fits within mobile view */
-  padding: 0 10px; /* Reduce padding for mobile */
+  max-width: 50%; 
+  padding: 0 10px; 
   margin: 0;
   margin-bottom: 30px;
 }
@@ -2645,41 +2606,41 @@ height: 45px;
 .about-container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Align text at the top */
-  align-items: flex-start; /* Align content to the left */
-  width: 100%; /* Full width for container */
+  justify-content: flex-start; 
+  align-items: flex-start; 
+  width: 100%; 
   flex-grow: 1; /* Allow container to grow based on content */
-  bottom: 0; /* Stick to the bottom of the container */
+  bottom: 0; 
   box-sizing: border-box;
   position: relative; /* Make the container the reference point for absolute positioning */
 }
 
 .about-image {
-  display: block; /* Show image on desktop */
-  position: absolute; /* Use absolute positioning */
-  bottom: 0; /* Stick to the bottom of the container */
-  right:140px; /* Adjust as needed */
-  width: 330px; /* Adjust the size */
+  display: block; 
+  position: absolute; 
+  bottom: 0; 
+  right:140px; 
+  width: 330px; 
 }
 
 
 
 /* Popup window */
 .popup-window {
-  width: 90%; /* Width suitable for mobile */
-  max-width: 700px; /* Max width for larger screens */
+  width: 90%; 
+  max-width: 700px; 
   height: 60%;
-  background-color: white; /* White background */
-  border-radius: 20px; /* Rounded corners */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
-  position: fixed; /* Use fixed positioning to center it on the screen */
-  top: 50%; /* Move to the middle of the screen */
-  left: 50%; /* Move to the middle of the screen */
-  transform: translate(-50%, -50%); /* Adjust position to be exactly center */
-  overflow: hidden; /* Ensure no content overflows the window */
-  z-index: 10; /* Ensure it stays on top of other elements */
+  background-color: white; 
+  border-radius: 20px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  position: fixed; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  overflow: hidden; 
+  z-index: 10; 
   position: absolute;
-  border: 3px solid #333; /* Change width and color as needed */
+  border: 3px solid #333; 
 
 }
 
@@ -2695,64 +2656,64 @@ height: 45px;
   outline: none;
 }
 
-/* Folder SVG icon */
+
 .folder-icon {
-  width: 55px; /* Adjust size as necessary */
+  width: 55px; 
 
 }
 
-/* Folder label */
+
 .folder-label {
-  font-family: 'Press Start 2P', sans-serif; /* Use the pixelated font */
-  font-size: 12px; /* Adjust size as necessary */
+  font-family: 'Press Start 2P', sans-serif; 
+  font-size: 12px; 
 
 }
 
-/* Individual folder positions */
 
-/* Code Arsenal Folder */
+
+
 .code-arsenal {
-  top: 30px; /* Adjust vertical position */
-  left: 10px; /* Adjust horizontal position */
+  top: 30px; 
+  left: 10px; 
 }
 
-/* Framework Forge Folder */
+
 .framework-forge {
-  top: 40px; /* Same vertical line as Code Arsenal */
-  left: 400px; /* Shift to the right */
+  top: 40px; 
+  left: 400px; 
 }
 
 /* UI/UX Workshop Folder */
 .uiux-workshop {
-  top: 170px; /* Move down vertically */
-  left: 20px; /* Same horizontal position as Code Arsenal */
+  top: 170px; 
+  left: 20px; 
 }
 
-/* Data Science Lab Folder */
+
 .data-science-lab {
-  top: 210px; /* Same vertical line as UI/UX Workshop */
-  left: 290px; /* Align horizontally with Framework Forge */
+  top: 210px; 
+  left: 290px; 
 }
 
-/* Creative Vault Folder */
+
 .creative-vault {
-  top: 330px; /* Position below other folders */
-  left: 85px; /* Center it horizontally */
+  top: 330px; 
+  left: 85px; 
 }
 
 .folder-icon-item {
-  width: 50px; /* Set the size for the icons */
-  height: auto; /* Maintain aspect ratio */
+  width: 50px; 
+  height: auto; 
   
 }
 
-  /* Section containing Project Vault */
+  
   .section3 {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center horizontally */
-    justify-content: center; /* Center vertically if needed */
-    height: 100vh; /* Adjust based on your needs */
+    align-items: center; 
+    justify-content: center; 
+    height: 100vh; 
     position: relative;
   }
   
@@ -2763,32 +2724,32 @@ height: 45px;
   
   }
   
-  /* Vault Container */
-  /* Project Vault Container */
+
+ 
   .vault-container {
     position: relative;
-    width: 45%; /* Adjust width as needed */
-    height: 70%; /* Adjust height as needed */
+    width: 45%; 
+    height: 70%; 
   }
   
   /* Project Card */
   .project-card {
-    width: 98%; /* Adjust width as needed */
-    max-height: 97%; /* Limit height to enable scrolling */
-    border: 3px solid #000000; /* Darker gray for vault border */
+    width: 98%; 
+    max-height: 97%; 
+    border: 3px solid #000000; 
     border-radius: 5px;
-    overflow-y: auto; /* Enable vertical scrolling */
-    padding: 20px; /* Padding for better content spacing */
-    background-color: #f9f9f9; /* Background color for card */
-    margin: 10px auto; /* Center card inside vault */
+    overflow-y: auto; 
+    padding: 20px; 
+    background-color: #f9f9f9; 
+    margin: 10px auto; 
   }
-  /* Center Project Cards within Vault Container */
+
   .project-card-container {
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
+    width: 100%; 
+    height: 100%; 
     display: flex;
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
+    align-items: center; 
+    justify-content: center; 
     overflow-y: auto; /* Enable scrolling if cards overflow */
   }
   /* Navigation Buttons */
@@ -2813,33 +2774,33 @@ height: 45px;
   
   }
   
-  /* Scrollable Description Content */
+  
   .description-content {
   
     font-size: 16px;
   }
   
-  /* Tools Title */
+  
   .tools-icons {
-    font-family: 'Poppins', sans-serif; /* Use Poppins font */
+    font-family: 'Poppins', sans-serif; 
     font-weight: 600;
     font-size: 18px;
-    text-align: left; /* Align title to the left */
-    margin-bottom: 5px; /* Space below the title */
-    margin-left: 3px; /* Align with other titles */
+    text-align: left;
+    margin-bottom: 5px; 
+    margin-left: 3px; 
   }
   
   
   
-  /* Tool Icons Styling */
+
   .tool-icon-item {
-    width: 60px; /* Adjust size as needed */
-    height: 60px; /* Adjust size as needed */
+    width: 60px; 
+    height: 60px; 
   }
-  /* Container for the Creation Path Section */
   
   
-  /* Creation Path Title */
+  
+ 
   .creation-path-title {
   
     font-size: 18px;
@@ -2847,36 +2808,36 @@ height: 45px;
   }
   
  
-  /* Phase Text */
+ 
   .progress-label {
     font-family: 'Poppins', sans-serif;
-    font-size: 18px; /* Adjust as needed */
-    margin-right: 20px; /* Space between text and bubble */
-    width: 80px; /* Fixed width to align properly */
-    text-align: left; /* Align text to the left */
+    font-size: 18px; 
+    margin-right: 20px;
+    width: 80px; 
+    text-align: left; 
     position: absolute;
     width: 60%;
     left: 0;
   }
   
-  /* Bubbles representing each phase */
+  
   .progress-bubble {
-    width: 20px; /* Adjust size */
-    height: 20px; /* Adjust size */
+    width: 20px; 
+    height: 20px; 
     border-radius: 50%;
     background-color: white;
     border: 2px solid #000;
     cursor: pointer;
-    margin-left: auto; /* Align the bubble to the right side */
+    margin-left: auto; 
   }
   
   /* Completed Phase Styling */
   .progress-bubble.completed {
-    background-color: #FFD700; /* Change to filled color when completed */
+    background-color: #FFD700; 
   }
   
   .tool-icon-item {
-    width: 30px; /* Adjust size as needed */
+    width: 30px; 
     height: 30px;
     margin: 5px;
   }
@@ -2890,14 +2851,14 @@ height: 45px;
 
   }
   
-  /* Shared styling for each card */
+
   .shared-card {
     width: 250px; 
     height: 340px; 
   
   }
   
-  /* Hover effect for shared cards */
+ 
   .shared-card:hover {
     transform: scale(1.05);
   }
@@ -2949,35 +2910,35 @@ height: 45px;
   
   
   .sketches-svg {
-    width: 90%; /* Adjust the width of the SVG */
+    width: 90%; 
   
   }
   .mockups-card h4 {
     
-    font-size: 24px; /* Adjust font size */
+    font-size: 24px; 
   
     
     background-color: #333;
   }
   
   
-  /* Style for Final */
+  /* Style for Final p */
   .final-text {
-    font-size: 36px; /* Adjust font size */
+    font-size: 36px; 
   
     
   }
   
   /* Style for Prototype */
   .prototype-text {
-    font-size: 30px; /* Adjust font size */
+    font-size: 30px; 
   
     
   }
   
   .aime-avatar {
-    right: 42%;           /* Center the avatar horizontally */
-    width: 6vw;          /* Responsive width */    
+    right: 42%;          
+    width: 6vw;             
     left: 50%;
     right: 50%;
   }
@@ -2985,16 +2946,16 @@ height: 45px;
   
   .chat-bubble {
   
-    bottom: 80px;         /* Adjust this to position above the avatar */
-    right: calc(50% - 230px); /* Centered relative to the avatar */
+    bottom: 80px;       
+    right: calc(50% - 230px); 
 
     height: 70px;
     border: 2px solid #000000;
     box-shadow: 0 2px 10px rgba(72, 52, 52, 0.2);
-    z-index: 1000;        /* Ensure it stays above other elements */
+    z-index: 1000;        
     font-size: 13px;
     font-weight: 600;
-    width: 170px;         /* Fixed width */
+    width: 170px;         
   }
   .section4{
     min-height: 50vh;
@@ -3003,9 +2964,9 @@ height: 45px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center; /* Centers the items */
+    justify-content: center; 
     margin-top: 60px;
-    gap: 70px; /* Adds space between the items */
+    gap: 70px; 
   }
   
   .info-box {

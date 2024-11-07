@@ -129,9 +129,9 @@ export const projects = [
     description: "I developed an interactive website for an artist that features a music promotion section, a store for merchandise, a video section showcasing the artist’s content, an announcements area, a subscription form, and social media links. It also includes a simple dashboard that allows the artist to easily control and update the displayed content. The front end is built using Next.js, React, Tailwind CSS, Swiper.js, and FontAwesome, while the back end utilizes Node.js, PostgreSQL, and AWS RDS. I used this project to explore a different tech stack from my previous work to expand my skills with modern technologies.",
     tools: ["HTML", "CSS", "Next.js","React","Figma", "Canva" ], 
     phases: {
-      uiux: false,
-      frontend: false,
-      backend: false,
+      uiux: true,
+      frontend: true,
+      backend: true,
 
     },
     details: {
@@ -141,21 +141,27 @@ export const projects = [
           {
             type: "Sketches",
             images: [
-              `${process.env.PUBLIC_URL}/project2/uiux/sketch1.png`,
-              `${process.env.PUBLIC_URL}/project2/uiux/sketch2.png`,
+              `${process.env.PUBLIC_URL}/skaw1.png`,
+              `${process.env.PUBLIC_URL}/skaw2.png`,
             ],
           },
           {
             type: "Mockups",
             images: [
-              `${process.env.PUBLIC_URL}/project2/uiux/mockup1.png`,
-              `${process.env.PUBLIC_URL}/project2/uiux/mockup2.png`,
+              `${process.env.PUBLIC_URL}/wraw1.png`,
+              
+              
             ],
           },
           {
             type: "Final Prototype",
             images: [
-              `${process.env.PUBLIC_URL}/project2/uiux/prototype.png`,
+              `${process.env.PUBLIC_URL}/awp1.png`,
+              `${process.env.PUBLIC_URL}/awp2.png`,
+              `${process.env.PUBLIC_URL}/awp3.png`,
+              `${process.env.PUBLIC_URL}/awp4.png`,
+              `${process.env.PUBLIC_URL}/awp5.png`,
+              `${process.env.PUBLIC_URL}/awp6.png`,
             ],
           },
         ],
@@ -166,9 +172,18 @@ export const projects = [
           {
             type: "Components",
             images: [
-              `${process.env.PUBLIC_URL}/project2/frontend/component1.png`,
-              `${process.env.PUBLIC_URL}/project2/frontend/component2.png`,
+              `${process.env.PUBLIC_URL}/awft1.png`,
+              `${process.env.PUBLIC_URL}/awft2.png`,
+              `${process.env.PUBLIC_URL}/awft3.png`,
+              `${process.env.PUBLIC_URL}/awft4.png`,
+              `${process.env.PUBLIC_URL}/awft5.png`,
+              `${process.env.PUBLIC_URL}/awft6.png`,
+              `${process.env.PUBLIC_URL}/awft7.png`,
+              `${process.env.PUBLIC_URL}/awft8.png`,
             ],
+
+
+           
           },
           {
             type: "Responsive Design",

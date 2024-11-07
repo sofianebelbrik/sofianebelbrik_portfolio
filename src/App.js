@@ -113,16 +113,16 @@ const prevImage = () => {
 const nextImage = () => {
   setCurrentImageIndex((prevIndex) => (prevIndex === lightboxImages.length - 1 ? 0 : prevIndex + 1));
 };
-  // Function to handle key click
+
   const handleKeyClick = () => {
     setIsRotated(true);
     
-    // After rotation is complete, make the door disappear
+    
     setTimeout(() => {
       setIsOpen(true);
-    }, 1000); // Delay matches the rotation duration
+    }, 1000); 
   };
- // Navigation handlers for project cards
+
  const handlePreviousProject = () => {
   setCurrentProjectIndex((prevIndex) =>
     prevIndex > 0 ? prevIndex - 1 : projects.length - 1
@@ -182,7 +182,7 @@ const creativeIcons = [
   { name: 'Project & Campaign Management', path: `${process.env.PUBLIC_URL}/creativev/k.svg` }
 ];
 
-// Consolidate all icons into one array
+
 const allIcons = [
   ...codeArsenalIcons,
   ...UIDesignIcons,
@@ -204,7 +204,7 @@ const findIconPath = (tool) => {
     );
   }
 
-  // Check for icons in Frameworkicons using color and initials
+  
   const dataIcon = Frameworkicons.find(icon => icon.name === tool);
   if (dataIcon) {
     return (
@@ -212,7 +212,7 @@ const findIconPath = (tool) => {
         <div
           style={{
             backgroundColor: dataIcon.color,
-            width: '35px', // Adjust size if needed
+            width: '35px', 
             height: '35px',
             borderRadius: '4px',
             display: 'flex',
@@ -235,8 +235,7 @@ const findIconPath = (tool) => {
 
 // Track the navigation history of folders
 const [navigationHistory, setNavigationHistory] = useState([]); // Array of visited folder names
-const [currentIndex, setCurrentIndex] = useState(-1); // Track the current position in the history
-
+const [currentIndex, setCurrentIndex] = useState(-1); 
 const handleFolderClick = (folderName) => {
   setWindowTitle(folderName);
   setIsFolderOpen(true);
@@ -271,7 +270,7 @@ const handleBackClick = () => {
 const handleForwardClick = () => {
   if (currentIndex < navigationHistory.length - 1) {
     const newIndex = currentIndex + 1;
-    setWindowTitle(navigationHistory[newIndex]); // Update title to next folder
+    setWindowTitle(navigationHistory[newIndex]); 
     setCurrentIndex(newIndex);
     setIsFolderOpen(true);
   }
@@ -455,7 +454,7 @@ const handleExpandToggle = () => {
 
 
     
-    // Render empty content when folder is open
+ 
     <div className="folder-content">
   {windowTitle === 'Code Arsenal' && (
   <div className="icons-grid">
@@ -566,7 +565,7 @@ const handleExpandToggle = () => {
     {/* Project Cards */}
     {isOpen && (
       <div className="project-card-container">
-        {/* Previous Arrow */}
+        
         <button className="nav-button prev-button" onClick={handlePreviousProject}>
           ⬅
         </button>
@@ -619,7 +618,7 @@ const handleExpandToggle = () => {
             </div>
           </div>
 
-          {/* Creation Path Section */}
+          
           <div className="creation-path-container">
             <h3 className="creation-path-title">Current Scope</h3>
             <div className="progress-line-vertical">
