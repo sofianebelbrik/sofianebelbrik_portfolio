@@ -704,9 +704,9 @@ const handleExpandToggle = () => {
         <SectionCards
           title="Back-end Development"
           cards={[
-            { type: "Server & Routing", category: "Server Setup" },
-            { type: "Database Integration", category: "Database Integration" },
-            { type: "Environment & Configurations", category: "Environment & Configurations" }
+            { type: "Backend Operations and Interactions", category: "Backend Operations and Interactions" },
+            { type: "Database", category: "Database" },
+            
           ]}
         />
       </div>

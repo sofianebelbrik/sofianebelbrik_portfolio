@@ -4,11 +4,11 @@ export const projects = [
     title: "Personal website - 2024 ",
    
     description: "I designed a personal website to showcase my skills and the projects I’m working on, using HTML, CSS, React, and JavaScript for the front end. The site includes an “About Me” section where I introduce myself, and my skills are displayed within a pixelated window interface featuring clickable folders—each folder represents different skills of mine. For the projects section, I created a special “Vault Project” area where visitors click on a vault handle to open it; inside, there are cards with basic information about my projects, which expand to reveal more detailed descriptions. Finally, there’s a “Contact Me” page where visitors can get in touch with me.",
-    tools: ["React", "CSS", "HTML","Figma", "Canva" ], 
+    tools: ["React", "CSS", "HTML","Figma", "Canva", "JavaScript" ], 
     phases: {
       uiux: true,
       frontend: true,
-      backend: false,
+      backend: true,
    
     },
     details: {
@@ -95,10 +95,10 @@ export const projects = [
         ],
       },
       backend: {
-        title: "Back-end Development",
+        title: "Back-end Dment",
         content: [
           {
-            type: "Server & Routing",
+            type: "Backend Operations and Interactions",
             images: [
               `${process.env.PUBLIC_URL}/project1/backend/server1.png`,
               `${process.env.PUBLIC_URL}/project1/backend/server2.png`,
@@ -127,7 +127,7 @@ export const projects = [
     title: "artist website - 2024",
     githubLink: "https://github.com/sofianebelbrik/artist-website",
     description: "I developed an interactive website for an artist that features a music promotion section, a store for merchandise, a video section showcasing the artist’s content, an announcements area, a subscription form, and social media links. It also includes a simple dashboard that allows the artist to easily control and update the displayed content. The front end is built using Next.js, React, Tailwind CSS, Swiper.js, and FontAwesome, while the back end utilizes Node.js, PostgreSQL, and AWS RDS. I used this project to explore a different tech stack from my previous work to expand my skills with modern technologies.",
-    tools: ["HTML", "CSS", "Next.js","React","Figma", "Canva" ], 
+    tools: ["HTML", "CSS", "Next.js","React","Figma", "Canva", "JavaScript" ], 
     phases: {
       uiux: true,
       frontend: true,
@@ -202,27 +202,35 @@ export const projects = [
         ],
       },
       backend: {
-        title: "Back-end Development",
+        title: "Back-end Dment",
         content: [
           {
-            type: "Server & Routing",
+            type: "Backend Operations and Interactions",
             images: [
-              `${process.env.PUBLIC_URL}/project2/backend/server1.png`,
-              `${process.env.PUBLIC_URL}/project2/backend/server2.png`,
+              `${process.env.PUBLIC_URL}/bc1.jpg`,
+              `${process.env.PUBLIC_URL}/bc2.jpg`,
+              `${process.env.PUBLIC_URL}/bc3.jpg`,
+              `${process.env.PUBLIC_URL}/bc4.jpg`,
+              `${process.env.PUBLIC_URL}/bc5.jpg`,
+              `${process.env.PUBLIC_URL}/bc6.jpg`,
+              `${process.env.PUBLIC_URL}/bc7.jpg`,
+              `${process.env.PUBLIC_URL}/bc8.jpg`,
+              `${process.env.PUBLIC_URL}/bc9.jpg`,
+              `${process.env.PUBLIC_URL}/bc10.jpg`,
             ],
           },
           {
-            type: "Database Integration",
+            type: "Database",
             images: [
-              `${process.env.PUBLIC_URL}/project2/backend/database1.png`,
-              `${process.env.PUBLIC_URL}/project2/backend/database2.png`,
+              `${process.env.PUBLIC_URL}/db1.jpg`,
+              `${process.env.PUBLIC_URL}/db2.jpg`,
             ],
           },
           {
-            type: "Environment & Configurations",
+            type: "Project Performance Overview",
             images: [
-              `${process.env.PUBLIC_URL}/project2/backend/env1.png`,
-              `${process.env.PUBLIC_URL}/project2/backend/env2.png`,
+              `${process.env.PUBLIC_URL}/videolink`,
+              
             ],
           },
         ],
@@ -348,13 +356,21 @@ export const projects = [
         ],
       },
       backend: {
-        title: "Back-end Development",
+        title: "Back-end Dment",
         content: [
           {
-            type: "Server & Routing",
+            type: "Backend Operations and Interactions",
             images: [
-              `${process.env.PUBLIC_URL}/project1/backend/server1.png`,
-              `${process.env.PUBLIC_URL}/project1/backend/server2.png`,
+              `${process.env.PUBLIC_URL}/project2/backend/bc1.png`,
+              `${process.env.PUBLIC_URL}/project2/backend/bc2.png`,
+              `${process.env.PUBLIC_URL}/project2/backend/bc3.png`,
+              `${process.env.PUBLIC_URL}/project2/backend/bc4.png`,
+              `${process.env.PUBLIC_URL}/project2/backend/bc5.png`,
+              `${process.env.PUBLIC_URL}/project2/backend/bc6.png`,
+              `${process.env.PUBLIC_URL}/project2/backend/bc7.png`,
+              `${process.env.PUBLIC_URL}/project2/backend/bc8.png`,
+              `${process.env.PUBLIC_URL}/project2/backend/bc9.png`,
+              `${process.env.PUBLIC_URL}/project2/backend/bc10.png`,
             ],
           },
           {
