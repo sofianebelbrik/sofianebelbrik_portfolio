@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/sofianebelbrik_portfolio/static/css/main.65614a4e.css",
-    "main.js": "/sofianebelbrik_portfolio/static/js/main.079ca3ad.js",
+    "main.js": "/sofianebelbrik_portfolio/static/js/main.c7f2b28b.js",
     "index.html": "/sofianebelbrik_portfolio/index.html",
     "main.65614a4e.css.map": "/sofianebelbrik_portfolio/static/css/main.65614a4e.css.map",
-    "main.079ca3ad.js.map": "/sofianebelbrik_portfolio/static/js/main.079ca3ad.js.map"
+    "main.c7f2b28b.js.map": "/sofianebelbrik_portfolio/static/js/main.c7f2b28b.js.map"
   },
   "entrypoints": [
     "static/css/main.65614a4e.css",
-    "static/js/main.079ca3ad.js"
+    "static/js/main.c7f2b28b.js"
   ]
 }
